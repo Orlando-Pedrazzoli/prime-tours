@@ -86,7 +86,7 @@ const Header = () => {
           <Link href='/' className='flex items-center'>
             <div className='flex flex-col'>
               <span className='text-2xl font-bold text-primary'>
-                Premiere Tours
+                Pedrazzoli Tours
               </span>
               <span className='text-xs text-gray-600'>
                 Portugal Premium Experience

@@ -55,8 +55,8 @@ const AboutSection = () => {
           >
             <div className='relative'>
               <img
-                src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600'
-                alt='Pedro - Motorista Guia'
+                src='/orlando-perfil.jpg'
+                alt='Orlando Pedrazzoli - Motorista Guia'
                 className='rounded-2xl shadow-xl w-full'
               />
               <div className='absolute -bottom-6 -right-6 bg-primary text-white p-6 rounded-2xl shadow-xl'>
