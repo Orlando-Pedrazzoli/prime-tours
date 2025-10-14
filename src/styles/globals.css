@@ -10,19 +10,26 @@
     --card-foreground: 222.2 84% 4.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
-    --primary: 209 100% 36%;
-    --primary-foreground: 210 40% 98%;
+
+    /* Verde da Bandeira Portuguesa */
+    --primary: 160 100% 20%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Dourado do Brasão */
     --secondary: 51 100% 50%;
     --secondary-foreground: 0 0% 10%;
+
+    /* Vermelho da Bandeira */
+    --accent: 0 64% 51%;
+    --accent-foreground: 0 0% 100%;
+
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 0 100% 71%;
-    --accent-foreground: 210 40% 98%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --ring: 160 100% 20%;
     --radius: 0.5rem;
   }
 
@@ -33,19 +40,19 @@
     --card-foreground: 210 40% 98%;
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
-    --primary: 210 40% 98%;
+    --primary: 160 100% 30%;
     --primary-foreground: 222.2 47.4% 11.2%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 51 100% 50%;
+    --secondary-foreground: 0 0% 10%;
+    --accent: 0 64% 51%;
+    --accent-foreground: 210 40% 98%;
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --ring: 160 100% 30%;
   }
 }
 
@@ -55,10 +62,14 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-feature-settings: 'rlig' 1, 'calt' 1;
   }
 }
 
-/* Custom animations */
+/* ============================================
+   ANIMAÇÕES PERSONALIZADAS
+   ============================================ */
+
 @keyframes slideInUp {
   from {
     transform: translateY(100px);
@@ -79,45 +90,45 @@
   }
 }
 
-.animate-slide-up {
-  animation: slideInUp 0.6s ease-out;
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
-.animate-fade-in {
-  animation: fadeIn 0.8s ease-out;
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
-/* Loading states */
-.skeleton {
-  @apply animate-pulse bg-gray-200 rounded-md;
+@keyframes pulse-slow {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
 }
 
-/* Smooth scroll */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  @apply bg-gray-100;
-}
-
-::-webkit-scrollbar-thumb {
-  @apply bg-primary-600 rounded-full;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  @apply bg-primary-700;
-}
-
-/* WhatsApp floating button animation */
-.whatsapp-float {
-  @apply fixed bottom-5 right-5 z-50;
-  animation: float 3s ease-in-out infinite;
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
 }
 
 @keyframes float {
@@ -130,12 +141,281 @@ html {
   }
 }
 
-/* Image overlay effects */
+.animate-slide-up {
+  animation: slideInUp 0.6s ease-out;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out;
+}
+
+.animate-slide-right {
+  animation: slideInRight 0.6s ease-out;
+}
+
+.animate-slide-left {
+  animation: slideInLeft 0.6s ease-out;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* ============================================
+   LOADING STATES
+   ============================================ */
+
+.skeleton {
+  @apply animate-pulse bg-gray-200 rounded-md;
+}
+
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.2) 20%,
+    rgba(255, 255, 255, 0.5) 60%,
+    rgba(255, 255, 255, 0)
+  );
+  animation: shimmer 2s linear infinite;
+  background-size: 1000px 100%;
+}
+
+/* ============================================
+   SCROLL BEHAVIOR
+   ============================================ */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+/* ============================================
+   SCROLLBAR PERSONALIZADA
+   ============================================ */
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gradient-to-b from-primary to-accent rounded-full;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gradient-to-b from-primary-700 to-accent-700;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #006847 #f1f1f1;
+}
+
+/* ============================================
+   WHATSAPP FLOATING BUTTON
+   ============================================ */
+
+.whatsapp-float {
+  @apply fixed bottom-5 right-5 z-50;
+  animation: float 3s ease-in-out infinite;
+}
+
+.whatsapp-float:hover {
+  animation-play-state: paused;
+}
+
+/* ============================================
+   IMAGE EFFECTS
+   ============================================ */
+
 .image-overlay {
   @apply absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent;
 }
 
-/* Card hover effects */
+.image-overlay-portugal {
+  @apply absolute inset-0;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 104, 71, 0.7) 0%,
+    rgba(211, 47, 47, 0.7) 100%
+  );
+  mix-blend-mode: multiply;
+}
+
+/* ============================================
+   CARD EFFECTS
+   ============================================ */
+
 .card-hover {
-  @apply transition-all duration-300 hover:shadow-2xl hover:scale-105;
+  @apply transition-all duration-300 hover:shadow-portugal hover:scale-105;
+}
+
+.card-portugal {
+  @apply border-t-4 border-primary hover:border-accent transition-all duration-300;
+}
+
+/* ============================================
+   GRADIENT BACKGROUNDS
+   ============================================ */
+
+.bg-portugal-gradient {
+  background: linear-gradient(135deg, #006847 0%, #d32f2f 100%);
+}
+
+.bg-portugal-gradient-reverse {
+  background: linear-gradient(135deg, #d32f2f 0%, #006847 100%);
+}
+
+.bg-portugal-subtle {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 104, 71, 0.05) 0%,
+    rgba(211, 47, 47, 0.05) 100%
+  );
+}
+
+/* ============================================
+   TEXT EFFECTS
+   ============================================ */
+
+.text-portugal-gradient {
+  @apply bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent;
+}
+
+.text-glow {
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5), 0 0 20px rgba(255, 215, 0, 0.3),
+    0 0 30px rgba(255, 215, 0, 0.2);
+}
+
+/* ============================================
+   BUTTON EFFECTS
+   ============================================ */
+
+.btn-portugal {
+  @apply bg-gradient-to-r from-primary to-accent text-white font-semibold;
+  @apply hover:shadow-portugal transition-all duration-300;
+  @apply hover:scale-105 active:scale-95;
+}
+
+.btn-portugal-outline {
+  @apply border-2 border-primary text-primary font-semibold;
+  @apply hover:bg-primary hover:text-white transition-all duration-300;
+  @apply hover:shadow-portugal-green;
+}
+
+/* ============================================
+   GLASS MORPHISM
+   ============================================ */
+
+.glass {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.glass-dark {
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ============================================
+   SECTION DIVIDERS
+   ============================================ */
+
+.section-divider {
+  position: relative;
+}
+
+.section-divider::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #006847, #ffd700, #d32f2f);
+  border-radius: 2px;
+}
+
+/* ============================================
+   MOBILE OPTIMIZATIONS
+   ============================================ */
+
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 80px;
+  }
+
+  .mobile-padding {
+    @apply px-4;
+  }
+
+  .mobile-text-sm {
+    @apply text-sm;
+  }
+}
+
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+
+.focus-visible:focus {
+  @apply outline-none ring-2 ring-primary ring-offset-2;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+  }
+}
+
+/* ============================================
+   PERFORMANCE OPTIMIZATIONS
+   ============================================ */
+
+.will-change-transform {
+  will-change: transform;
+}
+
+.will-change-opacity {
+  will-change: opacity;
+}
+
+/* GPU acceleration for smooth animations */
+.gpu-accelerated {
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
 }

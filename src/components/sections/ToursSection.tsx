@@ -52,28 +52,6 @@ const ToursSection = () => {
           </p>
         </motion.div>
 
-        {/* Estatísticas */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
-          className='grid grid-cols-3 gap-4 md:gap-8 max-w-4xl mx-auto mb-12'
-        >
-          <div className='bg-white rounded-lg p-6 text-center shadow-md'>
-            <div className='text-3xl font-bold text-primary mb-2'>7+</div>
-            <p className='text-gray-600'>Tours Disponíveis</p>
-          </div>
-          <div className='bg-white rounded-lg p-6 text-center shadow-md'>
-            <div className='text-3xl font-bold text-primary mb-2'>4</div>
-            <p className='text-gray-600'>Pessoas por Tour</p>
-          </div>
-          <div className='bg-white rounded-lg p-6 text-center shadow-md'>
-            <div className='text-3xl font-bold text-primary mb-2'>100%</div>
-            <p className='text-gray-600'>Tours Privados</p>
-          </div>
-        </motion.div>
-
         {/* Filtros */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

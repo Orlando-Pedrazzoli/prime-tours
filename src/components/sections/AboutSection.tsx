@@ -81,21 +81,20 @@ const AboutSection = () => {
             </h2>
 
             <p className='text-lg text-gray-700 mb-4'>
-              Olá! Sou o Pedro, o seu motorista-guia dedicado para descobrir
+              Olá! Sou o Orlando, o seu motorista-guia dedicado para descobrir
               Portugal de uma forma única e memorável.
             </p>
 
             <p className='text-gray-600 mb-6'>
-              Nascido e criado em Portugal, tenho a paixão de partilhar a
-              beleza, história e cultura do meu país com visitantes de todo o
-              mundo. Com mais de 10 anos de experiência em turismo premium,
-              garanto que cada tour é uma experiência personalizada e
-              inesquecível.
+              Tenho a paixão de partilhar a beleza, história e cultura do meu
+              país com visitantes de todo o mundo. Com mais de 10 anos de
+              experiência em turismo premium, garanto que cada tour é uma
+              experiência personalizada e inesquecível.
             </p>
 
             <p className='text-gray-600 mb-8'>
-              Falo português, inglês, espanhol e francês fluentemente,
-              permitindo-me comunicar confortavelmente com clientes de diversas
+              Falo português, inglês e espanhol fluentemente, permitindo-me
+              comunicar confortavelmente com clientes de diversas
               nacionalidades. O meu objetivo é não apenas levá-lo aos destinos,
               mas também proporcionar-lhe uma verdadeira imersão na cultura
               portuguesa.
@@ -113,10 +112,6 @@ const AboutSection = () => {
               <div className='flex items-center gap-2 text-sm'>
                 <div className='w-2 h-2 bg-green-500 rounded-full'></div>
                 <span>Español</span>
-              </div>
-              <div className='flex items-center gap-2 text-sm'>
-                <div className='w-2 h-2 bg-green-500 rounded-full'></div>
-                <span>Français</span>
               </div>
             </div>
 
