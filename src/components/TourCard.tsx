@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import { Clock, Users, MapPin, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -92,9 +91,11 @@ const TourCard: React.FC<TourCardProps> = ({ tour }) => {
               Total: {formatPrice(tour.price.total)} (4 pessoas)
             </p>
           </div>
-          <Link href={`#contacto`}>
+
+          {/* LINK PARA PÁGINA INDIVIDUAL DO TOUR */}
+          <Link href={`/tours/${tour.slug}`}>
             <Button className='bg-primary hover:bg-primary-700 group'>
-              Reservar
+              Ver Detalhes
               <ArrowRight
                 className='ml-2 group-hover:translate-x-1 transition-transform'
                 size={16}
