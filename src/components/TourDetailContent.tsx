@@ -28,6 +28,39 @@ interface TourDetailContentProps {
   tour: any;
 }
 
+// Mapeamento dos slugs dos tours para os nomes das imagens de mapa
+const tourMapImages = {
+  'tour-de-lisboa': 'tour-de-lisboa.jpg',
+  'passeio-sintra-cascais-estoril': 'passeio-sintra-cascais-estoril.jpg',
+  'fatima-batalha-nazare-obidos': 'fatima-batalha-nazare-e-obidos.jpg',
+  'tour-lisboa-sintra': 'tour-lisboa-sintra.jpg',
+  'tour-evora-monsaraz': 'tour-evora-e-monsaraz.jpg',
+  'tour-azeitao-palmela-sesimbra-arrabida-setubal':
+    'tour-azeitao-palmela-sesimbra-arrabida-setubal.jpg',
+  'tour-coimbra-porto': 'tour-coimbra-e-porto.jpg',
+  'passeio-fatima-sintra': 'passeio-a-fatima-e-sintra.jpg',
+  'passeio-sintra-obidos': 'passeio-a-sintra-e-obidos.jpg',
+  'tour-algarve-praia-da-rocha-lagos-sagres':
+    'tour-algarve-praia-da-rocha-lagos-sagres.jpg',
+  'tour-fatima-coimbra': 'tour-fatima-e-coimbra.jpg',
+  'passeio-fatima-obidos': 'passeio-fatima-e-obidos.jpg',
+  'tour-templarios-portugal': 'tour-templarios-em-portugal.jpg',
+  'tour-coimbra-aveiro': 'tour-coimbra-aveiro.jpg',
+  'passeio-porto-santiago-compostela':
+    'passeio-porto-santiago-de-compostela.jpg',
+  'passeio-tomar-convento-cristo-coimbra':
+    'passeio-tomar-convento-de-cristo-e-coimbra.jpg',
+  'tour-fatima-santiago-compostela': 'tour-fatima-e-santiago-de-compostela.jpg',
+  'passeio-sintra-mafra': 'passeio-a-sintra-e-mafra.jpg',
+  'passeio-fatima-5horas': 'passeio-de-fatima-5horas.jpg',
+  'passeio-sintra-4horas': 'passeio-a-sintra-4horas.jpg',
+  'tour-lisboa-4horas': 'tour-de-lisboa-4horas.jpg',
+  'tour-a-pe-bonde-lisboa': 'tour-a-pe-e-de-bonde-em-lisboa.jpg',
+  'passeio-noturno-lisboa': 'passeio-noturno-lisboa.jpg',
+  'passeio-lisboa-noite-fado-jantar':
+    'passeio-lisboa-a-noite-com-fado-show-e-jantar.jpg',
+};
+
 const TourDetailContent: React.FC<TourDetailContentProps> = ({ tour }) => {
   const [selectedPassengers, setSelectedPassengers] = useState(4);
 
@@ -117,9 +150,9 @@ const TourDetailContent: React.FC<TourDetailContentProps> = ({ tour }) => {
                 <MapPin className='text-primary' size={32} />
                 Mapa do Percurso
               </h2>
-              <div className='relative w-full h-[400px] rounded-xl overflow-hidden border-4 border-gray-100'>
+              <div className='relative w-full h-[600px] rounded-xl overflow-hidden border-4 border-gray-100'>
                 <img
-                  src={`/${tour.slug}-mapa.jpg`}
+                  src={`/${tourMapImages[tour.slug] || 'default-map.jpg'}`}
                   alt={`Mapa do percurso - ${tour.title}`}
                   className='w-full h-full object-cover'
                   onError={e => {

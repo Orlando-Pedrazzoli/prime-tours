@@ -7,15 +7,32 @@ export function middleware(request: NextRequest) {
   if (pathname.startsWith('/tours/')) {
     const slug = pathname.split('/tours/')[1];
 
-    // Lista de slugs válidos dos tours
+    // Lista de slugs válidos dos tours atualizados
     const validSlugs = [
-      'lisboa-tour-privado-dia-completo',
-      'sintra-cascais-costa-estoril',
+      'tour-de-lisboa',
+      'passeio-sintra-cascais-estoril',
       'fatima-batalha-nazare-obidos',
-      'sintra-obidos-tour-privado',
-      'fatima-meio-dia-tour-privado',
-      'sintra-meio-dia-tour-privado',
-      'jantar-fado-transporte-privado',
+      'tour-lisboa-sintra',
+      'tour-evora-monsaraz',
+      'tour-azeitao-palmela-sesimbra-arrabida-setubal',
+      'tour-coimbra-porto',
+      'passeio-fatima-sintra',
+      'passeio-sintra-obidos',
+      'tour-algarve-praia-da-rocha-lagos-sagres',
+      'tour-fatima-coimbra',
+      'passeio-fatima-obidos',
+      'tour-templarios-portugal',
+      'tour-coimbra-aveiro',
+      'passeio-porto-santiago-compostela',
+      'passeio-tomar-convento-cristo-coimbra',
+      'tour-fatima-santiago-compostela',
+      'passeio-sintra-mafra',
+      'passeio-fatima-5horas',
+      'passeio-sintra-4horas',
+      'tour-lisboa-4horas',
+      'tour-a-pe-bonde-lisboa',
+      'passeio-noturno-lisboa',
+      'passeio-lisboa-noite-fado-jantar',
     ];
 
     // Se o slug não existe, redirecionar para a seção de tours
