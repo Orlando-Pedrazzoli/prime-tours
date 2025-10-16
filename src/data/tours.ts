@@ -559,55 +559,35 @@ export const tours = [
       'Palácio da Pena ou Nacional',
       'Centro histórico de Sintra',
     ],
-    image: 'https://images.unsplash.com/photo-1555881018-9bbb4a7be8f1?w=1200',
+    image: 'https://images.pexels.com/photos/7818419/pexels-photo-7818419.jpeg',
     gallery: [
-      'https://images.unsplash.com/photo-1555881018-9bbb4a7be8f1?w=800',
-      'https://images.unsplash.com/photo-1562281302-809108fd533c?w=800',
-      'https://images.unsplash.com/photo-1590073844006-33379778ae09?w=800',
-      'https://images.unsplash.com/photo-1577086664693-894d8406334a?w=800',
+      'https://images.pexels.com/photos/30443720/pexels-photo-30443720.jpeg',
+      'https://images.unsplash.com/photo-1642694335441-82cc4a95fa78?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170',
+      'https://images.pexels.com/photos/27832068/pexels-photo-27832068.jpeg',
+      'https://images.pexels.com/photos/20230683/pexels-photo-20230683.jpeg',
     ],
     itinerary: [
-      {
-        time: '9:00',
-        location: 'Partida',
-        description: 'Recolha no local designado',
-      },
-      {
-        time: '10:00',
-        location: 'Fátima',
-        description: 'Santuário e Capela das Aparições',
-      },
-      {
-        time: '11:30',
-        location: 'Valinhos',
-        description: 'Casas dos três pastorinhos',
-      },
-      {
-        time: '12:30',
-        location: 'Viagem para Sintra',
-        description: 'Percurso cénico',
-      },
-      {
-        time: '13:30',
-        location: 'Almoço',
-        description: 'Tempo para almoço em Sintra (não incluído)',
-      },
-      {
-        time: '15:00',
-        location: 'Palácio',
-        description: 'Visita a um palácio à escolha',
-      },
-      {
-        time: '16:30',
-        location: 'Centro de Sintra',
-        description: 'Exploração da vila histórica',
-      },
-      {
-        time: '17:30',
-        location: 'Regresso',
-        description: 'Viagem de volta',
-      },
-    ],
+  {
+    location: 'Fátima - Santuário',
+    description: 'O famoso santuário Mariano de Fátima é sem dúvida um dos maiores centros de peregrinação do mundo. Aqui vêm milhões de pessoas anualmente prestar homenagem aos três pastorinhos que foram testemunhas da aparição da Virgem no lugar da Cova da Iria. Tempo livre para assistir a uma missa (opcional), visitar a Capelinha das Aparições onde se pode ver a imagem da Virgem de Fátima, e a Basílica onde se encontram os túmulos de Lúcia, Jacinta e Francisco (estes dois últimos canonizados pelo Papa Francisco em Maio de 2017, tornando-se assim os santos mais jovens da igreja católica).',
+  },
+  {
+    location: 'Igreja da Santíssima Trindade',
+    description: 'Visita à moderna igreja da Santíssima Trindade de Fátima, com 8.633 lugares sentados e 40.000 m² de área, um projeto da autoria do arquiteto grego Alexandros Tombazis. Tempo para fazer as suas compras de artigos religiosos para si, sua família e amigos.',
+  },
+  {
+    location: 'Valinhos',
+    description: 'A aldeia onde nasceram os três pastorinhos, Lúcia, Jacinta e Francisco. Aqui em Valinhos visitamos as casas de pedra calcária pertença das suas famílias que se dedicavam à agricultura e criação de ovelhas, num meio isolado e pobre, mas muito belo, do interior de Portugal.',
+  },
+  {
+    location: 'Sintra - Centro Histórico',
+    description: 'Sintra é sem dúvida um dos locais mais extraordinários em Portugal. O seu microclima torna esta pequena cidade na encosta da montanha e junto ao Atlântico um ponto de atração para os visitantes que por ali passam para admirar os seus famosos castelos, ou simplesmente apreciar a doçaria e comida tradicional, não esquecendo as lojas com os seus artigos típicos locais. Paragem no centro histórico e tempo livre onde poderá degustar os famosos travesseiros e queijadas na pastelaria Piriquita e explorar as ruelas da cidade mais romântica de Portugal.',
+  },
+  {
+    location: 'Palácio em Sintra (Opcional)',
+    description: 'Visita opcional a um dos palácios: Palácio Nacional de Sintra, Palácio da Pena, Quinta da Regaleira ou Palácio de Monserrate. Cada palácio oferece uma experiência única da arquitetura e história portuguesa.',
+  },
+],
     featured: false,
   },
 
@@ -636,55 +616,31 @@ export const tours = [
       'Ruas de pedra e casas caiadas',
     ],
     image:
-      'https://images.unsplash.com/photo-1538970272646-f61fabb3a8a2?w=1200',
+      'https://visitsintra.travel/images/ver/monumentos/palacio_queluz/Pqueluz_800x500.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1538970272646-f61fabb3a8a2?w=800',
-      'https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=800',
-      'https://images.unsplash.com/photo-1577551926752-4863c480ba97?w=800',
-      'https://images.unsplash.com/photo-1562281302-809108fd533c?w=800',
+      'https://www.parquesdesintra.pt/media/hpjdlzgs/parques_de_sintra_palacio_de_queluz_image_03.jpeg?rnd=133155067004030000&preset=contentWithGallery',
+      'https://images.pexels.com/photos/27832058/pexels-photo-27832058.jpeg',
+      'https://images.unsplash.com/photo-1697394491967-c6faf458ced7?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074',
+      'https://images.pexels.com/photos/19808191/pexels-photo-19808191.jpeg',
     ],
     itinerary: [
-      {
-        time: '9:00',
-        location: 'Partida',
-        description: 'Recolha no local designado',
-      },
-      {
-        time: '10:00',
-        location: 'Sintra',
-        description: 'Centro histórico, pastelaria Piriquita',
-      },
-      {
-        time: '10:30',
-        location: 'Palácio',
-        description: 'Visita a um palácio à escolha (opcional)',
-      },
-      {
-        time: '13:00',
-        location: 'Almoço',
-        description: 'Tempo para almoço em Sintra (não incluído)',
-      },
-      {
-        time: '14:30',
-        location: 'Viagem para Óbidos',
-        description: 'Percurso cénico até à vila medieval',
-      },
-      {
-        time: '15:30',
-        location: 'Óbidos',
-        description: 'Exploração da vila medieval',
-      },
-      {
-        time: '17:00',
-        location: 'Ginja de Óbidos',
-        description: 'Degustação do licor tradicional',
-      },
-      {
-        time: '17:30',
-        location: 'Regresso',
-        description: 'Viagem de volta',
-      },
-    ],
+  {
+    location: 'Palácio de Queluz (Opcional)',
+    description: 'Visita ao Palácio de Queluz, o "Versalhes Português", com os seus três estilos arquitetónicos: Renascentista, Barroco e Neo-clássico. Os fantásticos jardins franceses, decorados com fontes de artistas ingleses, estátuas italianas e um magnífico canal (lago-piscina) decorado com azulejos do século 18 fazem a delícia dos visitantes. Foi residência oficial de D. João VI. Aqui poderemos visitar o quarto onde nasceu e morreu seu filho, D. Pedro, 1º imperador do Brasil.',
+  },
+  {
+    location: 'Sintra - Centro Histórico',
+    description: 'Sintra é sem dúvida um dos locais mais extraordinários em Portugal. O seu microclima torna esta pequena cidade na encosta da montanha e junto ao Atlântico um ponto de atração para os visitantes que por ali passam para admirar os seus famosos castelos, ou simplesmente apreciar a doçaria e comida tradicional, não esquecendo as lojas com os seus artigos típicos locais. Paragem no centro histórico e tempo livre onde poderá degustar os famosos travesseiros e queijadas na pastelaria Piriquita e explorar as ruelas da cidade mais romântica de Portugal.',
+  },
+  {
+    location: 'Palácio em Sintra (Opcional)',
+    description: 'Visita opcional a um dos palácios: Palácio Nacional de Sintra, Palácio da Pena, Quinta da Regaleira ou Palácio de Monserrate. Cada palácio oferece uma experiência única da arquitetura e história portuguesa, desde os palácios reais medievais até às extravagâncias românticas do século XIX.',
+  },
+  {
+    location: 'Óbidos',
+    description: 'A vila de Óbidos é uma antiga cidade romana que floresceu mesmo depois da queda do império, devido ao grande comércio de produtos que se fazia por via marítima. Na idade média foi amuralhada após a conquista do primeiro rei de Portugal, D. Afonso Henriques. Óbidos é um dos melhores exemplos de cidade medieval em Portugal. Ao entrarmos nas suas muralhas retrocedemos no tempo ao encontrarmos as ruelas de pedra antiga, as casas com as suas fachadas seculares pintadas de branco, o comércio sempre ativo, um sem número de igrejas construídas ao longo dos séculos. Ao caminharmos nas muralhas medievais temos a sensação de viajarmos pelos séculos de história, no encontro de reis e batalhas por cada palmo de terra. Não deixaremos de provar a famosa Ginja de Óbidos, o famoso licor local servido num copinho de chocolate.',
+  },
+],
     featured: false,
   },
 
@@ -713,60 +669,47 @@ export const tours = [
       'Falésias douradas espetaculares',
     ],
     image:
-      'https://images.unsplash.com/photo-1571501679680-de32f1e7aad4?w=1200',
+      'https://images.unsplash.com/photo-1559315542-780c225b5239?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074',
     gallery: [
-      'https://images.unsplash.com/photo-1571501679680-de32f1e7aad4?w=800',
-      'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800',
-      'https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=800',
-      'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800',
+      'https://plus.unsplash.com/premium_photo-1667761276033-2ee987ffb5b1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1489',
+      'https://images.unsplash.com/photo-1567369171867-bea5fcbc6e1c?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1169',
+      'https://www.algarveriders.com/docimg/1052/meta',
+      'https://images.pexels.com/photos/20117918/pexels-photo-20117918.jpeg',
     ],
     itinerary: [
-      {
-        time: '8:00',
-        location: 'Partida',
-        description: 'Recolha no local designado',
-      },
-      {
-        time: '11:00',
-        location: 'Portimão',
-        description: 'Chegada à cidade costeira',
-      },
-      {
-        time: '11:30',
-        location: 'Praia da Rocha',
-        description: 'Praia icónica do Algarve',
-      },
-      {
-        time: '12:30',
-        location: 'Lagos',
-        description: 'Centro histórico e marina',
-      },
-      {
-        time: '13:30',
-        location: 'Almoço',
-        description: 'Gastronomia algarvia (não incluído)',
-      },
-      {
-        time: '15:00',
-        location: 'Ponta da Piedade',
-        description: 'Falésias e grutas espetaculares',
-      },
-      {
-        time: '16:00',
-        location: 'Sagres',
-        description: 'Fortaleza e vila dos descobrimentos',
-      },
-      {
-        time: '17:00',
-        location: 'Cabo de São Vicente',
-        description: 'Farol e "Fim do Mundo"',
-      },
-      {
-        time: '18:00',
-        location: 'Regresso',
-        description: 'Viagem de volta',
-      },
-    ],
+  {
+    location: 'Ponte Vasco da Gama',
+    description: 'Iniciaremos a viagem em direção ao Algarve atravessando a ponte mais longa da Europa. A Ponte Vasco da Gama com 17.325 metros de comprimento, inaugurada em 1998 durante a Feira Mundial de Lisboa, Expo-98.',
+  },
+  {
+    location: 'Praia da Rocha',
+    description: 'A mítica Praia da Rocha, considerada uma das mais belas do mundo, desde sempre foi destino de férias de verão das famílias de toda a Europa, em especial as britânicas. Neste local extremamente cosmopolita teremos tempo livre para caminhar ao longo do calçadão e tomar uma bebida refrescante desfrutando do mar e da praia.',
+  },
+  {
+    location: 'Lagos',
+    description: 'Lagos foi desde a idade média uma cidade de grande movimento comercial. Ponto de partida das primeiras expedições marítimas portuguesas para África, aqui se desenvolveu o comércio dos escravos, do ouro e dos produtos exóticos da costa ocidental africana. Tempo livre para caminharmos numa das mais agradáveis cidades de Portugal e desfrutar do seu comércio, doçaria e artigos locais.',
+  },
+  {
+    location: 'Ponta da Piedade',
+    description: 'Formações rochosas espetaculares esculpidas pela erosão do mar ao longo dos séculos. As falésias douradas, grutas marinhas e arcos naturais da Ponta da Piedade oferecem algumas das vistas mais deslumbrantes do Algarve. Oportunidade para fotografias memoráveis.',
+  },
+  {
+    location: 'Sagres',
+    description: 'Foi este o local escolhido pelo Infante D. Henrique para estabelecer a primeira escola náutica do mundo. Sagres é um local privilegiado pela natureza junto ao mar, ideal para uma relaxante paragem para almoço (opcional).',
+  },
+  {
+    location: 'Fortaleza de Sagres',
+    description: 'A Escola Náutica de Sagres fundada em 1416 por Henrique o Navegador, proporcionou aos Portugueses serem os primeiros Europeus a terem a hegemonia dos oceanos, devido às invenções da vela triangular, da caravela e do astrolábio. Visita a este local privilegiado da história mundial.',
+  },
+  {
+    location: 'Cabo de São Vicente',
+    description: 'O Cabo de São Vicente (santo padroeiro da cidade de Lisboa), é o ponto mais sudoeste do continente Europeu. Planalto que entra pelo mar adentro, com vistas espetaculares, é aqui a separação entre as águas frias do oceano Atlântico e as quentes do mar Mediterrâneo e da costa de África. Conhecido historicamente como o "Fim do Mundo".',
+  },
+  {
+    location: 'Regresso - Ponte 25 de Abril',
+    description: 'Já de regresso a Lisboa, entramos pela Ponte 25 de Abril, uma impressionante ponte suspensa ao estilo da Golden Gate Bridge em São Francisco, Califórnia, e que desde a sua construção em 1966, se tornou um dos símbolos de referência da capital de Portugal.',
+  },
+],
     featured: false,
   },
 
@@ -795,55 +738,35 @@ export const tours = [
       'Centro histórico de Coimbra',
     ],
     image:
-      'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1200',
+      'https://images.pexels.com/photos/18177069/pexels-photo-18177069.jpeg',
     gallery: [
-      'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800',
-      'https://images.unsplash.com/photo-1555881018-9bbb4a7be8f1?w=800',
-      'https://images.unsplash.com/photo-1614024672748-ba2f7b6e0b0f?w=800',
-      'https://images.unsplash.com/photo-1577086664693-894d8406334a?w=800',
+      'https://images.pexels.com/photos/32908046/pexels-photo-32908046.jpeg',
+      'https://images.pexels.com/photos/30443721/pexels-photo-30443721.jpeg',
+      'https://images.pexels.com/photos/28386070/pexels-photo-28386070.jpeg',
+      'https://images.pexels.com/photos/5541792/pexels-photo-5541792.jpeg',
     ],
     itinerary: [
-      {
-        time: '9:00',
-        location: 'Partida',
-        description: 'Recolha no local designado',
-      },
-      {
-        time: '10:00',
-        location: 'Fátima',
-        description: 'Santuário e Capela das Aparições',
-      },
-      {
-        time: '11:30',
-        location: 'Basílica',
-        description: 'Visita às basílicas e tempo para oração',
-      },
-      {
-        time: '12:30',
-        location: 'Viagem para Coimbra',
-        description: 'Percurso até à cidade universitária',
-      },
-      {
-        time: '13:30',
-        location: 'Almoço',
-        description: 'Gastronomia regional (não incluído)',
-      },
-      {
-        time: '15:00',
-        location: 'Universidade de Coimbra',
-        description: 'Biblioteca Joanina e Paço das Escolas',
-      },
-      {
-        time: '16:30',
-        location: 'Centro de Coimbra',
-        description: 'Exploração do centro histórico',
-      },
-      {
-        time: '17:30',
-        location: 'Regresso',
-        description: 'Viagem de volta',
-      },
-    ],
+  {
+    location: 'Fátima - Santuário',
+    description: 'O famoso santuário Mariano de Fátima é sem dúvida um dos maiores centros de peregrinação do mundo. Aqui vêm milhões de pessoas anualmente prestar homenagem aos três pastorinhos que foram testemunhas da aparição da Virgem no lugar da Cova da Iria. Tempo livre para assistir a uma missa (opcional), visitar a Capelinha das Aparições onde se pode ver a imagem da Virgem de Fátima, e a Basílica onde se encontram os túmulos de Lúcia, Jacinta e Francisco (estes dois últimos canonizados pelo Papa Francisco em Maio de 2017, tornando-se assim os santos mais jovens da igreja católica).',
+  },
+  {
+    location: 'Igreja da Santíssima Trindade',
+    description: 'Visita à moderna igreja da Santíssima Trindade de Fátima, com 8.633 lugares sentados e 40.000 m² de área, um projeto da autoria do arquiteto grego Alexandros Tombazis. Tempo para fazer as suas compras de artigos religiosos para si, sua família e amigos.',
+  },
+  {
+    location: 'Valinhos',
+    description: 'A aldeia onde nasceram os três pastorinhos, Lúcia, Jacinta e Francisco. Aqui em Valinhos visitamos as casas de pedra calcária pertença das suas famílias que se dedicavam à agricultura e criação de ovelhas, num meio isolado e pobre, mas muito belo, do interior de Portugal.',
+  },
+  {
+    location: 'Coimbra - Universidade',
+    description: 'A cidade de Coimbra, conhecida internacionalmente pela sua famosa universidade (uma das mais antigas da Europa), foi capital de Portugal até 1255. A cidade do Conhecimento, assim conhecida, respira cultura desde as margens do rio Mondego até à colina (morro) da Universidade. Aqui visitaremos a Biblioteca Joanina, considerada pelo jornal britânico "The Telegraph" a mais espetacular biblioteca do mundo. Construída por ordem do rei D. João V, esta biblioteca barroca de uma beleza e riqueza indescritíveis, foi o resultado da visão cultural do rei mais rico da Europa na época, com os seus cofres a abarrotar com o ouro proveniente das Minas Gerais na então colónia Brasileira.',
+  },
+  {
+    location: 'Baixa de Coimbra',
+    description: 'Tempo livre para passear na "Baixa de Coimbra" e visita à Igreja de Santa Cruz onde encontramos os túmulos do primeiro rei de Portugal, D. Afonso I e de seu filho D. Sancho I. Na doçaria local destacamos os pastéis de Santa Clara, os pastéis de Tentúgal e as Arrufadas de Coimbra. Opção para almoço com o famoso leitão da Bairrada (não incluído).',
+  },
+],
     featured: false,
   },
 
@@ -872,55 +795,31 @@ export const tours = [
       'Artesanato e doçaria regional',
     ],
     image:
-      'https://images.unsplash.com/photo-1577551926752-4863c480ba97?w=1200',
+      'https://images.pexels.com/photos/32908043/pexels-photo-32908043.jpeg',
     gallery: [
-      'https://images.unsplash.com/photo-1577551926752-4863c480ba97?w=800',
-      'https://images.unsplash.com/photo-1555881018-9bbb4a7be8f1?w=800',
-      'https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=800',
-      'https://images.unsplash.com/photo-1577086664693-894d8406334a?w=800',
+      'https://images.pexels.com/photos/18177069/pexels-photo-18177069.jpeg',
+      'https://images.pexels.com/photos/25588026/pexels-photo-25588026.jpeg',
+      'https://images.pexels.com/photos/19808191/pexels-photo-19808191.jpeg',
+      'https://images.pexels.com/photos/34128944/pexels-photo-34128944.jpeg',
     ],
     itinerary: [
-      {
-        time: '9:00',
-        location: 'Partida',
-        description: 'Recolha no local designado',
-      },
-      {
-        time: '10:00',
-        location: 'Fátima',
-        description: 'Santuário e Capela das Aparições',
-      },
-      {
-        time: '11:30',
-        location: 'Valinhos',
-        description: 'Casas dos três pastorinhos',
-      },
-      {
-        time: '12:30',
-        location: 'Viagem para Óbidos',
-        description: 'Percurso cénico',
-      },
-      {
-        time: '13:30',
-        location: 'Almoço',
-        description: 'Tempo para almoço (não incluído)',
-      },
-      {
-        time: '15:00',
-        location: 'Óbidos',
-        description: 'Exploração da vila medieval',
-      },
-      {
-        time: '16:30',
-        location: 'Ginja de Óbidos',
-        description: 'Degustação do licor tradicional',
-      },
-      {
-        time: '17:00',
-        location: 'Regresso',
-        description: 'Viagem de volta',
-      },
-    ],
+  {
+    location: 'Fátima - Santuário',
+    description: 'O famoso santuário Mariano de Fátima é sem dúvida um dos maiores centros de peregrinação do mundo. Aqui vêm milhões de pessoas anualmente prestar homenagem aos três pastorinhos que foram testemunhas da aparição da Virgem no lugar da Cova da Iria. Tempo livre para assistir a uma missa (opcional), visitar a Capelinha das Aparições onde se pode ver a imagem da Virgem de Fátima, e a Basílica onde se encontram os túmulos de Lúcia, Jacinta e Francisco (estes dois últimos canonizados pelo Papa Francisco em Maio de 2017, tornando-se assim os santos mais jovens da igreja católica).',
+  },
+  {
+    location: 'Igreja da Santíssima Trindade',
+    description: 'Visita à moderna igreja da Santíssima Trindade de Fátima, com 8.633 lugares sentados e 40.000 m² de área, um projeto da autoria do arquiteto grego Alexandros Tombazis. Tempo para fazer as suas compras de artigos religiosos para si, sua família e amigos.',
+  },
+  {
+    location: 'Valinhos',
+    description: 'A aldeia onde nasceram os três pastorinhos, Lúcia, Jacinta e Francisco. Aqui em Valinhos visitamos as casas de pedra calcária pertença das suas famílias que se dedicavam à agricultura e criação de ovelhas, num meio isolado e pobre, mas muito belo, do interior de Portugal.',
+  },
+  {
+    location: 'Óbidos',
+    description: 'A vila de Óbidos é uma antiga cidade romana que floresceu mesmo depois da queda do império, devido ao grande comércio de produtos que se fazia por via marítima. Na idade média foi amuralhada após a conquista do primeiro rei de Portugal, D. Afonso Henriques. Óbidos é um dos melhores exemplos de cidade medieval em Portugal. Ao entrarmos nas suas muralhas retrocedemos no tempo ao encontrarmos as ruelas de pedra antiga, as casas com as suas fachadas seculares pintadas de branco, o comércio sempre ativo, um sem número de igrejas construídas ao longo dos séculos. Ao caminharmos nas muralhas medievais temos a sensação de viajarmos pelos séculos de história, no encontro de reis e batalhas por cada palmo de terra. Não deixaremos de provar a famosa Ginja de Óbidos, o famoso licor local servido num copinho de chocolate.',
+  },
+],
     featured: false,
   },
 
@@ -949,55 +848,31 @@ export const tours = [
       'Arquitetura militar e religiosa',
     ],
     image:
-      'https://images.unsplash.com/photo-1601296160691-b34a86938874?w=1200',
+      'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi5T3IIwYm1THQQd0cET_F7F5GTevTaSH0IH1Bu8zpEiedI8p7PXeOItXaTE3UwY-kpvzP6HAudGZKhL1dAMP3fizfhvnwPo7zGjtanPiUAXEvj9j8yoLH1g1sEyQbYU6HXFF8lWqzay5dS/s800/PEDRO+ALVARES+CABRAL+CASTELO+ONDE+NASCEU.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1601296160691-b34a86938874?w=800',
-      'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800',
-      'https://images.unsplash.com/photo-1614024672748-ba2f7b6e0b0f?w=800',
-      'https://images.unsplash.com/photo-1580654712911-d7932d8491bc?w=800',
+      'https://mundoviajar.com.br/wp-content/uploads/2019/06/Castelo_de_Almourol.jpg',
+      'https://midias-turismo.eurodicas.com.br/wp-content/uploads/2025/02/tomar-em-portugal-1-1200x800.jpg.webp',
+      'https://www.mybesthotel.eu/pic/_05_5cbe1399cff2b.jpg',
+      'https://midias-turismo.eurodicas.com.br/wp-content/uploads/2025/02/onde-se-hospedar-em-tomar-1.jpg.webp',
     ],
     itinerary: [
-      {
-        time: '9:00',
-        location: 'Partida',
-        description: 'Recolha no local designado',
-      },
-      {
-        time: '10:30',
-        location: 'Tomar',
-        description: 'Chegada à cidade templária',
-      },
-      {
-        time: '11:00',
-        location: 'Convento de Cristo',
-        description: 'Charola e claustos',
-      },
-      {
-        time: '12:30',
-        location: 'Centro de Tomar',
-        description: 'Igreja de Santa Maria do Olival',
-      },
-      {
-        time: '13:30',
-        location: 'Almoço',
-        description: 'Tempo para almoço (não incluído)',
-      },
-      {
-        time: '15:00',
-        location: 'Almourol',
-        description: 'Castelo templário no Rio Tejo',
-      },
-      {
-        time: '16:30',
-        location: 'Dornes',
-        description: 'Torre templária pentagonal',
-      },
-      {
-        time: '17:30',
-        location: 'Regresso',
-        description: 'Viagem de volta',
-      },
-    ],
+  {
+    location: 'Santarém',
+    description: 'A capital do gótico Português, Santarém foi fundada pelos romanos no primeiro século antes de Cristo atingindo o auge da sua prosperidade durante o domínio dos Mouros. Conquistada pelo primeiro rei de Portugal, D. Afonso Henriques em 1147, Santarém tornou-se a capital da região do Ribatejo. Aqui visitaremos a igreja da Graça (século 13, estilo gótico), onde poderemos encontrar o túmulo do grande explorador Português Pedro Álvares Cabral, descobridor do Brasil.',
+  },
+  {
+    location: 'Castelo de Almourol',
+    description: 'O Castelo de Almourol é um dos melhores exemplos da arquitetura militar Templária do século 12. Estrategicamente localizado numa ilha no centro do rio Tejo, esta fortaleza considerada invencível, fazia parte de uma linha de defesa de 5 castelos que protegiam a então capital de Portugal, Coimbra. Aqui faremos a visita ao Castelo de Almourol atravessando o rio Tejo num agradável passeio de barco. Desde as muralhas do castelo desfrutaremos de uma maravilhosa paisagem do rio serpenteando a planície Ribatejana.',
+  },
+  {
+    location: 'Tomar - Centro Histórico',
+    description: 'A ordem dos Cavaleiros do Templo, ou Templários, entrou em Portugal no século doze, ainda antes da fundação do reino. Esta ordem ganha protagonismo em terras Lusas quando o cavaleiro templário Gualdim Pais fica incumbido em Jerusalém pelo fundador dos Templários Hugo de Payens, de fundar a primeira sede Templária na Europa. Nasce a cidade de Tomar, uma réplica da cidade Santa, Jerusalém. Passeio pelas ruas históricas de Tomar e visita à Igreja de Santa Maria do Olival, panteão dos Mestres Templários.',
+  },
+  {
+    location: 'Convento de Cristo',
+    description: 'Com a extinção da ordem dos Templários em 1307, todos os bens em Portugal ficam a cargo da nova Ordem de Cristo. Visita à sede dos Templários na Europa, o Convento de Cristo, Património da Humanidade da UNESCO, local inspirador de histórias e lendas transcritas em livros e adaptadas ao cinema. Aqui poderemos admirar a Charola Templária (rotunda sagrada), os magníficos claustros e a famosa Janela do Capítulo, obra-prima da arquitetura manuelina.',
+  },
+],
     featured: false,
   },
 
@@ -1026,60 +901,35 @@ export const tours = [
       'Costa Nova - Casas listradas',
     ],
     image:
-      'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1200',
+      'https://images.unsplash.com/photo-1559681584-03c381b53ed1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1507',
     gallery: [
-      'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800',
-      'https://images.unsplash.com/photo-1614024672748-ba2f7b6e0b0f?w=800',
-      'https://images.unsplash.com/photo-1580654712911-d7932d8491bc?w=800',
-      'https://images.unsplash.com/photo-1587890146347-0c8ddfbca5fc?w=800',
+      'https://images.unsplash.com/photo-1531772337062-9d94547f333f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1015',
+      'https://images.unsplash.com/photo-1586856349046-a111844f9dc0?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074',
+      'https://images.pexels.com/photos/20167099/pexels-photo-20167099.jpeg',
+      'https://images.pexels.com/photos/5496038/pexels-photo-5496038.jpeg',
     ],
     itinerary: [
-      {
-        time: '9:00',
-        location: 'Partida',
-        description: 'Recolha no local designado',
-      },
-      {
-        time: '10:30',
-        location: 'Coimbra',
-        description: 'Chegada à cidade universitária',
-      },
-      {
-        time: '11:00',
-        location: 'Universidade',
-        description: 'Biblioteca Joanina e Paço das Escolas',
-      },
-      {
-        time: '12:30',
-        location: 'Centro de Coimbra',
-        description: 'Exploração do centro histórico',
-      },
-      {
-        time: '13:30',
-        location: 'Viagem para Aveiro',
-        description: 'Percurso até à "Veneza Portuguesa"',
-      },
-      {
-        time: '14:30',
-        location: 'Almoço em Aveiro',
-        description: 'Gastronomia regional (não incluído)',
-      },
-      {
-        time: '16:00',
-        location: 'Passeio de moliceiro',
-        description: 'Canais de Aveiro (opcional)',
-      },
-      {
-        time: '17:00',
-        location: 'Costa Nova',
-        description: 'Casas listradas tradicionais',
-      },
-      {
-        time: '17:30',
-        location: 'Regresso',
-        description: 'Viagem de volta',
-      },
-    ],
+  {
+    location: 'Coimbra - Universidade',
+    description: 'A cidade de Coimbra, conhecida internacionalmente pela sua famosa universidade (uma das mais antigas da Europa), foi capital de Portugal até 1255. A cidade do Conhecimento, assim conhecida, respira cultura desde as margens do rio Mondego até à colina (morro) da Universidade. Aqui visitaremos a Biblioteca Joanina, considerada pelo jornal britânico "The Telegraph" a mais espetacular biblioteca do mundo. Construída por ordem do rei D. João V, esta biblioteca barroca de uma beleza e riqueza indescritíveis, foi o resultado da visão cultural do rei mais rico da Europa na época, com os seus cofres a abarrotar com o ouro proveniente das Minas Gerais da colónia Brasileira.',
+  },
+  {
+    location: 'Baixa de Coimbra',
+    description: 'Tempo livre para passear na Baixa de Coimbra e visita à Igreja de Santa Cruz onde encontramos os túmulos do primeiro rei de Portugal, D. Afonso I e de seu filho D. Sancho I. Na doçaria local destacamos os pastéis de Santa Clara, os pastéis de Tentúgal e as Arrufadas de Coimbra.',
+  },
+  {
+    location: 'Leitão da Bairrada (Almoço Opcional)',
+    description: 'Tempo para nos deliciarmos com o famoso leitão à Bairrada num dos muitos restaurantes locais (este é um dos pratos típicos e mais famosos da gastronomia portuguesa). Claro que em opção existem outras escolhas para almoçar na região.',
+  },
+  {
+    location: 'Aveiro - "Veneza Portuguesa"',
+    description: 'Aveiro é conhecida pela "Veneza Portuguesa". Obrigatório o passeio de moliceiro (barco típico da região), pelos inúmeros canais que se internam pela cidade e pela ria (rio de água salgada) onde a indústria do sal existe desde a época em que os Romanos habitavam esta área. Tempo livre para caminhar no centro histórico, dominado por edifícios de Arte Nova (Art Nouveau) e pelas lojas e pastelarias onde poderá adquirir o chamado rei do sal, a famosa Flor de Sal (Fleur de Sel) e degustar o doce típico da região, os famosos Ovos Moles de Aveiro.',
+  },
+  {
+    location: 'Costa Nova',
+    description: 'Visita à Costa Nova, famosa pelas suas casas de madeira pintadas às riscas coloridas verticais (palheiros), que eram originalmente usadas pelos pescadores para guardar os seus utensílios. Hoje é uma das imagens mais icónicas da região de Aveiro.',
+  },
+],
     featured: false,
   },
 
@@ -1109,229 +959,37 @@ export const tours = [
     ],
     image: 'https://images.unsplash.com/photo-1555881400-74d7acaacd8b?w=1200',
     gallery: [
-      'https://images.unsplash.com/photo-1555881400-74d7acaacd8b?w=800',
-      'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800',
-      'https://images.unsplash.com/photo-1571501679680-de32f1e7aad4?w=800',
-      'https://images.unsplash.com/photo-1588863167952-21c6a34b0d4e?w=800',
+      'https://images.unsplash.com/photo-1569959220744-ff553533f492?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1164',
+      'https://images.pexels.com/photos/1290141/pexels-photo-1290141.jpeg',
+      'https://plus.unsplash.com/premium_photo-1697729567490-96167a9635cc?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1035',
+      'https://images.unsplash.com/photo-1673978110380-dbe3be80eafd?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170',
     ],
     itinerary: [
-      {
-        time: '7:00',
-        location: 'Partida',
-        description: 'Recolha no local designado',
-      },
-      {
-        time: '9:30',
-        location: 'Porto',
-        description: 'Chegada à Cidade Invicta',
-      },
-      {
-        time: '10:00',
-        location: 'Centro do Porto',
-        description: 'Estação São Bento e Sé Catedral',
-      },
-      {
-        time: '11:00',
-        location: 'Ribeira',
-        description: 'Zona histórica junto ao Douro',
-      },
-      {
-        time: '12:00',
-        location: 'Vila Nova de Gaia',
-        description: 'Caves de Vinho do Porto (opcional)',
-      },
-      {
-        time: '13:00',
-        location: 'Viagem para Santiago',
-        description: 'Atravessar a fronteira para Espanha',
-      },
-      {
-        time: '15:30',
-        location: 'Santiago de Compostela',
-        description: 'Chegada à cidade dos peregrinos',
-      },
-      {
-        time: '16:00',
-        location: 'Catedral',
-        description: 'Plaza del Obradoiro e Catedral',
-      },
-      {
-        time: '17:30',
-        location: 'Centro histórico',
-        description: 'Exploração da cidade velha',
-      },
-      {
-        time: '18:30',
-        location: 'Regresso',
-        description: 'Viagem de volta a Portugal',
-      },
-    ],
-    featured: false,
-  },
-
-  // 16 - Passeio Tomar Convento de Cristo e Coimbra
   {
-    id: 'passeio-tomar-convento-cristo-coimbra',
-    slug: 'passeio-tomar-convento-cristo-coimbra',
-    title: 'Passeio Tomar Convento de Cristo e Coimbra',
-    subtitle: 'Templários e Universidade',
-    duration: 'Até 8 horas',
-    suggestedTime: '9:00',
-    price: {
-      total: 370,
-      perPerson: 93,
-      maxPeople: 4,
-    },
-    description:
-      'Descobra os segredos dos Templários em Tomar e a tradição académica milenar de Coimbra numa viagem através da História de Portugal.',
-    longDescription: `Uma jornada fascinante que combina os mistérios da Ordem dos Templários no magnífico Convento de Cristo de Tomar com a sabedoria acumulada ao longo de séculos na Universidade de Coimbra.`,
-    highlights: [
-      'Tomar - Convento de Cristo (UNESCO)',
-      'Charola Templária original',
-      'Janela do Capítulo manuelina',
-      'Coimbra - Universidade histórica',
-      'Biblioteca Joanina única',
-      'Duas joias do Património Mundial',
-    ],
-    image:
-      'https://images.unsplash.com/photo-1601296160691-b34a86938874?w=1200',
-    gallery: [
-      'https://images.unsplash.com/photo-1601296160691-b34a86938874?w=800',
-      'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800',
-      'https://images.unsplash.com/photo-1614024672748-ba2f7b6e0b0f?w=800',
-      'https://images.unsplash.com/photo-1580654712911-d7932d8491bc?w=800',
-    ],
-    itinerary: [
-      {
-        time: '9:00',
-        location: 'Partida',
-        description: 'Recolha no local designado',
-      },
-      {
-        time: '10:30',
-        location: 'Tomar',
-        description: 'Chegada à cidade templária',
-      },
-      {
-        time: '11:00',
-        location: 'Convento de Cristo',
-        description: 'Charola, claustos e janela manuelina',
-      },
-      {
-        time: '12:30',
-        location: 'Centro de Tomar',
-        description: 'Igreja de Santa Maria do Olival',
-      },
-      {
-        time: '13:30',
-        location: 'Viagem para Coimbra',
-        description: 'Percurso até à cidade universitária',
-      },
-      {
-        time: '14:30',
-        location: 'Almoço',
-        description: 'Gastronomia regional (não incluído)',
-      },
-      {
-        time: '16:00',
-        location: 'Universidade de Coimbra',
-        description: 'Biblioteca Joanina e Paço das Escolas',
-      },
-      {
-        time: '17:30',
-        location: 'Centro de Coimbra',
-        description: 'Exploração do centro histórico',
-      },
-      {
-        time: '18:00',
-        location: 'Regresso',
-        description: 'Viagem de volta',
-      },
-    ],
-    featured: false,
+    location: 'Porto - Panorâmica',
+    description: 'Porto é uma das mais belas cidades Europeias. Começamos a visita com uma panorâmica junto ao mar na praia de Matosinhos, seguindo a costa até à Foz do rio Douro, passando junto ao antigo bairro medieval de Miragaia e chegando à Torre dos Clérigos.',
   },
-
-  // 17 - Tour Fátima e Santiago de Compostela
   {
-    id: 'tour-fatima-santiago-compostela',
-    slug: 'tour-fatima-santiago-compostela',
-    title: 'Tour Fátima e Santiago de Compostela',
-    subtitle: 'Dois Grandes Santuários Ibéricos',
-    duration: 'Até 12 horas',
-    suggestedTime: '7:00',
-    price: {
-      total: 550,
-      perPerson: 138,
-      maxPeople: 4,
-    },
-    description:
-      'Uma peregrinação única que une dois dos mais importantes santuários da Península Ibérica: Fátima em Portugal e Santiago de Compostela em Espanha.',
-    longDescription: `Uma jornada espiritual extraordinária que conecta dois dos maiores centros de peregrinação da Europa: o Santuário de Fátima, onde a Virgem Maria apareceu aos três pastorinhos, e Santiago de Compostela, destino final dos peregrinos do Caminho.`,
-    highlights: [
-      'Fátima - Santuário Mariano mundial',
-      'Capela das Aparições',
-      'Valinhos - Casas dos pastorinhos',
-      'Santiago de Compostela - Catedral',
-      'Plaza del Obradoiro',
-      'Duas tradições de peregrinação',
-    ],
-    image: 'https://images.unsplash.com/photo-1555881018-9bbb4a7be8f1?w=1200',
-    gallery: [
-      'https://images.unsplash.com/photo-1555881018-9bbb4a7be8f1?w=800',
-      'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800',
-      'https://images.unsplash.com/photo-1577086664693-894d8406334a?w=800',
-      'https://images.unsplash.com/photo-1588863167952-21c6a34b0d4e?w=800',
-    ],
-    itinerary: [
-      {
-        time: '7:00',
-        location: 'Partida',
-        description: 'Recolha no local designado',
-      },
-      {
-        time: '8:00',
-        location: 'Fátima',
-        description: 'Santuário e Capela das Aparições',
-      },
-      {
-        time: '9:30',
-        location: 'Valinhos',
-        description: 'Casas dos três pastorinhos',
-      },
-      {
-        time: '10:30',
-        location: 'Tempo para oração',
-        description: 'Momento de recolhimento',
-      },
-      {
-        time: '11:30',
-        location: 'Viagem para Santiago',
-        description: 'Atravessar Portugal e entrar em Espanha',
-      },
-      {
-        time: '15:00',
-        location: 'Santiago de Compostela',
-        description: 'Chegada à cidade dos peregrinos',
-      },
-      {
-        time: '15:30',
-        location: 'Catedral',
-        description: 'Plaza del Obradoiro e Catedral',
-      },
-      {
-        time: '17:00',
-        location: 'Centro histórico',
-        description: 'Exploração da cidade velha',
-      },
-      {
-        time: '18:00',
-        location: 'Regresso',
-        description: 'Viagem de volta a Portugal',
-      },
-    ],
+    location: 'Clérigos, Livraria Lello e Igreja do Carmo',
+    description: 'Aqui poderemos fotografar o símbolo desta cidade: a Torre dos Clérigos, com 75 metros de altura, construída em 1754, na época o edifício mais alto da cidade do Porto. De seguida visitamos a Livraria Lello onde a escritora JK Rowling se inspirou para escrever o seu livro best-seller Harry Potter. Esta é sem dúvida uma das mais belas livrarias em todo o mundo, sendo por isso procurada por imensos turistas. Paragem para fotografia na igreja do Carmo com os seus maravilhosos azulejos em azul e branco a revestir toda a fachada exterior.',
+  },
+  {
+    location: 'Estação de São Bento e Catedral',
+    description: 'A estação de São Bento é mundialmente conhecida pelos seus painéis de azulejos no seu interior que retratam cenas importantes da história de Portugal. A Sé Catedral do Porto é um edifício de estilo românico do século 12 localizado num dos morros da cidade com uma vista fantástica sobre o rio Douro e as suas pontes.',
+  },
+  {
+    location: 'Vila Nova de Gaia - Caves do Vinho do Porto',
+    description: 'Aqui estão as famosas Caves do Vinho do Porto. Se for sua opção poderemos fazer a visita e degustação numa das caves da primeira região vinícola demarcada do mundo: a região do Vinho do Porto.',
+  },
+  {
+    location: 'Santiago de Compostela',
+    description: 'Cidade Galega do noroeste de Espanha, no século nove com a descoberta dos restos mortais do apóstolo Santiago Zebedeu tornou-se o grande centro de peregrinação da Europa, suplantando Jerusalém no médio oriente. Aqui haverá tempo livre para visitar a Catedral de Santiago, do século XI, e o túmulo do apóstolo de Cristo. Passeio pelo centro histórico da cidade, incluindo a famosa Plaza del Obradoiro.',
+  },
+],
     featured: false,
   },
 
+  
   // 18 - Passeio a Sintra e Mafra
   {
     id: 'passeio-sintra-mafra',
@@ -1356,60 +1014,35 @@ export const tours = [
       'Basílica e biblioteca histórica',
       'Arquitetura barroca imponente',
     ],
-    image: 'https://images.unsplash.com/photo-1562281302-809108fd533c?w=1200',
+    image: 'https://images.pexels.com/photos/32473806/pexels-photo-32473806.jpeg',
     gallery: [
-      'https://images.unsplash.com/photo-1562281302-809108fd533c?w=800',
-      'https://images.unsplash.com/photo-1590073844006-33379778ae09?w=800',
-      'https://images.unsplash.com/photo-1601296160691-b34a86938874?w=800',
-      'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800',
+      'https://images.unsplash.com/photo-1697394494123-c6c1323a14f7?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074',
+      'https://images.unsplash.com/photo-1606422981270-d410b689e6db?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1025',
+      'https://images.unsplash.com/photo-1665601398367-00b1bc81e532?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074',
+      'https://images.unsplash.com/photo-1627749635378-10e59a7b2116?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074',
     ],
     itinerary: [
-      {
-        time: '9:00',
-        location: 'Partida',
-        description: 'Recolha no local designado',
-      },
-      {
-        time: '9:30',
-        location: 'Sintra',
-        description: 'Chegada à vila romântica',
-      },
-      {
-        time: '10:00',
-        location: 'Palácio',
-        description: 'Visita a um palácio à escolha',
-      },
-      {
-        time: '12:00',
-        location: 'Centro de Sintra',
-        description: 'Exploração da vila histórica',
-      },
-      {
-        time: '13:00',
-        location: 'Viagem para Mafra',
-        description: 'Percurso até ao palácio-convento',
-      },
-      {
-        time: '13:30',
-        location: 'Almoço',
-        description: 'Tempo para almoço (não incluído)',
-      },
-      {
-        time: '15:00',
-        location: 'Palácio de Mafra',
-        description: 'Basílica, biblioteca e apartamentos reais',
-      },
-      {
-        time: '17:00',
-        location: 'Vila de Mafra',
-        description: 'Exploração da vila histórica',
-      },
-      {
-        time: '17:30',
-        location: 'Regresso',
-        description: 'Viagem de volta',
-      },
-    ],
+  {
+    location: 'Palácio de Queluz (Opcional)',
+    description: 'Visita ao Palácio de Queluz, o "Versalhes Português", com os seus três estilos arquitetónicos: Renascentista, Barroco e Neo-clássico, jardins franceses decorados com fontes de artistas ingleses, estátuas italianas e um magnífico canal (lago-piscina) decorado com azulejos do século 18. Foi residência oficial de D. João VI. Aqui poderemos visitar o quarto onde nasceu e morreu D. Pedro I do Brasil.',
+  },
+  {
+    location: 'Sintra - Centro Histórico',
+    description: 'Sintra é sem dúvida um dos locais mais extraordinários em Portugal. O seu microclima torna esta pequena cidade na encosta da montanha e junto ao Atlântico um ponto de atração para os visitantes que por ali passam para admirar os seus famosos castelos, ou simplesmente apreciar a doçaria e comida tradicional, não esquecendo as lojas com os seus artigos típicos locais. Paragem no centro histórico e tempo livre onde poderá degustar os famosos travesseiros e queijadas na pastelaria Piriquita e explorar as ruelas da cidade mais romântica de Portugal.',
+  },
+  {
+    location: 'Palácio em Sintra (Opcional)',
+    description: 'Visita opcional a um dos palácios: Palácio Nacional de Sintra, Palácio da Pena, Quinta da Regaleira ou Palácio de Monserrate. Cada palácio oferece uma experiência única da arquitetura e história portuguesa.',
+  },
+  {
+    location: 'Palácio Nacional de Mafra',
+    description: 'O Palácio Nacional de Mafra é o mais imponente de Portugal, construído no século 18 por ordem do Rei D. João V, o rei mais rico da Europa à época. O ouro das Minas Gerais da então colónia portuguesa Brasil, financiou grandes construções mandadas executar por este rei, onde se destacam o Aqueduto das Águas Livres em Lisboa e este enorme palácio com os aposentos do Rei e da Rainha em cada extremidade a 232 metros de distância um do outro. Destacam-se nesta visita no interior do palácio barroco, a biblioteca, a enfermaria e o hospital, o convento e a basílica com o seu átrio decorado com esculturas italianas e pedra mármore.',
+  },
+  {
+    location: 'Ericeira',
+    description: 'Uma das mais antigas cidades de pescadores em Portugal, a Ericeira foi fundada pelos Fenícios, 1000 anos antes de Cristo. Tempo livre para caminhar nas ruas pedestres com o seu comércio local, ponto de atração de muitos turistas nacionais e estrangeiros.',
+  },
+],
     featured: false,
   },
 
@@ -1437,45 +1070,27 @@ export const tours = [
       'Valinhos - Casas dos pastorinhos',
       'Tempo para oração ou missa',
     ],
-    image: 'https://images.unsplash.com/photo-1555881018-9bbb4a7be8f1?w=1200',
+    image: 'https://images.pexels.com/photos/18177069/pexels-photo-18177069.jpeg',
     gallery: [
-      'https://images.unsplash.com/photo-1555881018-9bbb4a7be8f1?w=800',
-      'https://images.unsplash.com/photo-1590073242678-70ee3fc28e8e?w=800',
-      'https://images.unsplash.com/photo-1577086664693-894d8406334a?w=800',
-      'https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?w=800',
+      'https://images.pexels.com/photos/30443720/pexels-photo-30443720.jpeg',
+      'https://images.pexels.com/photos/25588026/pexels-photo-25588026.jpeg',
+      'https://images.pexels.com/photos/10854000/pexels-photo-10854000.jpeg',
+      'https://images.pexels.com/photos/10853999/pexels-photo-10853999.jpeg',
     ],
     itinerary: [
-      {
-        time: '9:00',
-        location: 'Partida',
-        description: 'Recolha no local designado',
-      },
-      {
-        time: '10:30',
-        location: 'Santuário de Fátima',
-        description: 'Capela das Aparições, Basílica',
-      },
-      {
-        time: '11:30',
-        location: 'Igreja da Santíssima Trindade',
-        description: 'Visita à igreja moderna',
-      },
-      {
-        time: '12:00',
-        location: 'Tempo livre',
-        description: 'Oração, missa ou compras religiosas (opcional)',
-      },
-      {
-        time: '12:30',
-        location: 'Valinhos',
-        description: 'Casas dos três pastorinhos',
-      },
-      {
-        time: '13:30',
-        location: 'Regresso',
-        description: 'Viagem de volta',
-      },
-    ],
+  {
+    location: 'Fátima - Santuário',
+    description: 'O famoso santuário Mariano de Fátima é sem dúvida um dos maiores centros de peregrinação do mundo. Aqui vêm milhões de pessoas anualmente prestar homenagem aos três pastorinhos que foram testemunhas da aparição da Virgem no lugar da Cova da Iria. Tempo livre para assistir a uma missa (opcional), visitar a Capelinha das Aparições onde se pode ver a imagem da Virgem de Fátima, e a Basílica onde se encontram os túmulos de Lúcia, Jacinta e Francisco (estes dois últimos canonizados pelo Papa Francisco em Maio de 2017, tornando-se assim os santos mais jovens da igreja católica).',
+  },
+  {
+    location: 'Igreja da Santíssima Trindade',
+    description: 'Visita à moderna igreja da Santíssima Trindade de Fátima, com 8.633 lugares sentados e 40.000 m² de área, um projeto da autoria do arquiteto grego Alexandros Tombazis. Tempo para fazer as suas compras de artigos religiosos para si, sua família e amigos.',
+  },
+  {
+    location: 'Valinhos',
+    description: 'A aldeia onde nasceram os três pastorinhos, Lúcia, Jacinta e Francisco. Aqui em Valinhos visitamos as casas de pedra calcária pertença das suas famílias que se dedicavam à agricultura e criação de ovelhas, num meio isolado e pobre, mas muito belo, do interior de Portugal.',
+  },
+],
     featured: false,
   },
 
@@ -1504,333 +1119,41 @@ export const tours = [
       'Estoril e o famoso Casino',
     ],
     image:
-      'https://images.unsplash.com/photo-1588863167952-21c6a34b0d4e?w=1200',
+      'https://www.portugal.net/en/wp-content/uploads/sites/107/queluz-1.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1588863167952-21c6a34b0d4e?w=800',
-      'https://images.unsplash.com/photo-1562281302-809108fd533c?w=800',
-      'https://images.unsplash.com/photo-1567177173829-eedf4f72793e?w=800',
-      'https://images.unsplash.com/photo-1555881400-74d7acaacd8b?w=800',
+      'https://images.pexels.com/photos/27832068/pexels-photo-27832068.jpeg',
+      'https://a.travel-assets.com/findyours-php/viewfinder/images/res70/233000/233540-Boca-Do-Inferno.jpg',
+      'https://images.unsplash.com/photo-1615672337780-6e19a28a5b39?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1169',
+      'https://images.pexels.com/photos/29353364/pexels-photo-29353364.jpeg',
     ],
     itinerary: [
-      {
-        time: '9:00',
-        location: 'Partida',
-        description: 'Recolha no local designado',
-      },
-      {
-        time: '9:30',
-        location: 'Sintra',
-        description: 'Centro histórico, ruas de pedra',
-      },
-      {
-        time: '10:00',
-        location: 'Palácio (opcional)',
-        description: 'Visita a um palácio à escolha',
-      },
-      {
-        time: '11:00',
-        location: 'Boca do Inferno',
-        description: 'Paragem para fotos',
-      },
-      {
-        time: '11:30',
-        location: 'Cascais',
-        description: 'Tempo livre na baía',
-      },
-      {
-        time: '12:30',
-        location: 'Costa do Estoril',
-        description: 'Regresso pela costa',
-      },
-      {
-        time: '13:00',
-        location: 'Chegada',
-        description: 'Fim do tour',
-      },
-    ],
+  {
+    location: 'Palácio de Queluz (Opcional)',
+    description: 'Visita ao Palácio de Queluz, o "Versalhes Português", com os seus três estilos arquitetónicos: Renascentista, Barroco e Neo-clássico, jardins franceses decorados com fontes de artistas ingleses, estátuas italianas e um magnífico canal (lago-piscina) decorado com azulejos do século 18. Foi residência oficial de D. João VI. Aqui poderemos visitar o quarto onde nasceu e morreu D. Pedro I do Brasil. (Em opção poderá visitar um dos palácios de Sintra: Palácio Nacional de Sintra, Palácio da Pena, Quinta da Regaleira ou Palácio de Monserrate)',
+  },
+  {
+    location: 'Sintra - Centro Histórico',
+    description: 'Sintra é sem dúvida um dos locais mais extraordinários em Portugal. O seu microclima torna esta pequena cidade na encosta da montanha e junto ao Atlântico um ponto de atração para os visitantes que por ali passam para admirar os seus famosos castelos, ou simplesmente apreciar a doçaria e comida tradicional, não esquecendo as lojas com os seus artigos típicos locais. Paragem no centro histórico e tempo livre onde poderá degustar os famosos travesseiros e queijadas na pastelaria Piriquita e explorar as ruelas da cidade mais romântica de Portugal.',
+  },
+  {
+    location: 'Boca do Inferno',
+    description: 'Paragem para fotografar a Boca do Inferno, uma imponente cratera rochosa virada para o oceano Atlântico, formada pela erosão das ondas ao longo dos séculos.',
+  },
+  {
+    location: 'Cascais',
+    description: 'Esta antiga cidade romana de pescadores tornou-se no século 20 uma das estações balneares (resort) preferidas dos lisboetas que ali vão para desfrutar do sol e do mar, dos seus bares e restaurantes. Conhecida internacionalmente pelos seus grandes eventos náuticos (World Cup Sailing, America\'s Cup, Red Bull Flugtag), Cascais atrai imensos turistas de todo o mundo, quer para visitar quer para residir, sendo uma das cidades mais cosmopolitas da Europa. Tempo livre para explorar as ruas de Cascais.',
+  },
+  {
+    location: 'Costa do Estoril',
+    description: 'Viagem de regresso a Lisboa feita ao longo da Costa do Estoril com uma paisagem de mar deslumbrante, passando pelo famoso casino de Estoril que inspirou Ian Fleming a escrever "Casino Royale".',
+  },
+],
     featured: false,
   },
 
-  // 21 - Tour de Lisboa 4h
-  {
-    id: 'tour-lisboa-4horas',
-    slug: 'tour-lisboa-4horas',
-    title: 'Tour de Lisboa 4h',
-    subtitle: 'O Essencial da Capital',
-    duration: 'Até 4 horas',
-    suggestedTime: '9:00 ou 14:00',
-    price: {
-      total: 250,
-      perPerson: 63,
-      maxPeople: 4,
-    },
-    description:
-      'Descubra o essencial de Lisboa num tour de meio dia que mostra os pontos mais icónicos da capital portuguesa.',
-    longDescription: `Uma versão concentrada do melhor de Lisboa, perfeita para quem tem tempo limitado mas não quer perder os monumentos e bairros mais emblemáticos da capital. Uma introdução perfeita à cidade das sete colinas.`,
-    highlights: [
-      'Belém - Torre e Mosteiro dos Jerónimos',
-      'Padrão dos Descobrimentos',
-      'Pastéis de Belém originais',
-      'Alfama - Bairro mais antigo',
-      'Miradouros panorâmicos',
-      'Baixa Pombalina histórica',
-    ],
-    image:
-      'https://images.unsplash.com/photo-1585208798174-6cedd86e019a?w=1200',
-    gallery: [
-      'https://images.unsplash.com/photo-1585208798174-6cedd86e019a?w=800',
-      'https://images.unsplash.com/photo-1513735492246-483525079686?w=800',
-      'https://images.unsplash.com/photo-1555881400-74d7acaacd8b?w=800',
-      'https://images.unsplash.com/photo-1573479667972-ea82d7c0104e?w=800',
-    ],
-    itinerary: [
-      {
-        time: '9:00',
-        location: 'Partida',
-        description: 'Recolha no local designado',
-      },
-      {
-        time: '9:30',
-        location: 'Belém',
-        description: 'Torre de Belém e Mosteiro dos Jerónimos',
-      },
-      {
-        time: '10:30',
-        location: 'Padrão dos Descobrimentos',
-        description: 'Monumento aos navegadores',
-      },
-      {
-        time: '11:00',
-        location: 'Pastéis de Belém',
-        description: 'Degustação dos famosos pastéis',
-      },
-      {
-        time: '11:30',
-        location: 'Alfama',
-        description: 'Bairro histórico e miradouros',
-      },
-      {
-        time: '12:30',
-        location: 'Baixa Pombalina',
-        description: 'Praça do Comércio e Rossio',
-      },
-      {
-        time: '13:00',
-        location: 'Chegada',
-        description: 'Fim do tour',
-      },
-    ],
-    featured: false,
-  },
+  
 
-  // 22 - Tour a pé e de bonde em Lisboa 4h
-  {
-    id: 'tour-a-pe-bonde-lisboa',
-    slug: 'tour-a-pe-bonde-lisboa',
-    title: 'Tour a pé e de bonde em Lisboa 4h',
-    subtitle: 'Lisboa Autêntica nos Elétricos',
-    duration: 'Até 4 horas',
-    suggestedTime: '9:00 ou 14:00',
-    price: {
-      total: 280,
-      perPerson: 70,
-      maxPeople: 4,
-    },
-    description:
-      'Experimente Lisboa de forma autêntica combinando caminhadas pelos bairros históricos com viagens nos icónicos elétricos amarelos.',
-    longDescription: `A forma mais autêntica de conhecer Lisboa, combinando caminhadas pelos bairros mais típicos com viagens nos históricos elétricos amarelos. Uma experiência única que mostra a cidade como os lisboetas a vivem.`,
-    highlights: [
-      'Elétrico 28 - Rota mais famosa',
-      'Alfama a pé - Ruelas e fado',
-      'Bairro Alto - Zona boémia',
-      'Chiado - Shopping e cultura',
-      'Rossio e Carmo - Coração da cidade',
-      'Experiência local autêntica',
-    ],
-    image:
-      'https://images.unsplash.com/photo-1573479667972-ea82d7c0104e?w=1200',
-    gallery: [
-      'https://images.unsplash.com/photo-1573479667972-ea82d7c0104e?w=800',
-      'https://images.unsplash.com/photo-1585208798174-6cedd86e019a?w=800',
-      'https://images.unsplash.com/photo-1555881400-74d7acaacd8b?w=800',
-      'https://images.unsplash.com/photo-1513735492246-483525079686?w=800',
-    ],
-    itinerary: [
-      {
-        time: '9:00',
-        location: 'Partida',
-        description: 'Encontro no centro de Lisboa',
-      },
-      {
-        time: '9:30',
-        location: 'Elétrico 28',
-        description: 'Viagem no elétrico mais famoso',
-      },
-      {
-        time: '10:30',
-        location: 'Alfama a pé',
-        description: 'Caminhada pelas ruelas históricas',
-      },
-      {
-        time: '11:30',
-        location: 'Baixa Pombalina',
-        description: 'Exploração do centro comercial',
-      },
-      {
-        time: '12:00',
-        location: 'Elevador da Gloria',
-        description: 'Subida para o Bairro Alto',
-      },
-      {
-        time: '12:30',
-        location: 'Chiado a pé',
-        description: 'Zona comercial e cultural',
-      },
-      {
-        time: '13:00',
-        location: 'Fim do tour',
-        description: 'Despedida no centro',
-      },
-    ],
-    featured: false,
-  },
-
-  // 23 - Passeio noturno Lisboa 3h
-  {
-    id: 'passeio-noturno-lisboa',
-    slug: 'passeio-noturno-lisboa',
-    title: 'Passeio noturno Lisboa 3h',
-    subtitle: 'A Cidade Iluminada',
-    duration: 'Até 3 horas',
-    suggestedTime: '19:00',
-    price: {
-      total: 220,
-      perPerson: 55,
-      maxPeople: 4,
-    },
-    description:
-      'Descubra Lisboa quando o sol se põe. A cidade ganha vida noturna com luzes que destacam monumentos e criam uma atmosfera mágica.',
-    longDescription: `Lisboa à noite tem um charme especial. As luzes destacam os monumentos históricos, os miradouros oferecem vistas espetaculares sobre a cidade iluminada, e a atmosfera noturna convida a descobrir o lado mais romântico da capital.`,
-    highlights: [
-      'Miradouros noturnos espetaculares',
-      'Monumentos iluminados',
-      'Ponte 25 de Abril à noite',
-      'Cristo Rei com vista panorâmica',
-      'Bairros históricos iluminados',
-      'Atmosfera romântica única',
-    ],
-    image: 'https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?w=1200',
-    gallery: [
-      'https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?w=800',
-      'https://images.unsplash.com/photo-1585208798174-6cedd86e019a?w=800',
-      'https://images.unsplash.com/photo-1555881400-74d7acaacd8b?w=800',
-      'https://images.unsplash.com/photo-1513735492246-483525079686?w=800',
-    ],
-    itinerary: [
-      {
-        time: '19:00',
-        location: 'Partida',
-        description: 'Recolha no local designado',
-      },
-      {
-        time: '19:30',
-        location: 'Miradouro da Senhora do Monte',
-        description: 'Vista panorâmica ao pôr do sol',
-      },
-      {
-        time: '20:00',
-        location: 'Alfama iluminada',
-        description: 'Bairro histórico à noite',
-      },
-      {
-        time: '20:30',
-        location: 'Baixa Pombalina',
-        description: 'Centro histórico iluminado',
-      },
-      {
-        time: '21:00',
-        location: 'Ponte 25 de Abril',
-        description: 'Vista noturna da ponte',
-      },
-      {
-        time: '21:30',
-        location: 'Cristo Rei',
-        description: 'Vista panorâmica noturna',
-      },
-      {
-        time: '22:00',
-        location: 'Regresso',
-        description: 'Fim do passeio noturno',
-      },
-    ],
-    featured: false,
-  },
-
-  // 24 - Passeio lisboa à noite com Fado show e jantar
-  {
-    id: 'passeio-lisboa-noite-fado-jantar',
-    slug: 'passeio-lisboa-noite-fado-jantar',
-    title: 'Passeio lisboa à noite com Fado show e jantar',
-    subtitle: 'A Alma de Lisboa numa Noite',
-    duration: 'Até 4 horas',
-    suggestedTime: '19:00',
-    price: {
-      total: 500,
-      perPerson: 125,
-      maxPeople: 4,
-    },
-    description:
-      'O Fado é a expressão noturna de Lisboa. Neste tour, ouviremos esta música única, com tons chorosos tocados por guitarras portuguesas.',
-    longDescription: `O Fado, eleito Património Imaterial da Humanidade, é mais do que apenas um estilo musical, é o som da alma portuguesa. Alfama é o bairro onde nasceu o Fado. É aqui que começamos. Vamos ouvir o verdadeiro Fado de Lisboa, acompanhado de uma refeição tradicional com boa comida e vinho português.`,
-    highlights: [
-      'Jantar tradicional português incluído',
-      'Espetáculo de Fado ao vivo',
-      'Vista panorâmica de Alfama iluminada',
-      'Baixa Pombalina à noite',
-      'Avenida da Liberdade iluminada',
-      'Parque Eduardo VII com vista noturna',
-    ],
-    image: 'https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?w=1200',
-    gallery: [
-      'https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?w=800',
-      'https://images.unsplash.com/photo-1555881018-9bbb4a7be8f1?w=800',
-      'https://images.unsplash.com/photo-1585208798174-6cedd86e019a?w=800',
-      'https://images.unsplash.com/photo-1513735492246-483525079686?w=800',
-    ],
-    itinerary: [
-      {
-        time: '19:00',
-        location: 'Partida',
-        description: 'Recolha no hotel/local designado',
-      },
-      {
-        time: '19:30',
-        location: 'Alfama',
-        description: 'Vista panorâmica do bairro iluminado',
-      },
-      {
-        time: '20:00',
-        location: 'Casa de Fado',
-        description: 'Jantar e espetáculo de Fado',
-      },
-      {
-        time: '22:00',
-        location: 'Tour noturno',
-        description: 'Baixa Pombalina iluminada',
-      },
-      {
-        time: '22:30',
-        location: 'Parque Eduardo VII',
-        description: 'Vista noturna de Lisboa',
-      },
-      {
-        time: '23:00',
-        location: 'Regresso',
-        description: 'Transporte de volta ao hotel',
-      },
-    ],
-    featured: true,
-  },
+  
 ];
 
 export const testimonials = [

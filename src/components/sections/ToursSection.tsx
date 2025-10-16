@@ -13,9 +13,7 @@ const ToursSection = () => {
 
   const categories = [
     { id: 'todos', name: 'Todos os Tours', count: tours.length },
-    { id: 'dia-completo', name: 'Dia Completo', count: 4 },
     { id: 'meio-dia', name: 'Meio Dia', count: 2 },
-    { id: 'noturno', name: 'Noturno', count: 1 },
   ];
 
   const filteredTours = tours.filter(tour => {
@@ -30,7 +28,7 @@ const ToursSection = () => {
     return true;
   });
 
-  const displayedTours = showAll ? filteredTours : filteredTours.slice(0, 6);
+  const displayedTours = showAll ? filteredTours : filteredTours.slice(0, 18);
 
   return (
     <section id='tours' className='py-20 bg-gray-50'>
