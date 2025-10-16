@@ -139,7 +139,7 @@ const Footer = () => {
         <div className='container mx-auto px-4 py-4'>
           <div className='flex flex-col md:flex-row justify-between items-center text-sm text-gray-400'>
             <p>
-              © {currentYear} Premiere Tours Portugal. Todos os direitos
+              © {currentYear} Pedrazzoli Tours Portugal. Todos os direitos
               reservados.
             </p>
             <div className='flex gap-6 mt-2 md:mt-0'>

@@ -84,10 +84,11 @@ const TourDetailHeader: React.FC<TourDetailHeaderProps> = ({ tour }) => {
 
   return (
     <>
-      {/* Header com Breadcrumbs */}
-      <div className='bg-white border-b sticky top-16 z-40 shadow-sm'>
-        <div className='container mx-auto px-4 py-4'>
-          <div className='flex items-center justify-between'>
+      {/* Hero Section com Galeria */}
+      <div className='bg-white pt-20 mt-8'>
+        <div className='container mx-auto px-4 py-8'>
+          {/* Breadcrumbs e Ações */}
+          <div className='flex items-center justify-between mb-6'>
             <div className='flex items-center gap-4'>
               <Link href='/#tours'>
                 <Button
@@ -118,27 +119,14 @@ const TourDetailHeader: React.FC<TourDetailHeaderProps> = ({ tour }) => {
               <Button variant='outline' size='sm' onClick={handleShare}>
                 <Share2 size={16} />
               </Button>
-
-              <Button
-                size='lg'
-                className='bg-secondary hover:bg-secondary/90 text-black font-bold hidden md:inline-flex'
-                onClick={scrollToBooking}
-              >
-                Reservar Agora
-              </Button>
             </div>
           </div>
 
           {/* Breadcrumbs mobile */}
-          <div className='md:hidden mt-3'>
+          <div className='md:hidden mb-4'>
             <Breadcrumbs items={breadcrumbItems} />
           </div>
-        </div>
-      </div>
 
-      {/* Hero Section com Galeria */}
-      <div className='bg-white'>
-        <div className='container mx-auto px-4 py-8'>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

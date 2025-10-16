@@ -67,6 +67,35 @@
 }
 
 /* ============================================
+   HEADER E NAVEGAÇÃO - CORREÇÕES DE Z-INDEX
+   ============================================ */
+
+/* Header principal sempre no topo */
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: auto;
+}
+
+/* Garantir que o conteúdo não sobreponha o header */
+.page-content {
+  padding-top: 80px; /* Ajustar conforme altura do header */
+}
+
+/* Para páginas de tour, garantir espaçamento correto */
+.tour-page-content {
+  padding-top: 0; /* O TourDetailHeader já tem pt-20 */
+}
+
+/* Lightbox sempre acima de tudo */
+.lightbox-overlay {
+  z-index: 9999 !important;
+}
+
+/* ============================================
    ANIMAÇÕES PERSONALIZADAS
    ============================================ */
 
@@ -159,6 +188,10 @@
 
 .animate-pulse-slow {
   animation: pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
 }
 
 /* ============================================
@@ -366,6 +399,14 @@ html {
   .mobile-text-sm {
     @apply text-sm;
   }
+
+  .main-header {
+    height: auto;
+  }
+
+  .page-content {
+    padding-top: 70px;
+  }
 }
 
 /* ============================================
@@ -418,4 +459,47 @@ html {
 .gpu-accelerated {
   transform: translateZ(0);
   -webkit-transform: translateZ(0);
+}
+
+/* ============================================
+   CORREÇÕES ESPECÍFICAS PARA TOUR PAGES
+   ============================================ */
+
+/* Evitar conflitos entre headers */
+.tour-detail-page {
+  position: relative;
+}
+
+.tour-detail-page .main-header {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Garantir que o conteúdo do tour não seja coberto pelo header principal */
+.tour-detail-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Para modais e overlays em páginas de tour */
+.tour-modal-overlay {
+  z-index: 2000 !important;
+}
+
+/* Botões flutuantes específicos para tour pages */
+.tour-floating-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+@media (max-width: 768px) {
+  .tour-floating-buttons {
+    bottom: 80px; /* Espaço para não sobrepor outros elementos mobile */
+  }
 }
