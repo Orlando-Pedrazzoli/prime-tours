@@ -152,7 +152,10 @@ const TourDetailContent: React.FC<TourDetailContentProps> = ({ tour }) => {
               </h2>
               <div className='relative w-full h-[600px] rounded-xl overflow-hidden border-4 border-gray-100'>
                 <img
-                  src={`/${tourMapImages[tour.slug] || 'default-map.jpg'}`}
+                  src={`/${
+                    tourMapImages[tour.slug as keyof typeof tourMapImages] ||
+                    'default-map.jpg'
+                  }`}
                   alt={`Mapa do percurso - ${tour.title}`}
                   className='w-full h-full object-cover'
                   onError={e => {

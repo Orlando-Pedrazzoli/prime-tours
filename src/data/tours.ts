@@ -55,52 +55,46 @@ export const tours = [
     image:
       'https://images.unsplash.com/photo-1585208798174-6cedd86e019a?w=1200',
     gallery: [
-      'https://images.unsplash.com/photo-1585208798174-6cedd86e019a?w=800',
-      'https://images.unsplash.com/photo-1513735492246-483525079686?w=800',
-      'https://images.unsplash.com/photo-1555881400-74d7acaacd8b?w=800',
-      'https://images.unsplash.com/photo-1573479667972-ea82d7c0104e?w=800',
+      'https://images.unsplash.com/photo-1639515918990-c283ecdfb0fd?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074',
+      'https://images.unsplash.com/photo-1715677821506-391be19b8aef?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170',
+      'https://images.unsplash.com/photo-1624300346653-2cdf13634ed1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1632',
+      'https://images.unsplash.com/photo-1682616789315-b9a9f1e95ca7?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1491',
     ],
     itinerary: [
       {
-        time: '9:00',
-        location: 'Parque das Nações (Expo 98)',
-        description: 'Arquitetura moderna, Oceanário opcional',
+        location: 'Expo 98 - Parque das Nações',
+        description:
+          'Lugar onde em 1998 ocorreu a Feira Mundial, agora chamada Parque das Nações é o bairro mais recente da cidade de Lisboa onde se podem admirar algumas das maravilhas da arquitetura moderna (Ponte Vasco da Gama, Oceanário, Estação de trem do Oriente, Torres de São Gabriel e São Rafael, Shopping Vasco da Gama entre outros). Paragens para fotos e visita ao Oceanário (opcional) eleito pela TripAdvisor o melhor da Europa.',
       },
       {
-        time: '10:30',
         location: 'Alfama',
         description:
-          'Bairro mais antigo, miradouros, Castelo de São Jorge opcional',
+          'O bairro mais antigo de Lisboa que remonta à época dos mouros (séculos 8 a 12). Os mirantes de Santa Luzia e da Senhora do Monte proporcionam vistas maravilhosas do rio Tejo e da cidade. Exploraremos as ruelas, travessas e becos com pavimento de basalto, onde as fachadas das casas estão cobertas com azulejos, herança árabe na Península Ibérica. Aqui nasceu a canção nacional Portuguesa: O Fado. A Sé Catedral de Lisboa (ano de 1148) e a igreja de Santo António são outros dois pontos de passagem.',
       },
       {
-        time: '12:00',
         location: 'Baixa Pombalina',
-        description: 'Praça do Comércio, Rossio, Arco da Rua Augusta',
+        description:
+          'Após o terremoto de 1755, o Marquês de Pombal reconstruiu o centro da cidade devastado, criando a primeira cidade moderna na Europa com plano urbanístico geométrico inovador. Visitaremos as famosas praças do Comércio e do Rossio (estátua de D. Pedro I do Brasil), a rua Augusta (a mais importante rua pedestre de Portugal), com o seu famoso Arco de Triunfo.',
       },
       {
-        time: '13:00',
-        location: 'Almoço',
-        description: 'Tempo livre para almoço (não incluído)',
-      },
-      {
-        time: '14:30',
         location: 'Parque Eduardo VII',
-        description: 'Vista panorâmica da cidade',
+        description:
+          'Passaremos pela Avenida da Liberdade, a Champs Élysées de Lisboa, uma das avenidas mais belas do mundo. Passagem pelo monumento do Marquês de Pombal. Do alto do Parque Eduardo VII, admiraremos a vista maravilhosa da cidade de Lisboa e do rio Tejo.',
       },
       {
-        time: '15:00',
-        location: 'Ponte 25 de Abril e Cristo Rei',
-        description: 'Vistas espetaculares',
+        location: 'Ponte 25 de Abril e Monumento do Cristo Rei',
+        description:
+          'Inaugurada em 1966, a Ponte 25 de Abril é uma das mais imponentes pontes suspensas por cabos em todo o mundo. O monumento do Cristo Rei, inaugurado em 1959, oferece a panorâmica mais espetacular sobre a cidade de Lisboa a cerca de duzentos metros acima do nível do rio Tejo.',
       },
       {
-        time: '16:00',
         location: 'Belém',
-        description: 'Mosteiro dos Jerónimos, Torre de Belém, Pastéis de Belém',
+        description:
+          'O bairro dedicado aos grandes exploradores Portugueses dos séculos 15 e 16. Os majestosos monumentos refletem a época de ouro da história de Portugal: o Mosteiro dos Jerónimos, a Torre de Belém, e o Padrão dos Descobrimentos com as estátuas dos grandes navegadores Portugueses (Pedro Álvares Cabral, Vasco da Gama entre outros). Visita obrigatória aos Pastéis de Belém, os doces mais típicos de Portugal.',
       },
       {
-        time: '17:30',
         location: 'Chiado e Bairro Alto',
-        description: 'Zonas boémias e artísticas',
+        description:
+          'O boémio bairro do Chiado, reconstruído após o incêndio de 1988, é o bairro mais movimentado de Lisboa, com o famoso café A Brasileira e a estátua de Fernando Pessoa. Aqui estão alguns dos mais famosos restaurantes de Portugal. O Bairro Alto, situado num dos sete morros de Lisboa, é o local preferido dos Alfacinhas para desfrutarem da noite de Lisboa, com seus inúmeros bares, restaurantes e casas de fado.',
       },
     ],
     featured: true,
@@ -130,53 +124,49 @@ export const tours = [
       'Cascais - Vila de pescadores cosmopolita',
       'Costa do Estoril - Cassino que inspirou James Bond',
     ],
-    image: 'https://images.unsplash.com/photo-1562281302-809108fd533c?w=1200',
+    image:
+      'https://images.unsplash.com/photo-1697050303652-0b228f3f83df?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1632',
     gallery: [
-      'https://images.unsplash.com/photo-1562281302-809108fd533c?w=800',
-      'https://images.unsplash.com/photo-1555881400-74d7acaacd8b?w=800',
-      'https://images.unsplash.com/photo-1590073844006-33379778ae09?w=800',
-      'https://images.unsplash.com/photo-1567177173829-eedf4f72793e?w=800',
+      'https://images.unsplash.com/photo-1587973878066-b93f5430f875?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1171',
+      'https://images.unsplash.com/photo-1643119763555-d4239b5dfa12?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1171',
+      'https://images.unsplash.com/photo-1587973878097-ef3aabd5eeaa?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1171',
+      'https://images.pexels.com/photos/19952252/pexels-photo-19952252.jpeg',
     ],
     itinerary: [
       {
-        time: '8:30',
-        location: 'Partida',
-        description: 'Recolha no local designado',
-      },
-      {
-        time: '9:00',
         location: 'Palácio de Queluz',
-        description: 'Visita opcional ao "Versalhes Português"',
+        description:
+          'Visita opcional ao "Versalhes Português", com os seus três estilos arquitetónicos: Renascentista, Barroco e Neo-clássico, jardins franceses decorados com fontes de artistas ingleses, estátuas italianas e um magnífico canal (lago-piscina) decorado com azulejos do século 18. Foi residência oficial de D. João VI. Aqui poderemos visitar o quarto onde nasceu e morreu D. Pedro I do Brasil.',
       },
       {
-        time: '10:00',
-        location: 'Sintra',
-        description: 'Centro histórico, visita a um palácio à escolha',
+        location: 'Sintra - Centro Histórico',
+        description:
+          'Sintra é sem dúvida um dos locais mais extraordinários em Portugal. O seu microclima torna esta pequena cidade na encosta da montanha e junto ao Atlântico um ponto de atração para os visitantes. Paragem no centro histórico e tempo livre onde poderá degustar os famosos travesseiros e queijadas na pastelaria Piriquita e explorar as ruelas da cidade mais romântica de Portugal.',
       },
       {
-        time: '13:00',
-        location: 'Almoço',
-        description: 'Tempo para almoço em Sintra (não incluído)',
+        location: 'Palácio em Sintra',
+        description:
+          'Visita opcional a um dos palácios: Palácio Nacional de Sintra, Palácio da Pena, Quinta da Regaleira ou Palácio de Monserrate. Cada palácio oferece uma experiência única da arquitetura e história portuguesa.',
       },
       {
-        time: '14:30',
         location: 'Cabo da Roca',
-        description: 'Ponto mais ocidental da Europa continental',
+        description:
+          'O ponto mais oeste da Europa continental. Paragem para fotografia e admirar a beleza paisagística do Cabo da Roca, onde as falésias encontram o oceano Atlântico de forma espetacular.',
       },
       {
-        time: '15:30',
         location: 'Boca do Inferno',
-        description: 'Formação rochosa impressionante',
+        description:
+          'Paragem para fotografar a Boca do Inferno, uma imponente cratera rochosa virada para o oceano Atlântico, formada pela erosão das ondas ao longo dos séculos.',
       },
       {
-        time: '16:00',
         location: 'Cascais',
-        description: 'Tempo livre na baía',
+        description:
+          "Esta antiga cidade romana de pescadores tornou-se no século 20 uma das estações balneares (resort) preferidas dos lisboetas. Conhecida internacionalmente pelos seus grandes eventos náuticos (World Cup Sailing, America's Cup, Red Bull Flugtag), Cascais atrai imensos turistas de todo o mundo, sendo uma das cidades mais cosmopolitas da Europa. Tempo livre para explorar as ruas de Cascais.",
       },
       {
-        time: '17:00',
         location: 'Costa do Estoril',
-        description: 'Regresso por Estoril com vista para o mar',
+        description:
+          'Estoril, famoso internacionalmente pelo seu casino que inspirou Ian Fleming a escrever "Casino Royale", o primeiro livro da série James Bond. Viagem de regresso a Lisboa feita ao longo da Costa do Estoril com uma paisagem de mar deslumbrante.',
       },
     ],
     featured: true,
@@ -205,53 +195,44 @@ export const tours = [
       'Nazaré - Vila piscatória famosa pelas ondas gigantes',
       'Óbidos - Vila medieval murada, Ginja de Óbidos',
     ],
-    image: 'https://images.unsplash.com/photo-1555881018-9bbb4a7be8f1?w=1200',
+    image:
+      'https://images.unsplash.com/photo-1719851299604-4fc8a558e1fe?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1173',
     gallery: [
-      'https://images.unsplash.com/photo-1555881018-9bbb4a7be8f1?w=800',
-      'https://images.unsplash.com/photo-1590073242678-70ee3fc28e8e?w=800',
-      'https://images.unsplash.com/photo-1577551926752-4863c480ba97?w=800',
-      'https://images.unsplash.com/photo-1601296160691-b34a86938874?w=800',
+      'https://images.pexels.com/photos/20354066/pexels-photo-20354066.jpeg',
+      'https://images.unsplash.com/photo-1608208771441-9661953383a2?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1073',
+      'https://images.unsplash.com/photo-1584809414362-b15e562c4a10?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170',
+      'https://images.unsplash.com/photo-1697394491967-c6faf458ced7?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074',
     ],
     itinerary: [
       {
-        time: '9:00',
-        location: 'Partida',
-        description: 'Recolha no local designado',
+        location: 'Fátima - Santuário',
+        description:
+          'O famoso santuário Mariano de Fátima é sem dúvida um dos maiores centros de peregrinação do mundo. Aqui vêm milhões de pessoas anualmente prestar homenagem aos três pastorinhos que foram testemunhas da aparição da Virgem no lugar da Cova da Iria. Tempo livre para assistir a uma missa (opcional), visitar a Capelinha das Aparições onde se pode ver a imagem da Virgem de Fátima, e a Basílica onde se encontram os túmulos de Lúcia, Jacinta e Francisco (estes dois últimos canonizados pelo Papa Francisco em Maio de 2017, tornando-se assim os santos mais jovens da igreja católica).',
       },
       {
-        time: '10:00',
-        location: 'Fátima',
-        description: 'Santuário, Basílica, Capela das Aparições',
+        location: 'Igreja da Santíssima Trindade',
+        description:
+          'Visita à moderna igreja da Santíssima Trindade de Fátima, com 8.633 lugares sentados e 40.000 m² de área, um projeto da autoria do arquiteto grego Alexandros Tombazis. Tempo para fazer as suas compras de artigos religiosos para si, sua família e amigos.',
       },
       {
-        time: '11:30',
         location: 'Valinhos',
-        description: 'Casas dos três pastorinhos',
+        description:
+          'Na aldeia de Valinhos nasceram os três pastorinhos, Lúcia, Jacinta e Francisco. Aqui visitamos as casas de pedra calcária pertença das suas famílias que se dedicavam à agricultura e criação de ovelhas, num meio isolado e pobre, mas muito belo, do interior de Portugal.',
       },
       {
-        time: '12:30',
-        location: 'Batalha',
-        description: 'Mosteiro da Batalha (UNESCO)',
+        location: 'Batalha - Mosteiro',
+        description:
+          'O mosteiro da Batalha foi mandado construir pelo rei D. João I, para celebrar a vitória Portuguesa na célebre batalha de Aljubarrota em 1385. Património da UNESCO, este monumento é um dos melhores exemplos do estilo gótico europeu, na sua fase final. No interior alberga a igreja de Santa Maria da Vitória, a mais alta de Portugal com 32,5 metros de altura. Este mosteiro, símbolo da nacionalidade Portuguesa, é sem dúvida um dos monumentos mais belos da arquitetura portuguesa medieval.',
       },
       {
-        time: '14:00',
-        location: 'Almoço',
-        description: 'Tempo para almoço (não incluído)',
-      },
-      {
-        time: '15:30',
         location: 'Nazaré',
-        description: 'Vista das ondas gigantes, Praia do Norte',
+        description:
+          'A antiga vila de pescadores da Nazaré tornou-se numa das estações balneárias mais procuradas pelos turistas. A sua maravilhosa praia com um areal branco de enorme extensão cativa quantos por ali passam. A Nazaré tornou-se mundialmente conhecida devido às ondas gigantes na Praia do Norte. Aqui foi batido o record mundial da maior onda do mundo com 24,4 metros, surfada pelo brasileiro Rodrigo Koxa. Paragem com tempo livre para fotos.',
       },
       {
-        time: '16:30',
         location: 'Óbidos',
-        description: 'Vila medieval, muralhas, Ginja',
-      },
-      {
-        time: '17:30',
-        location: 'Regresso',
-        description: 'Viagem de volta',
+        description:
+          'A vila de Óbidos é uma antiga cidade romana que floresceu mesmo depois da queda do império. Na idade média foi amuralhada após a conquista do primeiro rei de Portugal, D. Afonso Henriques. Óbidos é um dos melhores exemplos de cidade medieval em Portugal. Ao entrarmos nas suas muralhas retrocedemos no tempo ao encontrarmos as ruelas de pedra antiga, as casas com as suas fachadas seculares pintadas de branco, o comércio sempre ativo, um sem número de igrejas construídas ao longo dos séculos. Não deixaremos de provar a famosa Ginja de Óbidos, o famoso licor local servido num copinho de chocolate.',
       },
     ],
     featured: true,
@@ -282,58 +263,48 @@ export const tours = [
       'Travesseiros e Queijadas tradicionais',
     ],
     image:
-      'https://images.unsplash.com/photo-1538970272646-f61fabb3a8a2?w=1200',
+      'https://images.unsplash.com/photo-1556755658-871cbaa86a3f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1171',
     gallery: [
-      'https://images.unsplash.com/photo-1538970272646-f61fabb3a8a2?w=800',
-      'https://images.unsplash.com/photo-1585208798174-6cedd86e019a?w=800',
-      'https://images.unsplash.com/photo-1562281302-809108fd533c?w=800',
-      'https://images.unsplash.com/photo-1590073844006-33379778ae09?w=800',
+      'https://plus.unsplash.com/premium_photo-1677344289076-b4e8d7325e94?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170',
+      'https://images.pexels.com/photos/11023106/pexels-photo-11023106.jpeg',
+      'https://images.unsplash.com/photo-1693474461982-2853d7242561?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170',
+      'https://images.unsplash.com/photo-1662506254404-e8ee655d491a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170',
     ],
     itinerary: [
       {
-        time: '9:00',
-        location: 'Partida',
-        description: 'Recolha no local designado',
+        location: 'Alfama',
+        description:
+          'O bairro mais antigo de Lisboa que remonta à época dos mouros (séculos 8 a 12). Os mirantes de Santa Luzia e da Senhora do Monte são paragem obrigatória, proporcionando vistas maravilhosas do rio Tejo e da cidade. Exploraremos as ruelas, travessas e becos com pavimento de basalto, onde as fachadas das casas estão cobertas com azulejos, herança árabe na Península Ibérica. Aqui nasceu a canção nacional Portuguesa: O Fado. A Sé Catedral de Lisboa (ano de 1148) e a igreja de Santo António são outros dois pontos de passagem.',
       },
       {
-        time: '9:30',
+        location: 'Baixa Pombalina',
+        description:
+          'Em 1755 o maior terremoto jamais registrado na Europa ocorreu em Lisboa. O Marquês de Pombal reconstruiu o centro da cidade completamente devastado. Assim nasceu a primeira cidade moderna na Europa: a Baixa Pombalina, com o seu plano urbanístico geométrico inovador, foi o modelo usado na construção das novas cidades, sobretudo no Novo Mundo (Manhattan em Nova Iorque, Centro de Chicago, etc.). Aqui visitaremos as famosas praças do Comércio e do Rossio (estátua de D. Pedro I do Brasil), a rua Augusta (a mais importante rua pedestre de Portugal), com o seu famoso Arco de Triunfo.',
+      },
+      {
         location: 'Belém',
-        description: 'Torre de Belém e Mosteiro dos Jerónimos',
+        description:
+          'Belém, o bairro de Lisboa dedicado aos grandes exploradores Portugueses dos séculos 15 e 16. Tendo sido Portugal a primeira nação globalizadora do mundo com a chegada dos seus exploradores a todos os continentes, o seu império tornou-se um dos maiores da história da humanidade. Os majestosos monumentos que aqui encontramos refletem a época de ouro da história de Portugal: o Mosteiro dos Jerónimos, a Torre de Belém, e o Padrão dos Descobrimentos com as estátuas dos grandes navegadores Portugueses (Pedro Álvares Cabral, Vasco da Gama entre tantos outros). Visita obrigatória aos Pastéis de Belém, os doces mais típicos de Portugal.',
       },
       {
-        time: '11:00',
-        location: 'Padrão dos Descobrimentos',
-        description: 'Monument aos navegadores portugueses',
+        location: 'Palácio de Queluz',
+        description:
+          'Visita opcional ao Palácio de Queluz, o "Versalhes Português", com os seus três estilos arquitetónicos: Renascentista, Barroco e Neo-clássico, jardins franceses decorados com fontes de artistas ingleses, estátuas italianas e um magnífico canal (lago-piscina) decorado com azulejos do século 18. Foi residência oficial de D. João VI. Aqui poderemos visitar o quarto onde nasceu e morreu D. Pedro I do Brasil. (Em opção poderá visitar um dos palácios de Sintra: Palácio Nacional de Sintra, Palácio da Pena, Quinta da Regaleira ou Palácio de Monserrate)',
       },
       {
-        time: '11:30',
-        location: 'Pastéis de Belém',
-        description: 'Degustação dos famosos pastéis',
+        location: 'Sintra - Centro Histórico',
+        description:
+          'Sintra é sem dúvida um dos locais mais extraordinários em Portugal. O seu microclima torna esta pequena cidade na encosta da montanha e junto ao Atlântico um ponto de atração para os visitantes que por ali passam para admirar os seus famosos castelos, ou simplesmente apreciar a doçaria e comida tradicional, não esquecendo as lojas com os seus artigos típicos locais. Paragem no centro histórico e tempo livre onde poderá degustar os famosos travesseiros e queijadas na pastelaria Piriquita e explorar as ruelas da cidade mais romântica de Portugal.',
       },
       {
-        time: '12:30',
-        location: 'Viagem para Sintra',
-        description: 'Percurso cénico até Sintra',
+        location: 'Cabo da Roca',
+        description:
+          'O ponto mais oeste da Europa continental. Paragem no Cabo da Roca para fotografia e admirar a beleza paisagística onde as falésias encontram o oceano Atlântico.',
       },
       {
-        time: '13:30',
-        location: 'Almoço em Sintra',
-        description: 'Tempo para almoço (não incluído)',
-      },
-      {
-        time: '15:00',
-        location: 'Palácio',
-        description: 'Visita a um palácio à escolha',
-      },
-      {
-        time: '16:30',
-        location: 'Centro de Sintra',
-        description: 'Exploração da vila histórica',
-      },
-      {
-        time: '17:30',
-        location: 'Regresso',
-        description: 'Viagem de volta',
+        location: 'Cascais',
+        description:
+          "Esta antiga cidade romana de pescadores tornou-se no século 20 uma das estações balneárias (resort) preferidas dos lisboetas que ali vão para desfrutar do sol e do mar, dos seus bares e restaurantes. Conhecida internacionalmente pelos seus grandes eventos náuticos (World Cup Sailing, America's Cup, Red Bull Flugtag), Cascais atrai imensos turistas de todo o mundo, quer para visitar quer para residir, sendo uma das cidades mais cosmopolitas da Europa. Tempo livre para explorar as ruas de Cascais.",
       },
     ],
     featured: false,
@@ -364,63 +335,53 @@ export const tours = [
       'Gastronomia regional tradicional',
     ],
     image:
-      'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1200',
+      'https://images.unsplash.com/photo-1697992253894-b957af8b3be4?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1631',
     gallery: [
-      'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800',
-      'https://images.unsplash.com/photo-1614024672748-ba2f7b6e0b0f?w=800',
-      'https://images.unsplash.com/photo-1580654712911-d7932d8491bc?w=800',
-      'https://images.unsplash.com/photo-1587890146347-0c8ddfbca5fc?w=800',
+      'https://images.unsplash.com/photo-1747787759521-a1880a476384?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170',
+      'https://images.unsplash.com/photo-1750473966351-f213853f213a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170',
+      'https://images.unsplash.com/photo-1694429908976-0825ff3154fb?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170',
+      'https://images.unsplash.com/photo-1694429908978-d3449534b730?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170',
     ],
     itinerary: [
       {
-        time: '9:00',
-        location: 'Partida',
-        description: 'Recolha no local designado',
+        location: 'Ponte Vasco da Gama',
+        description:
+          'Iniciamos a nossa viagem em direção a Évora atravessando a ponte mais longa da Europa: A Ponte Vasco da Gama. Esta ponte foi construída em 1998 aquando da inauguração da feira mundial de Lisboa (Expo 98), na celebração dos 500 anos da descoberta do caminho marítimo para a Índia por Vasco da Gama. A caminho de Évora iremos desfrutar da paisagem única da região do Alentejo com as suas extensas florestas de sobreiros (árvore da cortiça) e vinhedos (maior região vinícola de Portugal).',
       },
       {
-        time: '10:30',
-        location: 'Évora',
-        description: 'Chegada à cidade património UNESCO',
+        location: 'Fábrica da Cortiça',
+        description:
+          'Visita a uma das fábricas de cortiça da região de Évora, onde aprenderemos o processo da laboração da cortiça, desde a apanha até ao produto final. Aqui também poderemos comprar artigos a preço direto de fábrica.',
       },
       {
-        time: '11:00',
-        location: 'Templo Romano',
-        description: 'Templo de Diana - vestígios romanos',
+        location: 'Cidade de Évora',
+        description:
+          'Visita à cidade Património da Humanidade da UNESCO. Fortificada por uma muralha do século 17, Évora conta-nos a sua história através dos seus monumentos, praças e ruas medievais. Desde o templo romano, às arcadas mouras na praça do Giraldo, passando pela catedral do século 12 e pela Capela dos Ossos do século 17, poderemos reconstituir o passado da cidade considerada o celeiro da Roma antiga, uma das mais importantes cidades comerciais da época árabe em Portugal, tornando-se a capital da província do Alentejo após a conquista portuguesa.',
       },
       {
-        time: '11:30',
+        location: 'Templo Romano (Templo de Diana)',
+        description:
+          'Visita ao impressionante Templo Romano, também conhecido como Templo de Diana, um dos vestígios romanos mais bem preservados da Península Ibérica. Este monumento icónico é testemunho da importância de Évora durante o império romano.',
+      },
+      {
         location: 'Capela dos Ossos',
-        description: 'Igreja de São Francisco',
+        description:
+          'Visita à famosa Capela dos Ossos na Igreja de São Francisco, decorada com ossadas humanas. Esta capela do século 17 com a sua inscrição "Nós ossos que aqui estamos pelos vossos esperamos" é uma reflexão sobre a transitoriedade da vida.',
       },
       {
-        time: '12:30',
-        location: 'Centro histórico',
-        description: 'Sé Catedral e Praça do Giraldo',
-      },
-      {
-        time: '13:30',
-        location: 'Almoço',
-        description: 'Gastronomia alentejana (não incluído)',
-      },
-      {
-        time: '15:00',
-        location: 'Viagem para Monsaraz',
-        description: 'Paisagens alentejanas',
-      },
-      {
-        time: '16:00',
         location: 'Monsaraz',
-        description: 'Vila medieval e vistas sobre Alqueva',
+        description:
+          'Cidade medieval mágica, perto da fronteira com a Espanha. Explore as ruas e vielas de pedra de xisto de Monsaraz e o seu castelo medieval com vista para o maior lago artificial da Europa: o Alqueva. Aprenda sobre o legado dos Cavaleiros Templários e dos judeus portugueses sefarditas nesta joia das cidades históricas de Portugal.',
       },
       {
-        time: '17:00',
-        location: 'Prova de vinhos',
-        description: 'Degustação de vinhos regionais',
+        location: 'Vinícola - Prova de Vinhos',
+        description:
+          'Visita e prova de vinhos opcional a uma vinícola local: Adega da Cartuxa, Herdade do Esporão ou Adega Ervideira. Deguste os famosos vinhos do Alentejo, reconhecidos internacionalmente pela sua qualidade.',
       },
       {
-        time: '18:00',
-        location: 'Regresso',
-        description: 'Viagem de volta',
+        location: 'Ponte 25 de Abril e Cristo Rei',
+        description:
+          'No regresso a Lisboa, passaremos pela Ponte 25 de Abril, inaugurada em 1966 e que se tornou um ex-libris da cidade. É uma das mais imponentes pontes suspensas por cabos em todo o mundo. O monumento do Cristo Rei, inaugurado em 1959, é um santuário nacional. Devido à sua situação privilegiada, o mirante localiza-se a cerca de duzentos metros acima do nível do mar, sendo esta a panorâmica mais espetacular sobre a cidade de Lisboa, facto que atrai milhões de turistas anualmente.',
       },
     ],
     featured: false,
@@ -451,58 +412,48 @@ export const tours = [
       'Prova de vinhos Moscatel',
     ],
     image:
-      'https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=1200',
+      'https://blog.winetourismportugal.com/hs-fs/hubfs/quinta-da-bacalhoa-2.jpg?width=960&name=quinta-da-bacalhoa-2.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=800',
-      'https://images.unsplash.com/photo-1571501679680-de32f1e7aad4?w=800',
-      'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800',
-      'https://images.unsplash.com/photo-1571501679680-de32f1e7aad4?w=800',
+      'https://images.unsplash.com/photo-1600598863272-e33f8342ba7d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2160',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Sesimbra_-_Portugal_%2850956102918%29.jpg/760px-Mapcarta.jpg',
+      'https://www.vagamundos.pt/wp-content/uploads/2020/04/1-23-4.jpg',
+      'https://images.unsplash.com/photo-1639515610041-50bdc1a70df8?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074',
     ],
     itinerary: [
       {
-        time: '9:00',
-        location: 'Partida',
-        description: 'Recolha no local designado',
-      },
-      {
-        time: '9:45',
-        location: 'Azeitão',
-        description: 'Visita a quinta e prova de Moscatel',
-      },
-      {
-        time: '11:00',
         location: 'Palmela',
-        description: 'Castelo e vista panorâmica',
+        description:
+          'Atualmente conhecida por fazer parte da região vinícola da Península de Setúbal, esta antiga cidade moura com casas caiadas de branco é dominada desde o morro pelo estratégico Castelo de Palmela, conquistado por D. Afonso Henriques, primeiro rei de Portugal em 1147 e atribuído à ordem militar de Santiago de Espada. Aqui faremos a visita ao castelo de onde poderemos ver na distância as cidades de Setúbal e de Lisboa.',
       },
       {
-        time: '12:00',
-        location: 'Serra da Arrábida',
-        description: 'Parque Natural e miradouros',
+        location: 'Azeitão',
+        description:
+          'A vila de Azeitão é sobejamente conhecida em Portugal por várias razões das quais destacamos três: O queijo, o vinho e as Tortas de Azeitão (Pastelaria-doçaria). Aqui faremos a visita a uma das caves mais antigas de Portugal, a José Maria da Fonseca e/ou Quinta da Bacalhôa, onde poderemos degustar o célebre vinho Periquita e o mundialmente conhecido vinho fortificado, Moscatel. Tempo também para degustar aquele que no entender de muitos é o melhor queijo de Portugal, o famoso queijo de Azeitão. Poderá também se assim desejar provar a doçaria típica local onde imperam as Tortas de Azeitão.',
       },
       {
-        time: '13:00',
         location: 'Sesimbra',
-        description: 'Almoço na vila piscatória (não incluído)',
+        description:
+          'Antiga vila de pescadores encaixada entre montanhas e com o Atlântico como pano de fundo, aqui iremos explorar as ruelas que albergavam as casas das gentes que faziam da pesca o seu modo de vida. Hoje quase totalmente virada ao comércio e turismo, Sesimbra ainda alberga uma importante frota pesqueira no seu novo porto de abrigo. Tempo livre para almoço e exploração da vila.',
       },
       {
-        time: '15:00',
-        location: 'Praia da Arrábida',
-        description: 'Paragem na praia de águas cristalinas',
+        location: 'Serra da Arrábida',
+        description:
+          'A serra da Arrábida está inserida na região protegida do Parque Natural da Arrábida. Desde os mirantes situados a 500 metros acima do nível do mar iremos observar paisagens de extraordinária beleza que perdurarão na nossa memória por muito tempo. Daqui poderemos ver a maior extensão de praia em Portugal, com 45 quilómetros de comprimento e a terceira maior praia do mundo: Troia!',
       },
       {
-        time: '16:00',
+        location: 'Praias da Arrábida',
+        description:
+          'Paragem nas praias paradisíacas da Arrábida, com águas cristalinas e areias brancas, rodeadas pela vegetação verdejante da serra. Estas praias estão entre as mais belas de Portugal.',
+      },
+      {
         location: 'Setúbal',
-        description: 'Centro histórico e Igreja de Jesus',
+        description:
+          'Esta cidade capital da região, banhada pelo único rio em Portugal que flui de sul para norte, o rio Sado, teve grande desenvolvimento durante a época romana, com a produção de sal e de salga de peixe. Aqui era produzido um dos condimentos mais apreciados pelos povos da antiguidade de Grécia e Roma: o Garum. Tempo livre para caminhar nas ruas do comércio central de Setúbal e visitar o Mercado do Livramento, considerado um dos melhores mercados de peixe do mundo.',
       },
       {
-        time: '17:00',
-        location: 'Mercado do Livramento',
-        description: 'Um dos melhores mercados de peixe do mundo',
-      },
-      {
-        time: '17:30',
-        location: 'Regresso',
-        description: 'Viagem de volta',
+        location: 'Regresso a Lisboa',
+        description:
+          'Regresso a Lisboa pela Ponte 25 de Abril, com vista panorâmica sobre a cidade e o rio Tejo.',
       },
     ],
     featured: false,
@@ -532,63 +483,53 @@ export const tours = [
       'Caves de Vinho do Porto em Vila Nova de Gaia',
       'Estação de São Bento e azulejos',
     ],
-    image: 'https://images.unsplash.com/photo-1555881400-74d7acaacd8b?w=1200',
+    image: 'https://images.pexels.com/photos/5496038/pexels-photo-5496038.jpeg',
     gallery: [
-      'https://images.unsplash.com/photo-1555881400-74d7acaacd8b?w=800',
-      'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800',
-      'https://images.unsplash.com/photo-1571501679680-de32f1e7aad4?w=800',
-      'https://images.unsplash.com/photo-1588863167952-21c6a34b0d4e?w=800',
+      'https://images.unsplash.com/photo-1555881400-74d7acaacd8b?w=1200',
+      'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/fa/10/7d/20200910-113406-largejpg.jpg?w=900&h=500&s=1',
+      'https://images.pexels.com/photos/17847439/pexels-photo-17847439.jpeg',
+      'https://www.sailing-360.com/wp-content/uploads/sites/4302/2025/02/A-historia-dos-barcos-rabelos-do-Douro-000.jpg?w=1000&h=1000',
     ],
     itinerary: [
       {
-        time: '8:00',
-        location: 'Partida',
-        description: 'Recolha no local designado',
+        location: 'Coimbra - Universidade',
+        description:
+          'A cidade de Coimbra, conhecida internacionalmente pela sua famosa universidade (uma das mais antigas da Europa), foi capital de Portugal até 1255. A cidade do Conhecimento, assim conhecida, respira cultura desde as margens do rio Mondego até à colina (morro) da Universidade. Aqui visitaremos a Biblioteca Joanina, considerada pelo jornal britânico "The Telegraph" a mais espetacular biblioteca do mundo. Construída por ordem do rei D. João V, esta biblioteca barroca de uma beleza e riqueza indescritíveis, foi o resultado da visão cultural do rei mais rico da Europa na época, com os seus cofres a abarrotar com o ouro proveniente das Minas Gerais na então colónia Brasileira.',
       },
       {
-        time: '10:00',
-        location: 'Coimbra',
-        description: 'Chegada à cidade universitária',
+        location: 'Baixa de Coimbra',
+        description:
+          'Tempo livre para passear na "Baixa de Coimbra" e visita à Igreja de Santa Cruz onde encontramos os túmulos do primeiro rei de Portugal, D. Afonso I e de seu filho D. Sancho I. Na doçaria local destacamos os pastéis de Santa Clara, os pastéis de Tentúgal e as Arrufadas de Coimbra.',
       },
       {
-        time: '10:30',
-        location: 'Universidade de Coimbra',
-        description: 'Biblioteca Joanina e Paço das Escolas',
+        location: 'Leitão da Bairrada (Almoço Opcional)',
+        description:
+          'Tempo para nos deliciarmos com o famoso leitão à Bairrada num dos muitos restaurantes locais (este é um dos pratos típicos e mais famosos da gastronomia portuguesa). Claro que em opção existem outras escolhas para almoçar na região.',
       },
       {
-        time: '12:00',
-        location: 'Centro de Coimbra',
-        description: 'Exploração do centro histórico',
+        location: 'Porto - Panorâmica',
+        description:
+          'Porto é uma das mais belas cidades Europeias. Começamos a visita com uma panorâmica junto ao mar na praia de Matosinhos, seguindo a costa até à Foz do rio Douro, passando junto ao antigo bairro medieval de Miragaia e chegando aos Clérigos.',
       },
       {
-        time: '13:00',
-        location: 'Viagem para Porto',
-        description: 'Percurso para o norte',
+        location: 'Clérigos, Livraria Lello e Igreja do Carmo',
+        description:
+          'Aqui poderemos fotografar o símbolo desta cidade: a Torre dos Clérigos, com 75 metros de altura, construída em 1754, na época o edifício mais alto do Porto. De seguida visitamos a Livraria Lello onde a escritora JK Rowling se inspirou para escrever o seu livro best-seller Harry Potter. Esta é sem dúvida uma das mais belas livrarias em todo o mundo, sendo por isso procurada por imensos turistas. Paragem para fotografia na Igreja do Carmo com os seus maravilhosos azulejos em azul e branco a revestir toda a fachada exterior.',
       },
       {
-        time: '14:30',
-        location: 'Almoço no Porto',
-        description: 'Gastronomia nortenha (não incluído)',
+        location: 'Estação de São Bento e Catedral',
+        description:
+          'A estação de São Bento é mundialmente conhecida pelos seus painéis de azulejos no seu interior que retratam cenas importantes da história de Portugal. A Sé Catedral do Porto é um edifício de estilo românico do século 12 localizado num dos morros da cidade com uma vista fantástica sobre o rio Douro e as suas pontes.',
       },
       {
-        time: '16:00',
-        location: 'Centro do Porto',
-        description: 'Estação São Bento e Sé Catedral',
+        location: 'Vila Nova de Gaia - Caves do Vinho do Porto',
+        description:
+          'Aqui estão as famosas Caves do Vinho do Porto. Se for sua opção poderemos fazer a visita e degustação em uma das caves da primeira região vinícola demarcada do mundo: a região do Vinho do Porto.',
       },
       {
-        time: '17:00',
-        location: 'Ribeira',
-        description: 'Zona histórica junto ao Douro',
-      },
-      {
-        time: '17:30',
-        location: 'Vila Nova de Gaia',
-        description: 'Caves de Vinho do Porto (opcional)',
-      },
-      {
-        time: '18:30',
-        location: 'Regresso',
-        description: 'Viagem de volta',
+        location: 'Barco Rabelo (Opcional)',
+        description:
+          'Assim se chamam os barcos que traziam os barris de vinho das vinícolas do Vale do Douro até às caves em Gaia. Se optar poderá fazer um passeio de 50 minutos num destes Barcos Rabelo e ficar a conhecer as seis pontes que cruzam o rio Douro na cidade do Porto. A vista panorâmica da cidade vista de barco é simplesmente deslumbrante.',
       },
     ],
     featured: false,
