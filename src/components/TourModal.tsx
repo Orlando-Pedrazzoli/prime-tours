@@ -3,7 +3,7 @@
 import React from 'react';
 import { X, Clock, Users, MapPin, Euro, Check, Calendar } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { formatPrice } from '@/lib/utils';
+import { formatPrice, generatePriceTable } from '@/lib/utils';
 
 interface TourModalProps {
   tour: any;
@@ -13,6 +13,40 @@ interface TourModalProps {
 
 const TourModal: React.FC<TourModalProps> = ({ tour, isOpen, onClose }) => {
   if (!isOpen || !tour) return null;
+
+  // ============================================
+  // TABELA DE PREÇOS DINÂMICA (IGUAL AO TourDetailContent)
+  // ============================================
+  const priceTable =
+    tour.price.basePrice && tour.price.additionalPassenger
+      ? generatePriceTable(
+          tour.price.basePrice,
+          tour.price.additionalPassenger,
+          tour.price.maxPeople
+        )
+      : [
+          // Fallback para tours que ainda não foram atualizados
+          {
+            passengers: 1,
+            total: tour.price.total * 0.74,
+            perPerson: tour.price.total * 0.74,
+          },
+          {
+            passengers: 2,
+            total: tour.price.total * 0.81,
+            perPerson: (tour.price.total * 0.81) / 2,
+          },
+          {
+            passengers: 3,
+            total: tour.price.total * 0.93,
+            perPerson: (tour.price.total * 0.93) / 3,
+          },
+          {
+            passengers: 4,
+            total: tour.price.total,
+            perPerson: tour.price.perPerson,
+          },
+        ];
 
   return (
     <div className='fixed inset-0 z-50 overflow-y-auto'>
@@ -180,43 +214,33 @@ const TourModal: React.FC<TourModalProps> = ({ tour, isOpen, onClose }) => {
               </div>
             </div>
 
-            {/* Preços */}
+            {/* Preços - AGORA COM SISTEMA CORRETO */}
             <div className='bg-primary/5 rounded-xl p-6 mb-8'>
               <h3 className='text-lg font-bold mb-3'>Tabela de Preços</h3>
               <div className='grid grid-cols-2 md:grid-cols-4 gap-4 text-center'>
-                <div>
-                  <p className='text-sm text-gray-500'>1 Pessoa</p>
-                  <p className='font-bold text-lg'>
-                    {formatPrice(tour.price.total * 0.8)}
-                  </p>
-                </div>
-                <div>
-                  <p className='text-sm text-gray-500'>2 Pessoas</p>
-                  <p className='font-bold text-lg'>
-                    {formatPrice(tour.price.total * 0.85)}
-                  </p>
-                  <p className='text-xs text-gray-500'>
-                    {formatPrice((tour.price.total * 0.85) / 2)}/pessoa
-                  </p>
-                </div>
-                <div>
-                  <p className='text-sm text-gray-500'>3 Pessoas</p>
-                  <p className='font-bold text-lg'>
-                    {formatPrice(tour.price.total * 0.93)}
-                  </p>
-                  <p className='text-xs text-gray-500'>
-                    {formatPrice((tour.price.total * 0.93) / 3)}/pessoa
-                  </p>
-                </div>
-                <div className='bg-primary text-white rounded-lg p-2'>
-                  <p className='text-sm'>4 Pessoas</p>
-                  <p className='font-bold text-lg'>
-                    {formatPrice(tour.price.total)}
-                  </p>
-                  <p className='text-xs'>
-                    {formatPrice(tour.price.perPerson)}/pessoa
-                  </p>
-                </div>
+                {priceTable.map(price => (
+                  <div
+                    key={price.passengers}
+                    className={`p-3 rounded-lg ${
+                      price.passengers === 4
+                        ? 'bg-primary text-white'
+                        : 'bg-white'
+                    }`}
+                  >
+                    <p className='text-sm opacity-90 mb-1'>
+                      {price.passengers}{' '}
+                      {price.passengers === 1 ? 'Pessoa' : 'Pessoas'}
+                    </p>
+                    <p className='font-bold text-lg'>
+                      {formatPrice(price.total)}
+                    </p>
+                    {price.passengers > 1 && (
+                      <p className='text-xs opacity-75 mt-1'>
+                        {formatPrice(price.perPerson)}/pessoa
+                      </p>
+                    )}
+                  </div>
+                ))}
               </div>
             </div>
 
