@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { generatePriceTable } from '@/lib/utils';
 import {
   Check,
   X as XIcon,
@@ -64,25 +65,42 @@ const tourMapImages = {
 const TourDetailContent: React.FC<TourDetailContentProps> = ({ tour }) => {
   const [selectedPassengers, setSelectedPassengers] = useState(4);
 
-  // Tabela de preços dinâmica
-  const priceTable = [
-    {
-      passengers: 1,
-      total: tour.price.total * 0.74,
-      perPerson: tour.price.total * 0.74,
-    },
-    {
-      passengers: 2,
-      total: tour.price.total * 0.81,
-      perPerson: (tour.price.total * 0.81) / 2,
-    },
-    {
-      passengers: 3,
-      total: tour.price.total * 0.93,
-      perPerson: (tour.price.total * 0.93) / 3,
-    },
-    { passengers: 4, total: tour.price.total, perPerson: tour.price.perPerson },
-  ];
+  // ============================================
+  // TABELA DE PREÇOS DINÂMICA
+  // ============================================
+  // Se o tour tem basePrice e additionalPassenger definidos,
+  // usa o cálculo automático (novo sistema)
+  // Caso contrário, usa fallback com multiplicadores (tours antigos)
+  const priceTable =
+    tour.price.basePrice && tour.price.additionalPassenger
+      ? generatePriceTable(
+          tour.price.basePrice,
+          tour.price.additionalPassenger,
+          tour.price.maxPeople
+        )
+      : [
+          // Fallback para tours que ainda não foram atualizados
+          {
+            passengers: 1,
+            total: tour.price.total * 0.74,
+            perPerson: tour.price.total * 0.74,
+          },
+          {
+            passengers: 2,
+            total: tour.price.total * 0.81,
+            perPerson: (tour.price.total * 0.81) / 2,
+          },
+          {
+            passengers: 3,
+            total: tour.price.total * 0.93,
+            perPerson: (tour.price.total * 0.93) / 3,
+          },
+          {
+            passengers: 4,
+            total: tour.price.total,
+            perPerson: tour.price.perPerson,
+          },
+        ];
 
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent(

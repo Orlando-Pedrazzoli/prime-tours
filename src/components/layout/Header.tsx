@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useRouter, usePathname } from 'next/navigation';
 import { Menu, X, Phone, Mail, Globe, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { businessInfo } from '@/data/tours';
@@ -13,32 +14,36 @@ const Header = () => {
   const [currentLang, setCurrentLang] = useState('pt');
   const [activeSection, setActiveSection] = useState('inicio');
   const [showLangMenu, setShowLangMenu] = useState(false);
+  const router = useRouter();
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
 
-      // Detectar seção ativa
-      const sections = [
-        'inicio',
-        'tours',
-        'sobre',
-        'galeria',
-        'depoimentos',
-        'contacto',
-      ];
-      const scrollPosition = window.scrollY + 100;
+      // Detectar seção ativa (apenas na página principal)
+      if (pathname === '/') {
+        const sections = [
+          'inicio',
+          'tours',
+          'sobre',
+          'galeria',
+          'depoimentos',
+          'contacto',
+        ];
+        const scrollPosition = window.scrollY + 100;
 
-      for (const section of sections) {
-        const element = document.getElementById(section);
-        if (element) {
-          const { offsetTop, offsetHeight } = element;
-          if (
-            scrollPosition >= offsetTop &&
-            scrollPosition < offsetTop + offsetHeight
-          ) {
-            setActiveSection(section);
-            break;
+        for (const section of sections) {
+          const element = document.getElementById(section);
+          if (element) {
+            const { offsetTop, offsetHeight } = element;
+            if (
+              scrollPosition >= offsetTop &&
+              scrollPosition < offsetTop + offsetHeight
+            ) {
+              setActiveSection(section);
+              break;
+            }
           }
         }
       }
@@ -46,7 +51,7 @@ const Header = () => {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [pathname]);
 
   // Fechar menu mobile ao clicar fora
   useEffect(() => {
@@ -75,18 +80,28 @@ const Header = () => {
   ];
 
   const scrollToSection = (href: string) => {
-    const element = document.getElementById(href.replace('#', ''));
-    if (element) {
-      const offset = 80;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - offset;
+    const sectionId = href.replace('#', '');
 
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth',
-      });
+    // Verificar se estamos na página principal
+    if (pathname === '/') {
+      // Estamos na página principal, fazer scroll normal
+      const element = document.getElementById(sectionId);
+      if (element) {
+        const offset = 80;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth',
+        });
+      }
+      setIsMenuOpen(false);
+    } else {
+      // Estamos em outra página (ex: tour detail), redirecionar para homepage com hash
+      setIsMenuOpen(false);
+      router.push(`/${href}`);
     }
-    setIsMenuOpen(false);
   };
 
   return (
@@ -217,7 +232,7 @@ const Header = () => {
                     key={item.href}
                     onClick={() => scrollToSection(item.href)}
                     className={`relative px-4 py-2 text-sm font-medium transition-colors ${
-                      isActive
+                      isActive && pathname === '/'
                         ? 'text-primary'
                         : 'text-gray-700 hover:text-primary'
                     }`}
@@ -225,7 +240,7 @@ const Header = () => {
                     whileTap={{ scale: 0.95 }}
                   >
                     {item.label}
-                    {isActive && (
+                    {isActive && pathname === '/' && (
                       <motion.div
                         layoutId='activeSection'
                         className='absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-accent'
@@ -340,7 +355,8 @@ const Header = () => {
                 <div className='flex flex-col gap-2 mb-8'>
                   {navItems.map((item, index) => {
                     const isActive =
-                      activeSection === item.href.replace('#', '');
+                      activeSection === item.href.replace('#', '') &&
+                      pathname === '/';
                     return (
                       <motion.button
                         key={item.href}
