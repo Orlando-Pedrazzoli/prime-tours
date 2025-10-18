@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Inter, Playfair_Display } from 'next/font/google';
 import Script from 'next/script';
 import '@/styles/globals.css';
@@ -14,7 +14,15 @@ const playfair = Playfair_Display({
   weight: ['400', '700'],
 });
 
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: '#006847',
+};
+
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.pedrazzolitours.pt'),
   title: 'Pedrazzoli Tours Portugal | Tours Privados Exclusivos',
   description:
     'Descubra Portugal com tours privados personalizados. Transporte premium com motorista-guia certificado. Lisboa, Sintra, Fátima, Óbidos e mais.',
@@ -31,7 +39,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://www.pedrazzolitours.pt/og-image.jpg',
+        url: '/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Pedrazzoli Tours Portugal - Tours Privados',
@@ -42,7 +50,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Pedrazzoli Tours Portugal | Tours Privados Exclusivos',
     description: 'Descubra Portugal com tours privados personalizados.',
-    images: ['https://www.pedrazzolitours.pt/og-image.jpg'],
+    images: ['/og-image.jpg'],
   },
   robots: {
     index: true,
@@ -55,17 +63,23 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 5,
-  },
   alternates: {
     canonical: 'https://www.pedrazzolitours.pt',
   },
   verification: {
     google: 'seu-codigo-de-verificacao-aqui',
   },
+  // Comentar icons do metadata para usar os links diretos no <head>
+  // icons: {
+  //   icon: [
+  //     { url: '/favicon.ico', sizes: 'any' },
+  //     { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+  //     { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+  //   ],
+  //   apple: [
+  //     { url: '/favicon-32x32.png', sizes: '180x180' },
+  //   ],
+  // },
 };
 
 export default function RootLayout({
@@ -76,6 +90,29 @@ export default function RootLayout({
   return (
     <html lang='pt' className={`${inter.variable} ${playfair.variable}`}>
       <head>
+        {/* 
+          🔥 FAVICONS COM CACHE BUSTER - FORÇA ATUALIZAÇÃO
+          Depois que funcionar, remova o "?v=2" de todas as URLs abaixo
+        */}
+        <link rel='icon' type='image/x-icon' href='/favicon.ico?v=2' />
+        <link
+          rel='icon'
+          type='image/png'
+          sizes='16x16'
+          href='/favicon-16x16.png?v=2'
+        />
+        <link
+          rel='icon'
+          type='image/png'
+          sizes='32x32'
+          href='/favicon-32x32.png?v=2'
+        />
+        <link
+          rel='apple-touch-icon'
+          sizes='180x180'
+          href='/favicon-32x32.png?v=2'
+        />
+
         {/* Google Analytics */}
         {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
           <>
@@ -100,7 +137,7 @@ export default function RootLayout({
           </>
         )}
 
-        {/* Google Tag Manager (Opcional) */}
+        {/* Google Tag Manager */}
         {process.env.NEXT_PUBLIC_GTM_ID && (
           <Script
             id='google-tag-manager'
@@ -117,7 +154,7 @@ export default function RootLayout({
           />
         )}
 
-        {/* Facebook Pixel (Opcional) */}
+        {/* Facebook Pixel */}
         {process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID && (
           <Script
             id='facebook-pixel'
@@ -139,30 +176,11 @@ export default function RootLayout({
           />
         )}
 
-        {/* Verificação do Google Search Console */}
         <meta name='google-site-verification' content='seu-codigo-aqui' />
-
-        {/* PWA */}
         <link rel='manifest' href='/manifest.json' />
-        <meta name='theme-color' content='#006847' />
+        <meta name='msapplication-TileColor' content='#006847' />
+        <meta name='msapplication-TileImage' content='/favicon-32x32.png' />
 
-        {/* Favicons */}
-        <link rel='icon' href='/favicon.ico' />
-        <link
-          rel='icon'
-          type='image/png'
-          sizes='32x32'
-          href='/favicon-32x32.png'
-        />
-        <link
-          rel='icon'
-          type='image/png'
-          sizes='16x16'
-          href='/favicon-16x16.png'
-        />
-        <link rel='apple-touch-icon' href='/apple-touch-icon.png' />
-
-        {/* Preconnect para melhor performance */}
         <link rel='preconnect' href='https://fonts.googleapis.com' />
         <link
           rel='preconnect'
@@ -170,11 +188,9 @@ export default function RootLayout({
           crossOrigin='anonymous'
         />
 
-        {/* DNS Prefetch para serviços externos */}
         <link rel='dns-prefetch' href='https://www.googletagmanager.com' />
         <link rel='dns-prefetch' href='https://www.google-analytics.com' />
 
-        {/* Schema.org JSON-LD */}
         <Script
           id='schema-org'
           type='application/ld+json'
@@ -211,7 +227,6 @@ export default function RootLayout({
       </head>
 
       <body className={inter.className}>
-        {/* Google Tag Manager (noscript) */}
         {process.env.NEXT_PUBLIC_GTM_ID && (
           <noscript>
             <iframe
@@ -223,7 +238,6 @@ export default function RootLayout({
           </noscript>
         )}
 
-        {/* Facebook Pixel (noscript) */}
         {process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID && (
           <noscript>
             <img
