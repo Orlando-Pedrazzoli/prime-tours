@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -17,6 +17,7 @@ import {
   MapPin,
   CheckCircle,
   Send,
+  AlertCircle,
 } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 
@@ -48,22 +49,56 @@ const BookingForm = () => {
     resolver: zodResolver(bookingSchema),
   });
 
+  useEffect(() => {
+    if (process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY) {
+      emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY);
+    }
+  }, []);
+
   const onSubmit = async (data: BookingFormData) => {
     setIsSubmitting(true);
 
     try {
-      // Configurar EmailJS (você precisará configurar sua conta EmailJS)
-      // Por enquanto, vamos simular o envio
-      await new Promise(resolve => setTimeout(resolve, 1500));
+      if (
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID &&
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID &&
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+      ) {
+        await emailjs.send(
+          process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+          process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+          {
+            to_email: businessInfo.email,
+            from_name: data.name,
+            from_email: data.email,
+            phone: data.phone,
+            whatsapp: data.whatsapp || data.phone,
+            tour_name: data.tour,
+            tour_date: new Date(data.date).toLocaleDateString('pt-PT'),
+            passengers: data.passengers,
+            message: data.message || 'Sem mensagem adicional',
+            booking_date: new Date().toLocaleDateString('pt-PT'),
+            booking_time: new Date().toLocaleTimeString('pt-PT'),
+          }
+        );
+      } else {
+        const message = encodeURIComponent(
+          `Nova Reserva:\n\nNome: ${data.name}\nEmail: ${
+            data.email
+          }\nTelefone: ${data.phone}\nTour: ${data.tour}\nData: ${new Date(
+            data.date
+          ).toLocaleDateString('pt-PT')}\nPassageiros: ${
+            data.passengers
+          }\nMensagem: ${data.message || 'Sem mensagem'}`
+        );
+        window.open(
+          `https://wa.me/${businessInfo.whatsapp}?text=${message}`,
+          '_blank'
+        );
+      }
 
-      // Em produção, você usaria:
-      // await emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', data, 'YOUR_PUBLIC_KEY')
-
-      console.log('Dados da reserva:', data);
       setSubmitStatus('success');
       reset();
-
-      // Reset status após 5 segundos
       setTimeout(() => setSubmitStatus('idle'), 5000);
     } catch (error) {
       console.error('Erro ao enviar reserva:', error);
@@ -386,7 +421,8 @@ const BookingForm = () => {
                   </div>
                 )}
                 {submitStatus === 'error' && (
-                  <div className='bg-red-50 text-red-800 p-4 rounded-lg'>
+                  <div className='bg-red-50 text-red-800 p-4 rounded-lg flex items-center gap-3'>
+                    <AlertCircle size={20} />
                     Erro ao enviar reserva. Por favor tente novamente ou
                     contacte-nos diretamente.
                   </div>

@@ -1,0 +1,15 @@
+{
+  "regions": ["fra1"],
+  "functions": {
+    "src/app/api/*": {
+      "maxDuration": 10
+    }
+  },
+  "redirects": [
+    {
+      "source": "/tour",
+      "destination": "/#tours",
+      "permanent": true
+    }
+  ]
+}

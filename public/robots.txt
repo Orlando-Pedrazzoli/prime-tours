@@ -1,22 +1,7 @@
-# Robots.txt para Premiere Tours Portugal
-
+# public/robots.txt
 User-agent: *
 Allow: /
+Sitemap: https://www.pedrazzolitours.pt/sitemap.xml
+
+# Bloquear páginas administrativas se houver
 Disallow: /api/
-Disallow: /_next/
-Disallow: /admin/
-
-# Sitemap
-Sitemap: https://premieretours.pt/sitemap.xml
-
-# Crawl-delay
-Crawl-delay: 1
-
-# Bots específicos
-User-agent: Googlebot
-Allow: /
-Crawl-delay: 0
-
-User-agent: Bingbot
-Allow: /
-Crawl-delay: 1
