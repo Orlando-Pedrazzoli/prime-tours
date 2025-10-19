@@ -128,7 +128,7 @@ const TourModal: React.FC<TourModalProps> = ({ tour, isOpen, onClose }) => {
             <div className='mb-8'>
               <h3 className='text-xl font-bold mb-3'>Destaques do Tour</h3>
               <div className='grid md:grid-cols-2 gap-3'>
-                {tour.highlights.map((highlight, index) => (
+                {tour.highlights.map((highlight: string, index: number) => (
                   <div key={index} className='flex items-start gap-2'>
                     <Check
                       className='text-green-500 mt-0.5 flex-shrink-0'
@@ -145,7 +145,7 @@ const TourModal: React.FC<TourModalProps> = ({ tour, isOpen, onClose }) => {
               <div className='mb-8'>
                 <h3 className='text-xl font-bold mb-3'>Itinerário Detalhado</h3>
                 <div className='space-y-3'>
-                  {tour.itinerary.map((item, index) => (
+                  {tour.itinerary.map((item: any, index: number) => (
                     <div
                       key={index}
                       className='flex gap-4 pb-3 border-b last:border-0'
@@ -170,7 +170,7 @@ const TourModal: React.FC<TourModalProps> = ({ tour, isOpen, onClose }) => {
               <div className='mb-8'>
                 <h3 className='text-xl font-bold mb-3'>Galeria</h3>
                 <div className='grid grid-cols-2 md:grid-cols-4 gap-2'>
-                  {tour.gallery.map((img, index) => (
+                  {tour.gallery.map((img: string, index: number) => (
                     <img
                       key={index}
                       src={img}
@@ -218,7 +218,7 @@ const TourModal: React.FC<TourModalProps> = ({ tour, isOpen, onClose }) => {
             <div className='bg-primary/5 rounded-xl p-6 mb-8'>
               <h3 className='text-lg font-bold mb-3'>Tabela de Preços</h3>
               <div className='grid grid-cols-2 md:grid-cols-4 gap-4 text-center'>
-                {priceTable.map(price => (
+                {priceTable.map((price: any) => (
                   <div
                     key={price.passengers}
                     className={`p-3 rounded-lg ${
