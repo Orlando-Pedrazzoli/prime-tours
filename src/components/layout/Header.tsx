@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter, usePathname } from 'next/navigation';
-import { Menu, X, Phone, Mail, Globe, ChevronDown } from 'lucide-react';
+import { Menu, X, Phone, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { businessInfo } from '@/data/tours';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -13,7 +13,6 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [currentLang, setCurrentLang] = useState('pt');
   const [activeSection, setActiveSection] = useState('inicio');
-  const [showLangMenu, setShowLangMenu] = useState(false);
   const router = useRouter();
   const pathname = usePathname();
 
@@ -108,88 +107,9 @@ const Header = () => {
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled
-            ? 'bg-white shadow-lg py-2'
-            : 'bg-white/95 backdrop-blur-md py-3'
+          isScrolled ? 'bg-white shadow-lg py-2' : 'bg-transparent py-3'
         }`}
       >
-        {/* Top Bar - Desktop Only */}
-        <div
-          className={`hidden lg:block bg-gradient-to-r from-primary via-primary-600 to-accent text-white transition-all duration-300 ${
-            isScrolled ? 'py-1' : 'py-2'
-          }`}
-        >
-          <div className='container mx-auto px-4 flex justify-between items-center text-sm'>
-            <div className='flex items-center gap-6'>
-              <motion.a
-                href={`tel:${businessInfo.phone}`}
-                className='flex items-center gap-2 hover:text-secondary transition-colors'
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Phone size={14} />
-                {businessInfo.phone}
-              </motion.a>
-              <motion.a
-                href={`mailto:${businessInfo.email}`}
-                className='flex items-center gap-2 hover:text-secondary transition-colors'
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Mail size={14} />
-                {businessInfo.email}
-              </motion.a>
-            </div>
-
-            {/* Language Selector */}
-            <div className='relative'>
-              <button
-                onClick={() => setShowLangMenu(!showLangMenu)}
-                className='flex items-center gap-2 hover:text-secondary transition-colors'
-              >
-                <Globe size={14} />
-                <span>{languages.find(l => l.code === currentLang)?.flag}</span>
-                <span>{languages.find(l => l.code === currentLang)?.name}</span>
-                <ChevronDown
-                  size={14}
-                  className={`transition-transform ${
-                    showLangMenu ? 'rotate-180' : ''
-                  }`}
-                />
-              </button>
-
-              <AnimatePresence>
-                {showLangMenu && (
-                  <motion.div
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    className='absolute right-0 mt-2 bg-white rounded-lg shadow-xl py-2 min-w-[180px]'
-                  >
-                    {languages.map(lang => (
-                      <button
-                        key={lang.code}
-                        onClick={() => {
-                          setCurrentLang(lang.code);
-                          setShowLangMenu(false);
-                        }}
-                        className={`w-full px-4 py-2 text-left hover:bg-primary-50 transition-colors flex items-center gap-3 ${
-                          currentLang === lang.code
-                            ? 'bg-primary-50 text-primary font-semibold'
-                            : 'text-gray-700'
-                        }`}
-                      >
-                        <span className='text-xl'>{lang.flag}</span>
-                        <span>{lang.name}</span>
-                      </button>
-                    ))}
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-          </div>
-        </div>
-
         {/* Main Navigation */}
         <nav className='container mx-auto px-4'>
           <div className='flex justify-between items-center h-16 lg:h-20'>
@@ -212,10 +132,22 @@ const Header = () => {
                     />
                   </div>
                   <div>
-                    <span className='text-2xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent'>
+                    <span
+                      className={`text-2xl font-bold transition-all ${
+                        isScrolled
+                          ? 'bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent'
+                          : 'text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]'
+                      }`}
+                    >
                       Pedrazzoli Tours
                     </span>
-                    <p className='text-xs text-gray-600 group-hover:text-primary transition-colors'>
+                    <p
+                      className={`text-xs transition-colors ${
+                        isScrolled
+                          ? 'text-gray-600'
+                          : 'text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]'
+                      } group-hover:text-primary`}
+                    >
                       Portugal Premium Experience
                     </p>
                   </div>
@@ -233,8 +165,12 @@ const Header = () => {
                     onClick={() => scrollToSection(item.href)}
                     className={`relative px-4 py-2 text-sm font-medium transition-colors ${
                       isActive && pathname === '/'
-                        ? 'text-primary'
-                        : 'text-gray-700 hover:text-primary'
+                        ? isScrolled
+                          ? 'text-primary'
+                          : 'text-white font-bold'
+                        : isScrolled
+                        ? 'text-gray-700 hover:text-primary'
+                        : 'text-white/90 hover:text-white'
                     }`}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
@@ -243,7 +179,11 @@ const Header = () => {
                     {isActive && pathname === '/' && (
                       <motion.div
                         layoutId='activeSection'
-                        className='absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-accent'
+                        className={`absolute bottom-0 left-0 right-0 h-0.5 ${
+                          isScrolled
+                            ? 'bg-gradient-to-r from-primary to-accent'
+                            : 'bg-white'
+                        }`}
                         initial={false}
                         transition={{
                           type: 'spring',
@@ -271,7 +211,9 @@ const Header = () => {
 
             {/* Mobile Menu Button */}
             <motion.button
-              className='lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors'
+              className={`lg:hidden p-2 rounded-lg transition-colors ${
+                isScrolled ? 'hover:bg-gray-100' : 'hover:bg-white/20'
+              }`}
               onClick={e => {
                 e.stopPropagation();
                 setIsMenuOpen(!isMenuOpen);
@@ -287,7 +229,10 @@ const Header = () => {
                     exit={{ rotate: 90, opacity: 0 }}
                     transition={{ duration: 0.2 }}
                   >
-                    <X size={24} className='text-primary' />
+                    <X
+                      size={24}
+                      className={isScrolled ? 'text-primary' : 'text-white'}
+                    />
                   </motion.div>
                 ) : (
                   <motion.div
@@ -297,7 +242,10 @@ const Header = () => {
                     exit={{ rotate: -90, opacity: 0 }}
                     transition={{ duration: 0.2 }}
                   >
-                    <Menu size={24} className='text-primary' />
+                    <Menu
+                      size={24}
+                      className={isScrolled ? 'text-primary' : 'text-white'}
+                    />
                   </motion.div>
                 )}
               </AnimatePresence>

@@ -33,7 +33,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className='text-5xl md:text-7xl font-bold text-white mb-6'>
+            <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>
               Descubra Portugal de
               <span className='text-secondary'> Forma Exclusiva</span>
             </h1>
@@ -50,13 +50,6 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className='flex flex-col sm:flex-row gap-4 mb-12'
           >
-            <Button
-              size='xl'
-              className='bg-secondary hover:bg-secondary/90 text-black font-bold'
-              onClick={() => scrollToSection('contacto')}
-            >
-              Reserve o Seu Tour
-            </Button>
             <Button
               size='xl'
               variant='outline'
@@ -79,8 +72,8 @@ const HeroSection = () => {
                 <MapPin className='text-secondary' size={20} />
               </div>
               <div>
-                <p className='font-semibold'>Baseado em</p>
-                <p className='text-sm opacity-90'>Oeiras, Lisboa</p>
+                <p className='font-semibold'>Localização</p>
+                <p className='text-sm opacity-90'>Lisboa</p>
               </div>
             </div>
 
@@ -104,15 +97,7 @@ const HeroSection = () => {
               </div>
             </div>
 
-            <div className='flex items-center gap-3 text-white'>
-              <div className='bg-secondary/20 p-3 rounded-full backdrop-blur-sm'>
-                <Calendar className='text-secondary' size={20} />
-              </div>
-              <div>
-                <p className='font-semibold'>Disponível</p>
-                <p className='text-sm opacity-90'>Todos os dias</p>
-              </div>
-            </div>
+            <div className='flex items-center gap-3 text-white'></div>
           </motion.div>
         </div>
       </div>
