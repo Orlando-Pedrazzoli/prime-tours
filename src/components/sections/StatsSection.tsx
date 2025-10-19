@@ -57,7 +57,17 @@ const StatsSection = () => {
     },
   ];
 
-  const AnimatedCounter = ({ value, suffix, decimals = 0 }) => {
+  interface AnimatedCounterProps {
+    value: number;
+    suffix: string;
+    decimals?: number;
+  }
+
+  const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
+    value,
+    suffix,
+    decimals = 0,
+  }) => {
     const [count, setCount] = useState(0);
 
     useEffect(() => {
@@ -80,7 +90,7 @@ const StatsSection = () => {
 
         return () => clearInterval(timer);
       }
-    }, [value, inView]);
+    }, [value, inView, decimals]);
 
     return (
       <span className='text-4xl font-bold'>
