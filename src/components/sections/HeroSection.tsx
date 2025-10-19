@@ -38,9 +38,8 @@ const HeroSection = () => {
               <span className='text-secondary'> Forma Exclusiva</span>
             </h1>
             <p className='text-xl md:text-2xl text-white/90 mb-8'>
-              Tours privados personalizados com motorista-guia certificado.
-              Experiências únicas desde Lisboa até aos recantos mais
-              encantadores de Portugal.
+              Tours privados personalizados. Experiências únicas desde Lisboa
+              até aos recantos mais encantadores de Portugal.
             </p>
           </motion.div>
 

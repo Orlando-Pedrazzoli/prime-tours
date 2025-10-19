@@ -122,7 +122,7 @@ const Header = () => {
                   transition={{ type: 'spring', stiffness: 400 }}
                 >
                   <div
-                    className='w-12 h-12 rounded-full overflow-hidden shadow-lg 
+                    className='w-10 h-10 lg:w-12 lg:h-12 rounded-full overflow-hidden shadow-lg 
      ring-2 ring-primary/20 group-hover:ring-primary/40 transition-all'
                   >
                     <img
@@ -133,7 +133,7 @@ const Header = () => {
                   </div>
                   <div>
                     <span
-                      className={`text-2xl font-bold transition-all ${
+                      className={`text-lg lg:text-2xl font-bold transition-all ${
                         isScrolled
                           ? 'bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent'
                           : 'text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]'
@@ -142,7 +142,7 @@ const Header = () => {
                       Pedrazzoli Tours
                     </span>
                     <p
-                      className={`text-xs transition-colors ${
+                      className={`text-[10px] lg:text-xs transition-colors ${
                         isScrolled
                           ? 'text-gray-600'
                           : 'text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]'
@@ -230,7 +230,7 @@ const Header = () => {
                     transition={{ duration: 0.2 }}
                   >
                     <X
-                      size={24}
+                      size={32}
                       className={isScrolled ? 'text-primary' : 'text-white'}
                     />
                   </motion.div>
@@ -243,7 +243,7 @@ const Header = () => {
                     transition={{ duration: 0.2 }}
                   >
                     <Menu
-                      size={24}
+                      size={32}
                       className={isScrolled ? 'text-primary' : 'text-white'}
                     />
                   </motion.div>
