@@ -10,75 +10,83 @@ const GallerySection = () => {
   const galleryImages = [
     {
       id: 1,
-      src: 'https://images.unsplash.com/photo-1585208798174-6cedd86e019a?w=800',
-      alt: 'Vista de Lisboa',
-      category: 'Lisboa',
+      src: '/img01.jpg',
+      alt: 'Imagem 1',
     },
     {
       id: 2,
-      src: 'https://images.unsplash.com/photo-1562281302-809108fd533c?w=800',
-      alt: 'Palácio da Pena, Sintra',
-      category: 'Sintra',
+      src: '/img02.jpg',
+      alt: 'Imagem 2',
     },
     {
       id: 3,
-      src: 'https://images.unsplash.com/photo-1555881018-9bbb4a7be8f1?w=800',
-      alt: 'Santuário de Fátima',
-      category: 'Fátima',
+      src: '/img03.jpg',
+      alt: 'Imagem 3',
     },
     {
       id: 4,
-      src: 'https://images.unsplash.com/photo-1577551926752-4863c480ba97?w=800',
-      alt: 'Vila de Óbidos',
-      category: 'Óbidos',
+      src: '/img04.jpg',
+      alt: 'Imagem 4',
     },
     {
       id: 5,
-      src: 'https://images.unsplash.com/photo-1513735492246-483525079686?w=800',
-      alt: 'Torre de Belém',
-      category: 'Lisboa',
+      src: '/img05.jpg',
+      alt: 'Imagem 5',
     },
     {
       id: 6,
-      src: 'https://images.unsplash.com/photo-1567177173829-eedf4f72793e?w=800',
-      alt: 'Costa de Cascais',
-      category: 'Cascais',
+      src: '/img06.jpg',
+      alt: 'Imagem 6',
     },
     {
       id: 7,
-      src: 'https://images.unsplash.com/photo-1590073844006-33379778ae09?w=800',
-      alt: 'Centro histórico de Sintra',
-      category: 'Sintra',
+      src: '/img07.jpg',
+      alt: 'Imagem 7',
     },
     {
       id: 8,
-      src: 'https://images.unsplash.com/photo-1601296160691-b34a86938874?w=800',
-      alt: 'Mosteiro da Batalha',
-      category: 'Batalha',
+      src: '/img08.jpg',
+      alt: 'Imagem 8',
     },
     {
       id: 9,
-      src: 'https://images.unsplash.com/photo-1573479667972-ea82d7c0104e?w=800',
-      alt: 'Elétrico de Lisboa',
-      category: 'Lisboa',
+      src: '/img09.jpg',
+      alt: 'Imagem 9',
     },
     {
       id: 10,
-      src: 'https://images.unsplash.com/photo-1555881400-74d7acaacd8b?w=800',
-      alt: 'Praça do Comércio',
-      category: 'Lisboa',
+      src: '/img10.jpg',
+      alt: 'Imagem 10',
     },
     {
       id: 11,
-      src: 'https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=800',
-      alt: 'Castelo de Óbidos',
-      category: 'Óbidos',
+      src: '/img11.jpg',
+      alt: 'Imagem 11',
     },
     {
       id: 12,
-      src: 'https://images.unsplash.com/photo-1590073242678-70ee3fc28e8e?w=800',
-      alt: 'Nazaré',
-      category: 'Nazaré',
+      src: '/img12.jpg',
+      alt: 'Imagem 12',
+    },
+    {
+      id: 13,
+      src: '/img13.jpg',
+      alt: 'Imagem 13',
+    },
+    {
+      id: 14,
+      src: '/img14.jpg',
+      alt: 'Imagem 14',
+    },
+    {
+      id: 15,
+      src: '/img15.jpg',
+      alt: 'Imagem 15',
+    },
+    {
+      id: 16,
+      src: '/img16.jpg',
+      alt: 'Imagem 16',
     },
   ];
 
@@ -134,64 +142,54 @@ const GallerySection = () => {
                 alt={image.alt}
                 className='w-full h-full object-cover group-hover:scale-110 transition-transform duration-500'
               />
-              <div className='absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
-                <div className='absolute bottom-4 left-4 text-white'>
-                  <p className='font-semibold'>{image.category}</p>
-                  <p className='text-sm opacity-90'>{image.alt}</p>
-                </div>
-              </div>
             </motion.div>
           ))}
         </div>
 
-        {/* Lightbox */}
+        {/* Lightbox - Otimizado para imagens verticais */}
         {selectedImage !== null && (
           <div
-            className='fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4'
+            className='fixed inset-0 bg-black/95 z-50 flex items-center justify-center'
             onClick={() => setSelectedImage(null)}
           >
             <button
-              className='absolute top-4 right-4 text-white hover:text-secondary transition-colors'
+              className='absolute top-4 right-4 text-white hover:text-secondary transition-colors z-10'
               onClick={() => setSelectedImage(null)}
+              aria-label='Fechar'
             >
               <X size={32} />
             </button>
 
             <button
-              className='absolute left-4 top-1/2 -translate-y-1/2 text-white hover:text-secondary transition-colors'
+              className='absolute left-4 top-1/2 -translate-y-1/2 text-white hover:text-secondary transition-colors z-10'
               onClick={e => {
                 e.stopPropagation();
                 handlePrevious();
               }}
+              aria-label='Imagem anterior'
             >
               <ChevronLeft size={40} />
             </button>
 
             <button
-              className='absolute right-4 top-1/2 -translate-y-1/2 text-white hover:text-secondary transition-colors'
+              className='absolute right-4 top-1/2 -translate-y-1/2 text-white hover:text-secondary transition-colors z-10'
               onClick={e => {
                 e.stopPropagation();
                 handleNext();
               }}
+              aria-label='Próxima imagem'
             >
               <ChevronRight size={40} />
             </button>
 
-            <div className='max-w-5xl max-h-[90vh] relative'>
+            {/* Container otimizado para formato vertical */}
+            <div className='w-full h-full flex items-center justify-center px-4 py-8 md:px-16 md:py-12'>
               <img
                 src={galleryImages[selectedImage].src}
                 alt={galleryImages[selectedImage].alt}
-                className='w-full h-full object-contain'
+                className='max-w-full max-h-full w-auto h-auto object-contain'
                 onClick={e => e.stopPropagation()}
               />
-              <div className='absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4'>
-                <p className='text-white text-lg font-semibold'>
-                  {galleryImages[selectedImage].alt}
-                </p>
-                <p className='text-white/80'>
-                  {galleryImages[selectedImage].category}
-                </p>
-              </div>
             </div>
           </div>
         )}

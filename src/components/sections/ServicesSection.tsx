@@ -24,20 +24,7 @@ const ServicesSection = () => {
         'Roteiros exclusivos adaptados aos seus interesses, ritmo e preferências pessoais',
       color: 'bg-blue-500',
     },
-    {
-      icon: Users,
-      title: 'Grupos Pequenos',
-      description:
-        'Máximo de 4 pessoas por tour, garantindo uma experiência íntima e personalizada',
-      color: 'bg-green-500',
-    },
-    {
-      icon: Clock,
-      title: 'Flexibilidade Total',
-      description:
-        'Horários flexíveis e possibilidade de ajustar o itinerário durante o tour',
-      color: 'bg-purple-500',
-    },
+
     {
       icon: Shield,
       title: 'Segurança Garantida',
@@ -51,13 +38,6 @@ const ServicesSection = () => {
       description:
         'Serviço atencioso e dedicado do início ao fim da sua experiência',
       color: 'bg-red-500',
-    },
-    {
-      icon: Globe,
-      title: 'Guia Multilingue',
-      description:
-        'Comunicação fluente em português, inglês, espanhol e francês',
-      color: 'bg-indigo-500',
     },
   ];
 

@@ -139,7 +139,7 @@ const Header = () => {
                           : 'text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]'
                       }`}
                     >
-                      Pedrazzoli Tours
+                      Go Portugal Tours
                     </span>
                     <p
                       className={`text-[10px] lg:text-xs transition-colors ${

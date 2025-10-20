@@ -3,9 +3,52 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Star, Quote } from 'lucide-react';
-import { testimonials } from '@/data/tours';
 
 const TestimonialsSection = () => {
+  // Depoimentos com nome corrigido para Orlando
+  const testimonials = [
+    {
+      id: 1,
+      name: 'Maria Silva',
+      location: 'Brasil',
+      rating: 5,
+      text: 'Uma experiência incrível! O Orlando foi super atencioso e nos mostrou lugares maravilhosos. Recomendo muito!',
+      tour: 'Tour Lisboa e Sintra',
+      image:
+        'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100',
+    },
+    {
+      id: 2,
+      name: 'João Santos',
+      location: 'Portugal',
+      rating: 5,
+      text: 'Tour muito bem organizado! O Orlando conhece cada canto de Portugal e compartilha histórias fascinantes.',
+      tour: 'Tour Fátima e Óbidos',
+      image:
+        'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100',
+    },
+    {
+      id: 3,
+      name: 'Ana Costa',
+      location: 'Brasil',
+      rating: 5,
+      text: 'Simplesmente perfeito! O Orlando tornou nossa viagem inesquecível com seu conhecimento e simpatia.',
+      tour: 'Tour Privado Personalizado',
+      image:
+        'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100',
+    },
+    {
+      id: 4,
+      name: 'Carlos Oliveira',
+      location: 'Angola',
+      rating: 5,
+      text: 'Melhor tour que já fiz! O Orlando é um excelente guia e profissional. Voltarei com certeza!',
+      tour: 'Tour Batalha e Nazaré',
+      image:
+        'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100',
+    },
+  ];
+
   return (
     <section id='depoimentos' className='py-20 bg-gray-50'>
       <div className='container mx-auto px-4'>

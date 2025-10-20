@@ -26,7 +26,7 @@ const Footer = () => {
           {/* Sobre a Empresa */}
           <div>
             <h3 className='text-2xl font-bold mb-4 text-secondary'>
-              Premiere Tours
+              Go Portugal Tours
             </h3>
             <p className='text-gray-300 mb-4'>
               Experiências exclusivas de turismo privado em Portugal. Descubra o
@@ -139,8 +139,7 @@ const Footer = () => {
         <div className='container mx-auto px-4 py-4'>
           <div className='flex flex-col md:flex-row justify-between items-center text-sm text-gray-400'>
             <p>
-              © {currentYear} Pedrazzoli Tours Portugal. Todos os direitos
-              reservados.
+              © {currentYear} Go Portugal Tours. Todos os direitos reservados.
             </p>
             <div className='flex gap-6 mt-2 md:mt-0'>
               <Link href='#' className='hover:text-secondary transition-colors'>
