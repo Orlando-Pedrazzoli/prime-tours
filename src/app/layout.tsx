@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { Inter, Playfair_Display } from 'next/font/google';
 import Script from 'next/script';
+import MobileFix from '@/components/MobileFix';
 import '@/styles/globals.css';
 
 const inter = Inter({
@@ -227,6 +228,7 @@ export default function RootLayout({
       </head>
 
       <body className={inter.className}>
+        <MobileFix />
         {process.env.NEXT_PUBLIC_GTM_ID && (
           <noscript>
             <iframe
