@@ -1,21 +1,39 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true, // Adicionar para melhor performance
+  swcMinify: true,
+
+  // ✅ OTIMIZAÇÕES PARA REDUZIR TAMANHO
   images: {
     domains: [
       'images.unsplash.com',
       'localhost',
       'images.pexels.com',
       'plus.unsplash.com',
-      'www.pedrazzolitours.pt', // Adicionar seu domínio
+      'www.pedrazzolitours.pt',
     ],
     formats: ['image/avif', 'image/webp'],
-    minimumCacheTTL: 60, // Cache de imagens por 60 segundos
+    minimumCacheTTL: 60,
   },
-  // Compressão
+
   compress: true,
-  // Headers de segurança
+
+  // 🔥 NOVO: Remover source maps em produção
+  productionBrowserSourceMaps: false,
+
+  // 🔥 NOVO: Otimizar chunks
+  experimental: {
+    optimizePackageImports: [
+      'lucide-react',
+      'framer-motion',
+      '@radix-ui/react-accordion',
+      '@radix-ui/react-dialog',
+      '@radix-ui/react-dropdown-menu',
+      '@radix-ui/react-select',
+      '@radix-ui/react-toast',
+    ],
+  },
+
   async headers() {
     return [
       {
