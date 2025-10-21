@@ -9,9 +9,8 @@ const AboutSection = () => {
   const features = [
     {
       icon: Award,
-      title: 'Guia Certificado',
-      description:
-        'Motorista-guia profissional certificado com anos de experiência',
+      title: 'Motorista Certificado',
+      description: 'Motorista profissional certificado com anos de experiência',
     },
     {
       icon: MapPin,
@@ -56,12 +55,12 @@ const AboutSection = () => {
             <div className='relative'>
               <img
                 src='/orlando-perfil.jpg'
-                alt='Orlando Pedrazzoli - Motorista Guia'
+                alt='Orlando Pedrazzoli - Motorista'
                 className='rounded-2xl shadow-xl w-full'
               />
               <div className='absolute -bottom-6 -right-6 bg-primary text-white p-6 rounded-2xl shadow-xl'>
                 <div className='text-center'>
-                  <p className='text-3xl font-bold'>10+</p>
+                  <p className='text-3xl font-bold'>8+</p>
                   <p className='text-sm'>Anos de</p>
                   <p className='text-sm'>Experiência</p>
                 </div>
@@ -77,27 +76,26 @@ const AboutSection = () => {
             viewport={{ once: true }}
           >
             <h2 className='text-4xl md:text-5xl font-bold mb-6'>
-              Conheça o Seu <span className='text-primary'>Guia</span>
+              Conheça o Seu <span className='text-primary'>Motorista</span>
             </h2>
 
             <p className='text-lg text-gray-700 mb-4'>
-              Olá! Sou o Orlando, o seu motorista-guia dedicado para descobrir
+              Olá! Sou o Orlando, o seu motorista dedicado para descobrir
               Portugal de uma forma única e memorável.
             </p>
 
             <p className='text-gray-600 mb-6'>
               Tenho a paixão de partilhar a beleza, história e cultura do meu
-              país com visitantes de todo o mundo. Com mais de 10 anos de
+              país com visitantes de todo o mundo. Com mais de 8 anos de
               experiência em turismo premium, garanto que cada tour é uma
               experiência personalizada e inesquecível.
             </p>
 
             <p className='text-gray-600 mb-8'>
-              Falo português, inglês e espanhol fluentemente, permitindo-me
-              comunicar confortavelmente com clientes de diversas
-              nacionalidades. O meu objetivo é não apenas levá-lo aos destinos,
-              mas também proporcionar-lhe uma verdadeira imersão na cultura
-              portuguesa.
+              Falo português e inglês fluentemente, permitindo-me comunicar
+              confortavelmente com clientes de diversas nacionalidades. O meu
+              objetivo é não apenas levá-lo aos destinos, mas também
+              proporcionar-lhe uma verdadeira imersão na cultura portuguesa.
             </p>
 
             <div className='flex flex-wrap gap-4 mb-8'>
@@ -108,10 +106,6 @@ const AboutSection = () => {
               <div className='flex items-center gap-2 text-sm'>
                 <div className='w-2 h-2 bg-green-500 rounded-full'></div>
                 <span>English</span>
-              </div>
-              <div className='flex items-center gap-2 text-sm'>
-                <div className='w-2 h-2 bg-green-500 rounded-full'></div>
-                <span>Español</span>
               </div>
             </div>
 
