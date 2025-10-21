@@ -9,11 +9,6 @@ const GallerySection = () => {
 
   const galleryImages = [
     {
-      id: 1,
-      src: '/img02.jpg',
-      alt: 'Imagem 1',
-    },
-    {
       id: 2,
       src: '/img02.jpg',
       alt: 'Imagem 2',
@@ -87,6 +82,26 @@ const GallerySection = () => {
       id: 16,
       src: '/img16.jpg',
       alt: 'Imagem 16',
+    },
+    {
+      id: 17,
+      src: '/img17.jpg',
+      alt: 'Imagem 17',
+    },
+    {
+      id: 18,
+      src: '/img18.jpg',
+      alt: 'Imagem 18',
+    },
+    {
+      id: 19,
+      src: '/img19.jpg',
+      alt: 'Imagem 19',
+    },
+    {
+      id: 20,
+      src: '/img20.jpg',
+      alt: 'Imagem 20',
     },
   ];
 
