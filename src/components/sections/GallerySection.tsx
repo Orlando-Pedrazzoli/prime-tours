@@ -10,7 +10,7 @@ const GallerySection = () => {
   const galleryImages = [
     {
       id: 1,
-      src: '/img01.jpg',
+      src: '/img17.jpg',
       alt: 'Imagem 1',
     },
     {
