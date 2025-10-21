@@ -90,17 +90,17 @@ const GallerySection = () => {
     },
     {
       id: 18,
-      src: '/img18.jpg',
+      src: '/img18.JPG',
       alt: 'Imagem 18',
     },
     {
       id: 19,
-      src: '/img19.jpg',
+      src: '/img19.JPG',
       alt: 'Imagem 19',
     },
     {
       id: 20,
-      src: '/img20.jpg',
+      src: '/img20.JPG',
       alt: 'Imagem 20',
     },
   ];
