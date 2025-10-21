@@ -24,14 +24,14 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.goportugaltours.com'),
-  title: 'Go Portugal Tours| Tours Privados Exclusivos',
+  title: 'Go Portugal | Tours Privados Exclusivos',
   description:
-    'Descubra Portugal com tours privados personalizados. Transporte premium com motorista-guia certificado. Lisboa, Sintra, Fátima, Óbidos e mais.',
+    'Descubra Portugal com tours privados personalizados. Transporte premium com motorista certificado. Lisboa, Sintra, Fátima, Óbidos e mais.',
   keywords:
-    'tours portugal, tours privados lisboa, transporte privado portugal, passeios turísticos portugal, sintra tour, fátima tour, óbidos tour, pedrazzoli tours',
+    'tours portugal, tours privados lisboa, transporte privado portugal, passeios turísticos portugal, sintra tour, fátima tour, óbidos tour, Go Portugal tours',
   authors: [{ name: 'Go Portugal Tours' }],
   openGraph: {
-    title: 'Go Portugal Tours | Tours Privados Exclusivos',
+    title: 'Go Portugal | Tours Privados Exclusivos',
     description:
       'Descubra Portugal com tours privados personalizados. Transporte premium com motorista certificado.',
     url: 'https://www.goportugaltours.com',
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Go Portugal Tours | Tours Privados Exclusivos',
+    title: 'Go Portugal | Tours Privados Exclusivos',
     description: 'Descubra Portugal com tours privados personalizados.',
     images: ['/og-image.jpg'],
   },
@@ -199,7 +199,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'TravelAgency',
-              name: 'Pedrazzoli Tours Portugal',
+              name: 'Go Portugal Tours',
               description:
                 'Tours privados exclusivos em Portugal com motorista certificado',
               url: 'https://www.goportugaltours.com',
