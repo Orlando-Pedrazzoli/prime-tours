@@ -3,7 +3,7 @@
 # Premiere Tours Portugal - Script de Deploy para Produção
 
 echo "================================================"
-echo "  Premiere Tours Portugal - Build & Deploy      "
+echo "  Go Portugal Tours - Build & Deploy      "
 echo "================================================"
 echo ""
 

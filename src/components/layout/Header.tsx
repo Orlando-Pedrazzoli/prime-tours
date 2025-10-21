@@ -292,7 +292,7 @@ const Header = () => {
                     </div>
                     <div>
                       <h3 className='text-xl font-bold text-primary'>
-                        Pedrazzoli Tours
+                        Go Portugal Tours
                       </h3>
                       <p className='text-xs text-gray-600'>Portugal Premium</p>
                     </div>

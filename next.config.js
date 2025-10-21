@@ -10,7 +10,7 @@ const nextConfig = {
       'localhost',
       'images.pexels.com',
       'plus.unsplash.com',
-      'www.pedrazzolitours.pt',
+      'www.goportugaltours.com',
     ],
     formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 60,

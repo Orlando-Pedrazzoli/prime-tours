@@ -194,8 +194,7 @@ const TourModal: React.FC<TourModalProps> = ({ tour, isOpen, onClose }) => {
                   </p>
                   <ul className='text-sm text-gray-600 space-y-1'>
                     <li>• Veículos Hyundai/Toyota confortáveis</li>
-                    <li>• Motorista-guia certificado</li>
-                    <li>• WiFi e águas a bordo</li>
+                    <li>• Motorista certificado</li>
                     <li>• Seguro completo</li>
                     <li>• Todos os impostos</li>
                   </ul>

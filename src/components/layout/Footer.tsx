@@ -115,12 +115,6 @@ const Footer = () => {
               </div>
               <div className='flex items-center gap-3'>
                 <Award className='text-secondary' size={24} />
-                <div>
-                  <p className='font-medium'>Guia Certificado</p>
-                  <p className='text-xs text-gray-400'>
-                    Profissional licenciado
-                  </p>
-                </div>
               </div>
               <div className='flex items-center gap-3'>
                 <Car className='text-secondary' size={24} />

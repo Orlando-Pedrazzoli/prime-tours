@@ -23,19 +23,19 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.pedrazzolitours.pt'),
-  title: 'Pedrazzoli Tours Portugal | Tours Privados Exclusivos',
+  metadataBase: new URL('https://www.goportugaltours.com'),
+  title: 'Go Portugal Tours| Tours Privados Exclusivos',
   description:
     'Descubra Portugal com tours privados personalizados. Transporte premium com motorista-guia certificado. Lisboa, Sintra, Fátima, Óbidos e mais.',
   keywords:
     'tours portugal, tours privados lisboa, transporte privado portugal, passeios turísticos portugal, sintra tour, fátima tour, óbidos tour, pedrazzoli tours',
-  authors: [{ name: 'Pedrazzoli Tours Portugal' }],
+  authors: [{ name: 'Go Portugal Tours' }],
   openGraph: {
-    title: 'Pedrazzoli Tours Portugal | Tours Privados Exclusivos',
+    title: 'Go Portugal Tours | Tours Privados Exclusivos',
     description:
-      'Descubra Portugal com tours privados personalizados. Transporte premium com motorista-guia certificado.',
-    url: 'https://www.pedrazzolitours.pt',
-    siteName: 'Pedrazzoli Tours Portugal',
+      'Descubra Portugal com tours privados personalizados. Transporte premium com motorista certificado.',
+    url: 'https://www.goportugaltours.com',
+    siteName: 'Go Portugal Tours',
     locale: 'pt_PT',
     type: 'website',
     images: [
@@ -43,13 +43,13 @@ export const metadata: Metadata = {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Pedrazzoli Tours Portugal - Tours Privados',
+        alt: 'Go Portugal Tours - Tours Privados',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Pedrazzoli Tours Portugal | Tours Privados Exclusivos',
+    title: 'Go Portugal Tours | Tours Privados Exclusivos',
     description: 'Descubra Portugal com tours privados personalizados.',
     images: ['/og-image.jpg'],
   },
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: 'https://www.pedrazzolitours.pt',
+    canonical: 'https://www.goportugaltours.com',
   },
   verification: {
     google: 'seu-codigo-de-verificacao-aqui',
@@ -201,8 +201,8 @@ export default function RootLayout({
               '@type': 'TravelAgency',
               name: 'Pedrazzoli Tours Portugal',
               description:
-                'Tours privados exclusivos em Portugal com motorista-guia certificado',
-              url: 'https://www.pedrazzolitours.pt',
+                'Tours privados exclusivos em Portugal com motorista certificado',
+              url: 'https://www.goportugaltours.com',
               telephone: '+351912164220',
               email: 'pedrazzoliorlando@gmail.com',
               address: {
@@ -212,10 +212,10 @@ export default function RootLayout({
                 addressCountry: 'PT',
               },
               priceRange: '€€',
-              image: 'https://www.pedrazzolitours.pt/logo.jpg',
+              image: 'https://www.goportugaltours.com/logo.jpg',
               sameAs: [
-                'https://www.facebook.com/pedrazzolitours',
-                'https://www.instagram.com/pedrazzolitours',
+                'https://www.facebook.com/goportugaltours',
+                'https://www.instagram.com/goportugaltours',
               ],
               aggregateRating: {
                 '@type': 'AggregateRating',

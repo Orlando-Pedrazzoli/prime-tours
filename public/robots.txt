@@ -1,7 +1,7 @@
 # public/robots.txt
 User-agent: *
 Allow: /
-Sitemap: https://www.pedrazzolitours.pt/sitemap.xml
+Sitemap: https://www.goportugaltours.com/sitemap.xml
 
 # Bloquear páginas administrativas se houver
 Disallow: /api/

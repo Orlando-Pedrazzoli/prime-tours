@@ -1,4 +1,4 @@
-# Premiere Tours Portugal - Website
+# Go Portugal Tours - Website
 
 Website profissional para serviço de transporte privado e passeios turísticos em Portugal, baseado em Oeiras.
 
@@ -22,7 +22,7 @@ Website profissional para serviço de transporte privado e passeios turísticos 
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/premiere-tours.git
+git clone https://github.com/seu-usuario/prime-tours.git
 cd premiere-tours
 ```
 
@@ -113,11 +113,11 @@ No arquivo `src/data/tours.ts`, atualize o objeto `businessInfo`:
 
 ```typescript
 export const businessInfo = {
-  name: 'Premiere Tours Portugal',
+  name: 'Go Portugal Tours',
   email: 'pedrazzoliorlando@gmail.com',
   phone: '+351 912 164 220',
   whatsapp: '351912164220',
-  location: 'Oeiras, Lisboa',
+  location: 'Lisboa',
   // ...
 };
 ```
@@ -202,8 +202,8 @@ Este projeto é propriedade de Premiere Tours Portugal. Todos os direitos reserv
 
 - Email: pedrazzoliorlando@gmail.com
 - WhatsApp: +351 912 164 220
-- Localização: Oeiras, Lisboa, Portugal
+- Localização: Lisboa, Portugal
 
 ---
 
-Desenvolvido com ❤️ para Premiere Tours Portugal
+Desenvolvido para Go Portugal Tours
