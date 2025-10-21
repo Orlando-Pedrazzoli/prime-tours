@@ -89,7 +89,7 @@ const TourCard: React.FC<TourCardProps> = ({ tour, index = 0 }) => {
           </div>
           <div className='flex items-center gap-2 text-sm col-span-2'>
             <MapPin className='text-primary flex-shrink-0' size={16} />
-            <span className='text-gray-600'>Partida: Oeiras, Lisboa</span>
+            <span className='text-gray-600'>Partida: Lisboa</span>
           </div>
         </div>
 
