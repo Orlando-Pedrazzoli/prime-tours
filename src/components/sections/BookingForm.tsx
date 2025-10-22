@@ -211,7 +211,7 @@ const BookingForm = () => {
               className='lg:col-span-2'
             >
               <form onSubmit={handleSubmit(onSubmit)} className='space-y-6'>
-                <div className='grid md:grid-cols-2 gap-6'>
+                <div className='grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6'>
                   {/* Nome */}
                   <div>
                     <label className='block text-sm font-medium text-gray-700 mb-2'>
@@ -219,12 +219,12 @@ const BookingForm = () => {
                     </label>
                     <div className='relative'>
                       <User
-                        className='absolute left-3 top-3 text-gray-400'
+                        className='absolute left-2.5 md:left-3 top-3 text-gray-400 pointer-events-none'
                         size={20}
                       />
                       <input
                         {...register('name')}
-                        className='w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent'
+                        className='w-full pl-11 md:pl-10 pr-3 md:pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm md:text-base'
                         placeholder='Seu nome completo'
                       />
                     </div>
@@ -242,13 +242,13 @@ const BookingForm = () => {
                     </label>
                     <div className='relative'>
                       <Mail
-                        className='absolute left-3 top-3 text-gray-400'
+                        className='absolute left-2.5 md:left-3 top-3 text-gray-400 pointer-events-none'
                         size={20}
                       />
                       <input
                         {...register('email')}
                         type='email'
-                        className='w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent'
+                        className='w-full pl-11 md:pl-10 pr-3 md:pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm md:text-base'
                         placeholder='seu@email.com'
                       />
                     </div>
@@ -266,12 +266,12 @@ const BookingForm = () => {
                     </label>
                     <div className='relative'>
                       <Phone
-                        className='absolute left-3 top-3 text-gray-400'
+                        className='absolute left-2.5 md:left-3 top-3 text-gray-400 pointer-events-none'
                         size={20}
                       />
                       <input
                         {...register('phone')}
-                        className='w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent'
+                        className='w-full pl-11 md:pl-10 pr-3 md:pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm md:text-base'
                         placeholder='+351 xxx xxx xxx'
                       />
                     </div>
@@ -289,12 +289,12 @@ const BookingForm = () => {
                     </label>
                     <div className='relative'>
                       <MessageSquare
-                        className='absolute left-3 top-3 text-gray-400'
+                        className='absolute left-2.5 md:left-3 top-3 text-gray-400 pointer-events-none'
                         size={20}
                       />
                       <input
                         {...register('whatsapp')}
-                        className='w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent'
+                        className='w-full pl-11 md:pl-10 pr-3 md:pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm md:text-base'
                         placeholder='+351 xxx xxx xxx'
                       />
                     </div>
@@ -308,7 +308,7 @@ const BookingForm = () => {
                   </label>
                   <select
                     {...register('tour')}
-                    className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent'
+                    className='w-full px-3 md:px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm md:text-base'
                   >
                     <option value=''>Escolha um tour...</option>
                     {tours.map(tour => (
@@ -325,7 +325,7 @@ const BookingForm = () => {
                   )}
                 </div>
 
-                <div className='grid md:grid-cols-2 gap-6'>
+                <div className='grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6'>
                   {/* Data */}
                   <div>
                     <label className='block text-sm font-medium text-gray-700 mb-2'>
@@ -333,14 +333,14 @@ const BookingForm = () => {
                     </label>
                     <div className='relative'>
                       <Calendar
-                        className='absolute left-3 top-3 text-gray-400'
+                        className='absolute left-2.5 md:left-3 top-3 text-gray-400 pointer-events-none'
                         size={20}
                       />
                       <input
                         {...register('date')}
                         type='date'
                         min={new Date().toISOString().split('T')[0]}
-                        className='w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent'
+                        className='w-full pl-11 md:pl-10 pr-3 md:pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm md:text-base'
                       />
                     </div>
                     {errors.date && (
@@ -357,12 +357,12 @@ const BookingForm = () => {
                     </label>
                     <div className='relative'>
                       <Users
-                        className='absolute left-3 top-3 text-gray-400'
+                        className='absolute left-2.5 md:left-3 top-3 text-gray-400 pointer-events-none'
                         size={20}
                       />
                       <select
                         {...register('passengers')}
-                        className='w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent'
+                        className='w-full pl-11 md:pl-10 pr-8 md:pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm md:text-base appearance-none'
                       >
                         <option value=''>Selecione...</option>
                         <option value='1'>1 pessoa</option>
