@@ -1,17 +1,170 @@
-<!-- public/sitemap.xml -->
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Página Principal -->
   <url>
     <loc>https://www.goportugaltours.com/</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2025-01-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- Tour 1: Lisboa -->
   <url>
     <loc>https://www.goportugaltours.com/tours/tour-de-lisboa</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2025-01-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <!-- Adicionar todos os 20+ tours -->
+
+  <!-- Tour 2: Sintra Cascais Estoril -->
+  <url>
+    <loc>https://www.goportugaltours.com/tours/passeio-sintra-cascais-estoril</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Tour 3: Óbidos Nazaré Fátima -->
+  <url>
+    <loc>https://www.goportugaltours.com/tours/passeio-obidos-nazare-fatima</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Tour 4: Évora Monsaraz -->
+  <url>
+    <loc>https://www.goportugaltours.com/tours/passeio-evora-monsaraz</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Tour 5: Porto 8h -->
+  <url>
+    <loc>https://www.goportugaltours.com/tours/tour-porto-8h</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Tour 6: Porto 10h -->
+  <url>
+    <loc>https://www.goportugaltours.com/tours/tour-porto-10h</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Tour 7: Vale do Douro 8h -->
+  <url>
+    <loc>https://www.goportugaltours.com/tours/passeio-douro-8h</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Tour 8: Porto e Douro 2 dias (Hotel) -->
+  <url>
+    <loc>https://www.goportugaltours.com/tours/passeio-porto-douro-2d-hotel</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Tour 9: Porto e Douro 2 dias (Quinta) -->
+  <url>
+    <loc>https://www.goportugaltours.com/tours/passeio-porto-douro-2d-quinta</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Tour 10: Porto Guimarães Braga -->
+  <url>
+    <loc>https://www.goportugaltours.com/tours/passeio-porto-guimaraes-braga</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Tour 11: Norte 2 dias -->
+  <url>
+    <loc>https://www.goportugaltours.com/tours/passeio-norte-2-dias</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Tour 12: Sul 2 dias -->
+  <url>
+    <loc>https://www.goportugaltours.com/tours/passeio-sul-2-dias</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Tour 13: Costa Vicentina 8h -->
+  <url>
+    <loc>https://www.goportugaltours.com/tours/passeio-costa-vicentina-8h</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Tour 14: Oeste Medieval -->
+  <url>
+    <loc>https://www.goportugaltours.com/tours/tour-oeste-medieval</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Tour 15: Oeste e Centro 2 dias -->
+  <url>
+    <loc>https://www.goportugaltours.com/tours/tour-oeste-e-centro-2d</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Tour 16: Mafra Ericeira Peniche -->
+  <url>
+    <loc>https://www.goportugaltours.com/tours/passeio-mafra-ericeira-peniche</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Tour 17: Palácio de Mafra 5h -->
+  <url>
+    <loc>https://www.goportugaltours.com/tours/passeio-palacio-mafra-5h</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Tour 18: Fátima Batalha Alcobaça -->
+  <url>
+    <loc>https://www.goportugaltours.com/tours/passeio-fatima-batalha-alcobaca</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Tour 19: Fátima 5h -->
+  <url>
+    <loc>https://www.goportugaltours.com/tours/passeio-fatima-5h</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Tour 20: Sintra 4h -->
+  <url>
+    <loc>https://www.goportugaltours.com/tours/passeio-sintra-4horas</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
