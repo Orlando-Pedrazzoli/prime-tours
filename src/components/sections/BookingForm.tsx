@@ -344,7 +344,7 @@ const BookingForm = () => {
                         })}
                         type='date'
                         min={new Date().toISOString().split('T')[0]}
-                        className='w-full pl-11 md:pl-10 pr-8 md:pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm md:text-base'
+                        className='w-full pl-11 md:pl-10 pr-3 md:pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm md:text-base'
                         style={{
                           colorScheme: 'light',
                           ...(dateValue === '' && {
