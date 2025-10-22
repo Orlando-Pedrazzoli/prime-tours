@@ -100,6 +100,7 @@ const BookingForm = () => {
 
       setSubmitStatus('success');
       reset();
+      setDateValue('');
       setTimeout(() => setSubmitStatus('idle'), 5000);
     } catch (error) {
       console.error('Erro ao enviar reserva:', error);
@@ -314,7 +315,7 @@ const BookingForm = () => {
                     <option value=''>Escolha um tour...</option>
                     {tours.map(tour => (
                       <option key={tour.id} value={tour.title}>
-                        {tour.title}
+                        {tour.title} - €{tour.price.total}
                       </option>
                     ))}
                     <option value='personalizado'>Tour Personalizado</option>
@@ -346,10 +347,19 @@ const BookingForm = () => {
                         className='w-full pl-11 md:pl-10 pr-3 md:pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm md:text-base'
                         style={{
                           colorScheme: 'light',
+                          ...(dateValue === '' && {
+                            color: 'transparent',
+                          }),
+                        }}
+                        onFocus={e => (e.target.style.color = '#374151')}
+                        onBlur={e => {
+                          if (e.target.value === '') {
+                            e.target.style.color = 'transparent';
+                          }
                         }}
                       />
                       {!dateValue && (
-                        <span className='absolute left-11 md:left-10 top-3 text-gray-400 text-sm md:text-base pointer-events-none'>
+                        <span className='absolute left-11 md:left-10 top-3.5 text-gray-400 text-sm md:text-base pointer-events-none'>
                           Selecione a data...
                         </span>
                       )}
