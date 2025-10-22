@@ -39,6 +39,7 @@ const BookingForm = () => {
   const [submitStatus, setSubmitStatus] = useState<
     'idle' | 'success' | 'error'
   >('idle');
+  const [dateValue, setDateValue] = useState('');
 
   const {
     register,
@@ -313,7 +314,7 @@ const BookingForm = () => {
                     <option value=''>Escolha um tour...</option>
                     {tours.map(tour => (
                       <option key={tour.id} value={tour.title}>
-                        {tour.title} - €{tour.price.total}
+                        {tour.title}
                       </option>
                     ))}
                     <option value='personalizado'>Tour Personalizado</option>
@@ -333,15 +334,25 @@ const BookingForm = () => {
                     </label>
                     <div className='relative'>
                       <Calendar
-                        className='absolute left-2.5 md:left-3 top-3 text-gray-400 pointer-events-none'
+                        className='absolute left-2.5 md:left-3 top-3 text-gray-400 pointer-events-none z-10'
                         size={20}
                       />
                       <input
-                        {...register('date')}
+                        {...register('date', {
+                          onChange: e => setDateValue(e.target.value),
+                        })}
                         type='date'
                         min={new Date().toISOString().split('T')[0]}
                         className='w-full pl-11 md:pl-10 pr-3 md:pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm md:text-base'
+                        style={{
+                          colorScheme: 'light',
+                        }}
                       />
+                      {!dateValue && (
+                        <span className='absolute left-11 md:left-10 top-3 text-gray-400 text-sm md:text-base pointer-events-none'>
+                          Selecione a data...
+                        </span>
+                      )}
                     </div>
                     {errors.date && (
                       <p className='mt-1 text-sm text-red-600'>
