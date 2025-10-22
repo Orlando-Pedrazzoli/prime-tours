@@ -159,27 +159,27 @@ const TourDetailContent: React.FC<TourDetailContentProps> = ({ tour }) => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className='bg-white rounded-2xl p-8 shadow-md'
+              className='bg-white rounded-2xl p-4 md:p-8 shadow-md'
             >
-              <h2 className='text-3xl font-bold mb-6 flex items-center gap-3'>
-                <MapPin className='text-primary' size={32} />
+              <h2 className='text-2xl md:text-3xl font-bold mb-3 md:mb-6 flex items-center gap-2 md:gap-3'>
+                <MapPin className='text-primary' size={28} />
                 Mapa do Percurso
               </h2>
-              <div className='relative w-full h-[400px] md:h-[500px] lg:h-[600px] rounded-xl overflow-hidden border-4 border-gray-100 bg-gray-50'>
+              <div className='relative w-full rounded-lg md:rounded-xl overflow-hidden border-2 md:border-4 border-primary/20'>
                 <img
                   src={`/${
                     tourMapImages[tour.slug as keyof typeof tourMapImages] ||
                     'default-map.jpg'
                   }`}
                   alt={`Mapa do percurso - ${tour.title}`}
-                  className='w-full h-full object-contain'
+                  className='w-full h-auto max-h-[800px] md:max-h-[600px] object-cover md:object-contain'
                   onError={e => {
                     // Fallback se a imagem não existir
                     (e.target as HTMLImageElement).src = tour.image;
                   }}
                 />
               </div>
-              <p className='text-sm text-gray-500 mt-3 text-center'>
+              <p className='text-xs md:text-sm text-gray-500 mt-2 md:mt-3 text-center px-2'>
                 * Percurso sujeito a alterações conforme preferências do cliente
               </p>
             </motion.div>
