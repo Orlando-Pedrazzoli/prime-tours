@@ -112,12 +112,12 @@ export const tours = [
     duration: 'Até 8 horas',
     suggestedTime: '8:30',
     price: {
-      basePrice: 200, // Preço base (1 passageiro)
+      basePrice: 150, // Preço base (1 passageiro)
       additionalPassenger: 20, // Custo por passageiro adicional
       maxPeople: 4,
       // Calculados automaticamente:
-      total: 260, // 150 + (20 * 3)
-      perPerson: 65, // 210 / 4
+      total: 210, // 150 + (20 * 3)
+      perPerson: 52.5, // 210 / 4
     },
     description:
       'Embarque numa aventura inesquecível que mostra os cantos mais encantadores de Portugal, desde palácios de conto de fadas até à costa atlântica deslumbrante.',
@@ -187,12 +187,12 @@ export const tours = [
     duration: 'Até 8 horas',
     suggestedTime: '9:00',
     price: {
-      basePrice: 150, // Preço base (1 passageiro)
-      additionalPassenger: 20, // Custo por passageiro adicional
+      basePrice: 250, // Preço base (1 passageiro)
+      additionalPassenger: 10, // Custo por passageiro adicional
       maxPeople: 4,
       // Calculados automaticamente:
-      total: 210, // 150 + (20 * 3)
-      perPerson: 52.5, // 210 / 4
+      total: 280, // 250 + (10 * 3)
+      perPerson: 70, // 280 / 4
     },
     description:
       'Experimente o melhor de Portugal num tour privado que combina espiritualidade, história e beleza costeira de tirar o fôlego.',
