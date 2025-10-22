@@ -485,12 +485,12 @@ export const tours = [
     duration: 'Até 10 horas',
     suggestedTime: '8:00',
     price: {
-      basePrice: 150, // Preço base (1 passageiro)
-      additionalPassenger: 20, // Custo por passageiro adicional
+      basePrice: 400, // Preço base (1 passageiro)
+      additionalPassenger: 10, // Custo por passageiro adicional
       maxPeople: 4,
       // Calculados automaticamente:
-      total: 210, // 150 + (20 * 3)
-      perPerson: 52.5, // 210 / 4
+      total: 430, // 400 + (10 * 3)
+      perPerson: 107.5, // 430 / 4
     },
     description:
       'Uma viagem épica pelo centro e norte de Portugal, visitando duas das cidades mais importantes: Coimbra universitária e o Porto histórico.',
