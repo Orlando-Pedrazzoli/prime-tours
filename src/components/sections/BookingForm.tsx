@@ -335,7 +335,7 @@ const BookingForm = () => {
                     </label>
                     <div className='relative'>
                       <Calendar
-                        className='absolute left-2.5 md:left-3 top-3 text-gray-400 pointer-events-none z-10'
+                        className='absolute left-2.5 md:left-3 top-3 text-gray-400 pointer-events-none'
                         size={20}
                       />
                       <input
@@ -344,7 +344,7 @@ const BookingForm = () => {
                         })}
                         type='date'
                         min={new Date().toISOString().split('T')[0]}
-                        className='w-full pl-11 md:pl-10 pr-3 md:pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm md:text-base'
+                        className='w-full pl-11 md:pl-10 pr-8 md:pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm md:text-base'
                         style={{
                           colorScheme: 'light',
                           ...(dateValue === '' && {
@@ -359,7 +359,7 @@ const BookingForm = () => {
                         }}
                       />
                       {!dateValue && (
-                        <span className='absolute left-11 md:left-10 top-3.5 text-gray-400 text-sm md:text-base pointer-events-none'>
+                        <span className='absolute left-11 md:left-10 top-3 text-gray-400 text-sm md:text-base pointer-events-none'>
                           Selecione a data...
                         </span>
                       )}
