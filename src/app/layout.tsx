@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.goportugaltours.com',
   },
   verification: {
-    google: 'googleca1f51d61a311fc4',
+    google: 'tDuSbHK-9L-0tUnez3TKEQqU4n_76nqf26yaA7-NZPk',
   },
 };
 
