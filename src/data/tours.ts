@@ -564,12 +564,12 @@ export const tours = [
     duration: 'Até 8 horas',
     suggestedTime: '9:00',
     price: {
-      basePrice: 150, // Preço base (1 passageiro)
-      additionalPassenger: 20, // Custo por passageiro adicional
+      basePrice: 200, // Preço base (1 passageiro)
+      additionalPassenger: 10, // Custo por passageiro adicional
       maxPeople: 4,
       // Calculados automaticamente:
-      total: 210, // 150 + (20 * 3)
-      perPerson: 52.5, // 210 / 4
+      total: 230, // 200 + (10 * 3)
+      perPerson: 57.5, // 230 / 4
     },
     description:
       'Combine a espiritualidade de Fátima com a magia dos palácios de Sintra numa experiência única que toca a alma.',
@@ -628,12 +628,12 @@ export const tours = [
     duration: 'Até 8 horas',
     suggestedTime: '9:00',
     price: {
-      basePrice: 150, // Preço base (1 passageiro)
-      additionalPassenger: 20, // Custo por passageiro adicional
+      basePrice: 200, // Preço base (1 passageiro)
+      additionalPassenger: 10, // Custo por passageiro adicional
       maxPeople: 4,
       // Calculados automaticamente:
-      total: 210, // 150 + (20 * 3)
-      perPerson: 52.5, // 210 / 4
+      total: 230, // 200 + (10 * 3)
+      perPerson: 57.5, // 230 / 4
     },
     description:
       'Este tour leva-o numa descoberta da magia dos castelos portugueses desde os tempos medievais até ao período do romantismo.',
