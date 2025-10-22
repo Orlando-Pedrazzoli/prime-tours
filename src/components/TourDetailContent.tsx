@@ -461,17 +461,12 @@ const TourDetailContent: React.FC<TourDetailContentProps> = ({ tour }) => {
                   <div className='flex items-start gap-3'>
                     <Award className='text-primary flex-shrink-0' size={20} />
                     <div>
-                      <p className='font-semibold text-sm'>Guia Certificado</p>
+                      <p className='font-semibold text-sm'>
+                        Motorista Certificado
+                      </p>
                       <p className='text-xs text-gray-600'>
                         Profissional licenciado
                       </p>
-                    </div>
-                  </div>
-                  <div className='flex items-start gap-3'>
-                    <Wifi className='text-primary flex-shrink-0' size={20} />
-                    <div>
-                      <p className='font-semibold text-sm'>WiFi & Água</p>
-                      <p className='text-xs text-gray-600'>Incluídos a bordo</p>
                     </div>
                   </div>
                 </div>
