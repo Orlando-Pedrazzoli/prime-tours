@@ -165,14 +165,14 @@ const TourDetailContent: React.FC<TourDetailContentProps> = ({ tour }) => {
                 <MapPin className='text-primary' size={32} />
                 Mapa do Percurso
               </h2>
-              <div className='relative w-full h-[600px] rounded-xl overflow-hidden border-4 border-gray-100'>
+              <div className='relative w-full h-[400px] md:h-[500px] lg:h-[600px] rounded-xl overflow-hidden border-4 border-gray-100 bg-gray-50'>
                 <img
                   src={`/${
                     tourMapImages[tour.slug as keyof typeof tourMapImages] ||
                     'default-map.jpg'
                   }`}
                   alt={`Mapa do percurso - ${tour.title}`}
-                  className='w-full h-full object-cover'
+                  className='w-full h-full object-contain'
                   onError={e => {
                     // Fallback se a imagem não existir
                     (e.target as HTMLImageElement).src = tour.image;
