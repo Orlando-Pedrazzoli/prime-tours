@@ -14,8 +14,7 @@ export const businessInfo = {
 
   included: [
     'Veículos Hyundai i30 SW ou Toyota Yaris Cross de alto conforto',
-    'Motorista-guia profissional certificado',
-    'WiFi e águas a bordo',
+    'Motorista profissional certificado',
     'Seguro de acidentes e responsabilidade civil',
     'Todos os impostos incluídos',
   ],
