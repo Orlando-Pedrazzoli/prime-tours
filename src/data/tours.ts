@@ -5,7 +5,7 @@ export const businessInfo = {
   tagline: 'Experiências Exclusivas de Turismo Privado',
   description:
     'Transporte privado de passageiros e passeios guiados em Portugal',
-  location: 'Oeiras, Lisboa',
+  location: 'Lisboa',
   capacity: 4,
   vehicles: ['Hyundai i30 SW', 'Toyota Yaris Cross'],
   email: 'pedrazzoliorlando@gmail.com',
@@ -330,12 +330,12 @@ export const tours = [
     duration: 'Até 8 horas',
     suggestedTime: '9:00',
     price: {
-      basePrice: 150, // Preço base (1 passageiro)
+      basePrice: 200, // Preço base (1 passageiro)
       additionalPassenger: 20, // Custo por passageiro adicional
       maxPeople: 4,
       // Calculados automaticamente:
-      total: 210, // 150 + (20 * 3)
-      perPerson: 52.5, // 210 / 4
+      total: 260, // 200 + (20 * 3)
+      perPerson: 65, // 260 / 4
     },
     description:
       'Descubra o coração do Alentejo com este tour que combina história romana, arquitetura medieval e os melhores vinhos da região.',
@@ -1317,7 +1317,7 @@ export const faqs = [
   {
     question: 'Onde é o ponto de encontro?',
     answer:
-      'Fazemos a recolha em qualquer local designado por si - hotel, aeroporto, estação de comboios ou outro local em Lisboa/Oeiras.',
+      'Fazemos a recolha em qualquer local designado por si - hotel, aeroporto, estação de comboios ou outro local em Lisboa.',
   },
   {
     question: 'Qual a política de cancelamento?',
