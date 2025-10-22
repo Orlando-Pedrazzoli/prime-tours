@@ -68,19 +68,8 @@ export const metadata: Metadata = {
     canonical: 'https://www.goportugaltours.com',
   },
   verification: {
-    google: 'seu-codigo-de-verificacao-aqui',
+    google: 'googleca1f51d61a311fc4',
   },
-  // Comentar icons do metadata para usar os links diretos no <head>
-  // icons: {
-  //   icon: [
-  //     { url: '/favicon.ico', sizes: 'any' },
-  //     { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
-  //     { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
-  //   ],
-  //   apple: [
-  //     { url: '/favicon-32x32.png', sizes: '180x180' },
-  //   ],
-  // },
 };
 
 export default function RootLayout({
@@ -177,7 +166,6 @@ export default function RootLayout({
           />
         )}
 
-        <meta name='google-site-verification' content='seu-codigo-aqui' />
         <link rel='manifest' href='/manifest.json' />
         <meta name='msapplication-TileColor' content='#006847' />
         <meta name='msapplication-TileImage' content='/favicon-32x32.png' />

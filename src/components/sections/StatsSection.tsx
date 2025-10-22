@@ -36,7 +36,7 @@ const StatsSection = () => {
     },
     {
       icon: Calendar,
-      value: 10,
+      value: 8,
       suffix: '+',
       label: 'Anos de Experiência',
       color: 'text-green-500',
