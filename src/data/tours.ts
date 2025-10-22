@@ -688,12 +688,12 @@ export const tours = [
     duration: 'Até 10 horas',
     suggestedTime: '8:00',
     price: {
-      basePrice: 150, // Preço base (1 passageiro)
-      additionalPassenger: 20, // Custo por passageiro adicional
+      basePrice: 450, // Preço base (1 passageiro)
+      additionalPassenger: 10, // Custo por passageiro adicional
       maxPeople: 4,
       // Calculados automaticamente:
-      total: 210, // 150 + (20 * 3)
-      perPerson: 52.5, // 210 / 4
+      total: 480, // 450 + (10 * 3)
+      perPerson: 120, // 480 / 4
     },
     description:
       'Descubra o melhor do Algarve numa viagem épica pelas praias douradas, falésias espetaculares e o cabo que os navegadores chamavam "Fim do Mundo".',
@@ -768,12 +768,12 @@ export const tours = [
     duration: 'Até 8 horas',
     suggestedTime: '9:00',
     price: {
-      basePrice: 150, // Preço base (1 passageiro)
-      additionalPassenger: 20, // Custo por passageiro adicional
+      basePrice: 300, // Preço base (1 passageiro)
+      additionalPassenger: 10, // Custo por passageiro adicional
       maxPeople: 4,
       // Calculados automaticamente:
-      total: 210, // 150 + (20 * 3)
-      perPerson: 52.5, // 210 / 4
+      total: 330, // 300 + (10 * 3)
+      perPerson: 82.5, // 330 / 4
     },
     description:
       'Combine a espiritualidade de Fátima com a tradição académica de Coimbra, duas cidades que representam a fé e o conhecimento.',
@@ -833,12 +833,12 @@ export const tours = [
     duration: 'Até 7 horas',
     suggestedTime: '9:00',
     price: {
-      basePrice: 150, // Preço base (1 passageiro)
-      additionalPassenger: 20, // Custo por passageiro adicional
+      basePrice: 200, // Preço base (1 passageiro)
+      additionalPassenger: 10, // Custo por passageiro adicional
       maxPeople: 4,
       // Calculados automaticamente:
-      total: 210, // 150 + (20 * 3)
-      perPerson: 52.5, // 210 / 4
+      total: 230, // 200 + (10 * 3)
+      perPerson: 57.5, // 230 / 4
     },
     description:
       'Uma jornada espiritual que combina o fervor religioso de Fátima com o charme medieval de Óbidos.',
@@ -893,12 +893,12 @@ export const tours = [
     duration: 'Até 8 horas',
     suggestedTime: '9:00',
     price: {
-      basePrice: 150, // Preço base (1 passageiro)
-      additionalPassenger: 20, // Custo por passageiro adicional
+      basePrice: 250, // Preço base (1 passageiro)
+      additionalPassenger: 10, // Custo por passageiro adicional
       maxPeople: 4,
       // Calculados automaticamente:
-      total: 210, // 150 + (20 * 3)
-      perPerson: 52.5, // 210 / 4
+      total: 280, // 250 + (10 * 3)
+      perPerson: 70, // 280 / 4
     },
     description:
       'Siga os passos dos misteriosos Cavaleiros Templários através dos seus monumentos mais impressionantes em Portugal.',
@@ -953,12 +953,12 @@ export const tours = [
     duration: 'Até 8 horas',
     suggestedTime: '9:00',
     price: {
-      basePrice: 150, // Preço base (1 passageiro)
-      additionalPassenger: 20, // Custo por passageiro adicional
+      basePrice: 350, // Preço base (1 passageiro)
+      additionalPassenger: 10, // Custo por passageiro adicional
       maxPeople: 4,
       // Calculados automaticamente:
-      total: 210, // 150 + (20 * 3)
-      perPerson: 52.5, // 210 / 4
+      total: 380, // 350 + (10 * 3)
+      perPerson: 95, // 380 / 4
     },
     description:
       'Descubra duas pérolas do centro de Portugal: a histórica Coimbra universitária e a encantadora Aveiro, conhecida como a Veneza Portuguesa.',
@@ -1018,12 +1018,12 @@ export const tours = [
     duration: 'Até 12 horas',
     suggestedTime: '7:00',
     price: {
-      basePrice: 150, // Preço base (1 passageiro)
-      additionalPassenger: 20, // Custo por passageiro adicional
+      basePrice: 600, // Preço base (1 passageiro)
+      additionalPassenger: 10, // Custo por passageiro adicional
       maxPeople: 4,
       // Calculados automaticamente:
-      total: 210, // 150 + (20 * 3)
-      perPerson: 52.5, // 210 / 4
+      total: 630, // 600 + (10 * 3)
+      perPerson: 157.5, // 630 / 4
     },
     description:
       'Uma viagem épica que atravessa fronteiras, do histórico Porto português até à mística Santiago de Compostela na Galiza.',
@@ -1147,12 +1147,12 @@ export const tours = [
     duration: 'Até 5 horas',
     suggestedTime: '9:00',
     price: {
-      basePrice: 150, // Preço base (1 passageiro)
-      additionalPassenger: 20, // Custo por passageiro adicional
+      basePrice: 200, // Preço base (1 passageiro)
+      additionalPassenger: 10, // Custo por passageiro adicional
       maxPeople: 4,
       // Calculados automaticamente:
-      total: 210, // 150 + (20 * 3)
-      perPerson: 52.5, // 210 / 4
+      total: 230, // 200 + (10 * 3)
+      perPerson: 57.5, // 230 / 4
     },
     description:
       'Visite o famoso Santuário de Fátima, um dos maiores centros de peregrinação do mundo, construído onde a Virgem Maria apareceu a três pastores em 1917.',
@@ -1202,12 +1202,12 @@ export const tours = [
     duration: 'Até 4 horas',
     suggestedTime: '9:00 ou 14:00',
     price: {
-      basePrice: 150, // Preço base (1 passageiro)
+      basePrice: 100, // Preço base (1 passageiro)
       additionalPassenger: 20, // Custo por passageiro adicional
       maxPeople: 4,
       // Calculados automaticamente:
-      total: 210, // 150 + (20 * 3)
-      perPerson: 52.5, // 210 / 4
+      total: 160, // 100 + (20 * 3)
+      perPerson: 40, // 160 / 4
     },
     description:
       'Este tour desvenda a magia deste lugar único na terra. Sintra leva-nos a palácios e castelos encantados, vistas deslumbrantes, grutas misteriosas e trilhos secretos.',
