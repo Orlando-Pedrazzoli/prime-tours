@@ -7,32 +7,28 @@ export function middleware(request: NextRequest) {
   if (pathname.startsWith('/tours/')) {
     const slug = pathname.split('/tours/')[1];
 
-    // Lista de slugs válidos dos tours atualizados
+    // ✅ Lista de slugs válidos (SINCRONIZADO COM SITEMAP.XML)
     const validSlugs = [
       'tour-de-lisboa',
       'passeio-sintra-cascais-estoril',
-      'fatima-batalha-nazare-obidos',
-      'tour-lisboa-sintra',
-      'tour-evora-monsaraz',
-      'tour-azeitao-palmela-sesimbra-arrabida-setubal',
-      'tour-coimbra-porto',
-      'passeio-fatima-sintra',
-      'passeio-sintra-obidos',
-      'tour-algarve-praia-da-rocha-lagos-sagres',
-      'tour-fatima-coimbra',
-      'passeio-fatima-obidos',
-      'tour-templarios-portugal',
-      'tour-coimbra-aveiro',
-      'passeio-porto-santiago-compostela',
-      'passeio-tomar-convento-cristo-coimbra',
-      'tour-fatima-santiago-compostela',
-      'passeio-sintra-mafra',
-      'passeio-fatima-5horas',
+      'passeio-obidos-nazare-fatima',
+      'passeio-evora-monsaraz',
+      'tour-porto-8h',
+      'tour-porto-10h',
+      'passeio-douro-8h',
+      'passeio-porto-douro-2d-hotel',
+      'passeio-porto-douro-2d-quinta',
+      'passeio-porto-guimaraes-braga',
+      'passeio-norte-2-dias',
+      'passeio-sul-2-dias',
+      'passeio-costa-vicentina-8h',
+      'tour-oeste-medieval',
+      'tour-oeste-e-centro-2d',
+      'passeio-mafra-ericeira-peniche',
+      'passeio-palacio-mafra-5h',
+      'passeio-fatima-batalha-alcobaca',
+      'passeio-fatima-5h',
       'passeio-sintra-4horas',
-      'tour-lisboa-4horas',
-      'tour-a-pe-bonde-lisboa',
-      'passeio-noturno-lisboa',
-      'passeio-lisboa-noite-fado-jantar',
     ];
 
     // Se o slug não existe, redirecionar para a seção de tours

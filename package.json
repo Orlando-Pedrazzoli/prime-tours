@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "validate-routes": "node scripts/validate-routes.js",
     "lint": "next lint"
   },
   "dependencies": {
