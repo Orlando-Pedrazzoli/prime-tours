@@ -3,7 +3,7 @@
   <!-- Página Principal -->
   <url>
     <loc>https://www.goportugaltours.com/</loc>
-    <lastmod>2025-01-22</lastmod>
+    <lastmod>2025-10-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -11,7 +11,7 @@
   <!-- Tour 1: Lisboa -->
   <url>
     <loc>https://www.goportugaltours.com/tours/tour-de-lisboa</loc>
-    <lastmod>2025-01-22</lastmod>
+    <lastmod>2025-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -19,151 +19,183 @@
   <!-- Tour 2: Sintra Cascais Estoril -->
   <url>
     <loc>https://www.goportugaltours.com/tours/passeio-sintra-cascais-estoril</loc>
-    <lastmod>2025-01-22</lastmod>
+    <lastmod>2025-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Tour 3: Óbidos Nazaré Fátima -->
+  <!-- Tour 3: Fátima Batalha Nazaré Óbidos -->
   <url>
-    <loc>https://www.goportugaltours.com/tours/passeio-obidos-nazare-fatima</loc>
-    <lastmod>2025-01-22</lastmod>
+    <loc>https://www.goportugaltours.com/tours/fatima-batalha-nazare-obidos</loc>
+    <lastmod>2025-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Tour 4: Évora Monsaraz -->
+  <!-- Tour 4: Lisboa Sintra -->
   <url>
-    <loc>https://www.goportugaltours.com/tours/passeio-evora-monsaraz</loc>
-    <lastmod>2025-01-22</lastmod>
+    <loc>https://www.goportugaltours.com/tours/tour-lisboa-sintra</loc>
+    <lastmod>2025-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Tour 5: Porto 8h -->
+  <!-- Tour 5: Évora Monsaraz -->
   <url>
-    <loc>https://www.goportugaltours.com/tours/tour-porto-8h</loc>
-    <lastmod>2025-01-22</lastmod>
+    <loc>https://www.goportugaltours.com/tours/tour-evora-monsaraz</loc>
+    <lastmod>2025-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Tour 6: Porto 10h -->
+  <!-- Tour 6: Azeitão Palmela Sesimbra Arrábida Setúbal -->
   <url>
-    <loc>https://www.goportugaltours.com/tours/tour-porto-10h</loc>
-    <lastmod>2025-01-22</lastmod>
+    <loc>https://www.goportugaltours.com/tours/tour-azeitao-palmela-sesimbra-arrabida-setubal</loc>
+    <lastmod>2025-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Tour 7: Vale do Douro 8h -->
+  <!-- Tour 7: Coimbra Porto -->
   <url>
-    <loc>https://www.goportugaltours.com/tours/passeio-douro-8h</loc>
-    <lastmod>2025-01-22</lastmod>
+    <loc>https://www.goportugaltours.com/tours/tour-coimbra-porto</loc>
+    <lastmod>2025-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Tour 8: Porto e Douro 2 dias (Hotel) -->
+  <!-- Tour 8: Fátima Sintra -->
   <url>
-    <loc>https://www.goportugaltours.com/tours/passeio-porto-douro-2d-hotel</loc>
-    <lastmod>2025-01-22</lastmod>
+    <loc>https://www.goportugaltours.com/tours/passeio-fatima-sintra</loc>
+    <lastmod>2025-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Tour 9: Porto e Douro 2 dias (Quinta) -->
+  <!-- Tour 9: Sintra Óbidos -->
   <url>
-    <loc>https://www.goportugaltours.com/tours/passeio-porto-douro-2d-quinta</loc>
-    <lastmod>2025-01-22</lastmod>
+    <loc>https://www.goportugaltours.com/tours/passeio-sintra-obidos</loc>
+    <lastmod>2025-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Tour 10: Porto Guimarães Braga -->
+  <!-- Tour 10: Algarve - Praia da Rocha Lagos Sagres -->
   <url>
-    <loc>https://www.goportugaltours.com/tours/passeio-porto-guimaraes-braga</loc>
-    <lastmod>2025-01-22</lastmod>
+    <loc>https://www.goportugaltours.com/tours/tour-algarve-praia-da-rocha-lagos-sagres</loc>
+    <lastmod>2025-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Tour 11: Norte 2 dias -->
+  <!-- Tour 11: Fátima Coimbra -->
   <url>
-    <loc>https://www.goportugaltours.com/tours/passeio-norte-2-dias</loc>
-    <lastmod>2025-01-22</lastmod>
+    <loc>https://www.goportugaltours.com/tours/tour-fatima-coimbra</loc>
+    <lastmod>2025-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Tour 12: Sul 2 dias -->
+  <!-- Tour 12: Fátima Óbidos -->
   <url>
-    <loc>https://www.goportugaltours.com/tours/passeio-sul-2-dias</loc>
-    <lastmod>2025-01-22</lastmod>
+    <loc>https://www.goportugaltours.com/tours/passeio-fatima-obidos</loc>
+    <lastmod>2025-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Tour 13: Costa Vicentina 8h -->
+  <!-- Tour 13: Templários Portugal -->
   <url>
-    <loc>https://www.goportugaltours.com/tours/passeio-costa-vicentina-8h</loc>
-    <lastmod>2025-01-22</lastmod>
+    <loc>https://www.goportugaltours.com/tours/tour-templarios-portugal</loc>
+    <lastmod>2025-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Tour 14: Oeste Medieval -->
+  <!-- Tour 14: Coimbra Aveiro -->
   <url>
-    <loc>https://www.goportugaltours.com/tours/tour-oeste-medieval</loc>
-    <lastmod>2025-01-22</lastmod>
+    <loc>https://www.goportugaltours.com/tours/tour-coimbra-aveiro</loc>
+    <lastmod>2025-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Tour 15: Oeste e Centro 2 dias -->
+  <!-- Tour 15: Porto Santiago de Compostela -->
   <url>
-    <loc>https://www.goportugaltours.com/tours/tour-oeste-e-centro-2d</loc>
-    <lastmod>2025-01-22</lastmod>
+    <loc>https://www.goportugaltours.com/tours/passeio-porto-santiago-compostela</loc>
+    <lastmod>2025-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Tour 16: Mafra Ericeira Peniche -->
+  <!-- Tour 16: Tomar Convento de Cristo Coimbra -->
   <url>
-    <loc>https://www.goportugaltours.com/tours/passeio-mafra-ericeira-peniche</loc>
-    <lastmod>2025-01-22</lastmod>
+    <loc>https://www.goportugaltours.com/tours/passeio-tomar-convento-cristo-coimbra</loc>
+    <lastmod>2025-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Tour 17: Palácio de Mafra 5h -->
+  <!-- Tour 17: Fátima Santiago de Compostela -->
   <url>
-    <loc>https://www.goportugaltours.com/tours/passeio-palacio-mafra-5h</loc>
-    <lastmod>2025-01-22</lastmod>
+    <loc>https://www.goportugaltours.com/tours/tour-fatima-santiago-compostela</loc>
+    <lastmod>2025-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Tour 18: Fátima Batalha Alcobaça -->
+  <!-- Tour 18: Sintra Mafra -->
   <url>
-    <loc>https://www.goportugaltours.com/tours/passeio-fatima-batalha-alcobaca</loc>
-    <lastmod>2025-01-22</lastmod>
+    <loc>https://www.goportugaltours.com/tours/passeio-sintra-mafra</loc>
+    <lastmod>2025-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Tour 19: Fátima 5h -->
+  <!-- Tour 19: Fátima 5 Horas -->
   <url>
-    <loc>https://www.goportugaltours.com/tours/passeio-fatima-5h</loc>
-    <lastmod>2025-01-22</lastmod>
+    <loc>https://www.goportugaltours.com/tours/passeio-fatima-5horas</loc>
+    <lastmod>2025-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Tour 20: Sintra 4h -->
+  <!-- Tour 20: Sintra 4 Horas -->
   <url>
     <loc>https://www.goportugaltours.com/tours/passeio-sintra-4horas</loc>
-    <lastmod>2025-01-22</lastmod>
+    <lastmod>2025-10-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Tour 21: Lisboa 4 Horas -->
+  <url>
+    <loc>https://www.goportugaltours.com/tours/tour-lisboa-4horas</loc>
+    <lastmod>2025-10-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Tour 22: A Pé e Bonde Lisboa -->
+  <url>
+    <loc>https://www.goportugaltours.com/tours/tour-a-pe-bonde-lisboa</loc>
+    <lastmod>2025-10-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Tour 23: Passeio Noturno Lisboa -->
+  <url>
+    <loc>https://www.goportugaltours.com/tours/passeio-noturno-lisboa</loc>
+    <lastmod>2025-10-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Tour 24: Lisboa Noite Fado Jantar -->
+  <url>
+    <loc>https://www.goportugaltours.com/tours/passeio-lisboa-noite-fado-jantar</loc>
+    <lastmod>2025-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
