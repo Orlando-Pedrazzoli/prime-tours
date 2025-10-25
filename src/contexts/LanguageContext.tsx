@@ -85,7 +85,22 @@ const translations = {
     'contact.phone': 'Telefone',
     'contact.email': 'Email',
     'contact.location': 'Localização',
+
+    // Footer
+    'footer.description': 'Experiências exclusivas de turismo privado em Portugal. Descubra o melhor do nosso país com conforto e segurança.',
+    'footer.popularTours': 'Tours Populares',
+    'footer.information': 'Informações',
+    'footer.available': 'Disponível todos os dias',
+    'footer.certifications': 'Certificações',
+    'footer.insurance': 'Seguro Total',
+    'footer.insuranceDesc': 'Acidentes e RC incluídos',
+    'footer.premiumVehicles': 'Veículos Premium',
+    'footer.vehiclesDesc': 'Hyundai & Toyota',
+    'footer.rights': 'Todos os direitos reservados.',
+    'footer.privacyPolicy': 'Política de Privacidade',
+    'footer.termsConditions': 'Termos e Condições',
   },
+  
   en: {
     // Navigation
     'nav.home': 'Home',
@@ -157,6 +172,20 @@ const translations = {
     'contact.phone': 'Phone',
     'contact.email': 'Email',
     'contact.location': 'Location',
+
+    // Footer
+    'footer.description': 'Exclusive private tourism experiences in Portugal. Discover the best of our country with comfort and safety.',
+    'footer.popularTours': 'Popular Tours',
+    'footer.information': 'Information',
+    'footer.available': 'Available every day',
+    'footer.certifications': 'Certifications',
+    'footer.insurance': 'Full Insurance',
+    'footer.insuranceDesc': 'Accidents and liability included',
+    'footer.premiumVehicles': 'Premium Vehicles',
+    'footer.vehiclesDesc': 'Hyundai & Toyota',
+    'footer.rights': 'All rights reserved.',
+    'footer.privacyPolicy': 'Privacy Policy',
+    'footer.termsConditions': 'Terms and Conditions',
   },
 };
 

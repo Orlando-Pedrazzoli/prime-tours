@@ -14,9 +14,11 @@ import {
   Clock,
 } from 'lucide-react';
 import { businessInfo, tours } from '@/data/tours';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const { t } = useLanguage();
 
   return (
     <footer className='bg-gray-900 text-white'>
@@ -29,8 +31,7 @@ const Footer = () => {
               Go Portugal Tours
             </h3>
             <p className='text-gray-300 mb-4'>
-              Experiências exclusivas de turismo privado em Portugal. Descubra o
-              melhor do nosso país com conforto e segurança.
+              {t('footer.description')}
             </p>
             <div className='flex gap-3'>
               <a
@@ -52,7 +53,7 @@ const Footer = () => {
 
           {/* Tours Populares */}
           <div>
-            <h4 className='text-lg font-semibold mb-4'>Tours Populares</h4>
+            <h4 className='text-lg font-semibold mb-4'>{t('footer.popularTours')}</h4>
             <ul className='space-y-2'>
               {tours.slice(0, 5).map(tour => (
                 <li key={tour.id}>
@@ -69,7 +70,7 @@ const Footer = () => {
 
           {/* Informações */}
           <div>
-            <h4 className='text-lg font-semibold mb-4'>Informações</h4>
+            <h4 className='text-lg font-semibold mb-4'>{t('footer.information')}</h4>
             <ul className='space-y-3'>
               <li className='flex items-center gap-2 text-gray-300 text-sm'>
                 <MapPin size={16} className='flex-shrink-0' />
@@ -95,21 +96,21 @@ const Footer = () => {
               </li>
               <li className='flex items-center gap-2 text-gray-300 text-sm'>
                 <Clock size={16} className='flex-shrink-0' />
-                Disponível todos os dias
+                {t('footer.available')}
               </li>
             </ul>
           </div>
 
           {/* Certificações */}
           <div>
-            <h4 className='text-lg font-semibold mb-4'>Certificações</h4>
+            <h4 className='text-lg font-semibold mb-4'>{t('footer.certifications')}</h4>
             <div className='space-y-3'>
               <div className='flex items-center gap-3'>
                 <Shield className='text-secondary' size={24} />
                 <div>
-                  <p className='font-medium'>Seguro Total</p>
+                  <p className='font-medium'>{t('footer.insurance')}</p>
                   <p className='text-xs text-gray-400'>
-                    Acidentes e RC incluídos
+                    {t('footer.insuranceDesc')}
                   </p>
                 </div>
               </div>
@@ -119,8 +120,8 @@ const Footer = () => {
               <div className='flex items-center gap-3'>
                 <Car className='text-secondary' size={24} />
                 <div>
-                  <p className='font-medium'>Veículos Premium</p>
-                  <p className='text-xs text-gray-400'>Hyundai & Toyota</p>
+                  <p className='font-medium'>{t('footer.premiumVehicles')}</p>
+                  <p className='text-xs text-gray-400'>{t('footer.vehiclesDesc')}</p>
                 </div>
               </div>
             </div>
@@ -133,14 +134,14 @@ const Footer = () => {
         <div className='container mx-auto px-4 py-4'>
           <div className='flex flex-col md:flex-row justify-between items-center text-sm text-gray-400'>
             <p>
-              © {currentYear} Go Portugal Tours. Todos os direitos reservados.
+              © {currentYear} Go Portugal Tours. {t('footer.rights')}
             </p>
             <div className='flex gap-6 mt-2 md:mt-0'>
               <Link href='#' className='hover:text-secondary transition-colors'>
-                Política de Privacidade
+                {t('footer.privacyPolicy')}
               </Link>
               <Link href='#' className='hover:text-secondary transition-colors'>
-                Termos e Condições
+                {t('footer.termsConditions')}
               </Link>
             </div>
           </div>
