@@ -4,39 +4,40 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import {
   MapPin,
-  Users,
-  Clock,
   Shield,
   Heart,
   Sparkles,
-  Globe,
+  Star,
   CreditCard,
   Headphones,
-  Star,
 } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const ServicesSection = () => {
+  const { t } = useLanguage();
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    element?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   const services = [
     {
       icon: MapPin,
-      title: 'Tours Personalizados',
-      description:
-        'Roteiros exclusivos adaptados aos seus interesses, ritmo e preferências pessoais',
+      title: t('services.personalizedTours'),
+      description: t('services.personalizedToursDesc'),
       color: 'bg-blue-500',
     },
-
     {
       icon: Shield,
-      title: 'Segurança Garantida',
-      description:
-        'Seguro completo, veículos inspecionados e motorista-guia certificado',
+      title: t('services.guaranteedSafety'),
+      description: t('services.guaranteedSafetyDesc'),
       color: 'bg-orange-500',
     },
     {
       icon: Heart,
-      title: 'Atendimento Premium',
-      description:
-        'Serviço atencioso e dedicado do início ao fim da sua experiência',
+      title: t('services.premiumService'),
+      description: t('services.premiumServiceDesc'),
       color: 'bg-red-500',
     },
   ];
@@ -44,26 +45,23 @@ const ServicesSection = () => {
   const whyChooseUs = [
     {
       icon: Star,
-      title: 'Experiência Local',
-      description:
-        'Conhecimento profundo de Portugal, suas histórias e segredos',
+      title: t('services.localExperience'),
+      description: t('services.localExperienceDesc'),
     },
     {
       icon: Sparkles,
-      title: 'Momentos Únicos',
-      description:
-        'Criamos experiências memoráveis que vão além do turismo convencional',
+      title: t('services.uniqueMoments'),
+      description: t('services.uniqueMomentsDesc'),
     },
     {
       icon: CreditCard,
-      title: 'Preços Transparentes',
-      description: 'Sem taxas ocultas, tudo incluído no preço anunciado',
+      title: t('services.transparentPricing'),
+      description: t('services.transparentPricingDesc'),
     },
     {
       icon: Headphones,
-      title: 'Suporte 24/7',
-      description:
-        'Estamos sempre disponíveis para ajudar antes, durante e após o tour',
+      title: t('services.support247'),
+      description: t('services.support247Desc'),
     },
   ];
 
@@ -79,12 +77,11 @@ const ServicesSection = () => {
           className='text-center mb-16'
         >
           <h2 className='text-4xl md:text-5xl font-bold mb-4'>
-            Porquê Escolher os{' '}
-            <span className='text-primary'>Nossos Serviços</span>
+            {t('services.whyChoose')}{' '}
+            <span className='text-primary'>{t('services.ourServices')}</span>
           </h2>
           <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-            Oferecemos uma experiência de turismo premium com atenção aos
-            mínimos detalhes
+            {t('services.subtitle')}
           </p>
         </motion.div>
 
@@ -123,12 +120,10 @@ const ServicesSection = () => {
           <div className='grid lg:grid-cols-2 gap-12 items-center'>
             <div>
               <h3 className='text-3xl font-bold mb-6'>
-                Uma Experiência Verdadeiramente Portuguesa
+                {t('services.portugueseExperience')}
               </h3>
               <p className='text-lg mb-8 opacity-90'>
-                Mais do que um simples transporte, oferecemos uma jornada
-                cultural através de Portugal. Cada tour é uma oportunidade de
-                mergulhar na história, gastronomia e tradições locais.
+                {t('services.portugueseExperienceDesc')}
               </p>
               <div className='space-y-4'>
                 {whyChooseUs.map((item, index) => (
@@ -154,8 +149,8 @@ const ServicesSection = () => {
               <div className='absolute -bottom-6 -right-6 bg-secondary text-black p-6 rounded-2xl shadow-xl'>
                 <div className='text-center'>
                   <p className='text-3xl font-bold'>100%</p>
-                  <p className='text-sm font-medium'>Satisfação</p>
-                  <p className='text-sm'>Garantida</p>
+                  <p className='text-sm font-medium'>{t('services.satisfaction')}</p>
+                  <p className='text-sm'>{t('services.guaranteed')}</p>
                 </div>
               </div>
             </div>
@@ -171,25 +166,24 @@ const ServicesSection = () => {
           className='text-center mt-16'
         >
           <h3 className='text-2xl font-bold mb-4'>
-            Pronto para uma experiência inesquecível?
+            {t('services.readyExperience')}
           </h3>
           <p className='text-gray-600 mb-8 max-w-2xl mx-auto'>
-            Deixe-nos criar o tour perfeito para si. Cada detalhe será pensado
-            para tornar a sua viagem única e memorável.
+            {t('services.readyExperienceDesc')}
           </p>
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-            <a
-              href='#tours'
+            <button
+              onClick={() => scrollToSection('tours')}
               className='bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-700 transition-colors inline-flex items-center justify-center'
             >
-              Ver Tours Disponíveis
-            </a>
-            <a
-              href='#contacto'
+              {t('services.viewAvailableTours')}
+            </button>
+            <button
+              onClick={() => scrollToSection('contacto')}
               className='bg-secondary text-black px-8 py-4 rounded-lg font-semibold hover:bg-secondary/90 transition-colors inline-flex items-center justify-center'
             >
-              Solicitar Tour Personalizado
-            </a>
+              {t('services.requestCustomTour')}
+            </button>
           </div>
         </motion.div>
       </div>

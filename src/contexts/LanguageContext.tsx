@@ -67,19 +67,40 @@ const translations = {
     'about.portuguese': 'Português',
     'about.english': 'English',
     
-    // Services
-    'services.certified': 'Motorista Certificado',
-    'services.certifiedDesc': 'Motorista profissional certificado com anos de experiência',
-    'services.localKnowledge': 'Conhecimento Local',
-    'services.localDesc': 'Conheço os melhores lugares, histórias e segredos de Portugal',
-    'services.personalized': '100% Personalizado',
-    'services.personalizedDesc': 'Tours privados adaptados aos seus interesses e preferências',
-    'services.flexibility': 'Flexibilidade Total',
-    'services.flexibilityDesc': 'Horários e itinerários flexíveis ao seu ritmo',
-    'services.safety': 'Segurança Garantida',
-    'services.safetyDesc': 'Seguro completo e veículos sempre em perfeitas condições',
-    'services.premium': 'Experiência Premium',
-    'services.premiumDesc': 'Serviço de excelência com atenção aos mínimos detalhes',
+    // Services Section
+    'services.whyChoose': 'Porquê Escolher os',
+    'services.ourServices': 'Nossos Serviços',
+    'services.subtitle': 'Oferecemos uma experiência de turismo premium com atenção aos mínimos detalhes',
+    
+    // Main Services Cards
+    'services.personalizedTours': 'Tours Personalizados',
+    'services.personalizedToursDesc': 'Roteiros exclusivos adaptados aos seus interesses, ritmo e preferências pessoais',
+    'services.guaranteedSafety': 'Segurança Garantida',
+    'services.guaranteedSafetyDesc': 'Seguro completo, veículos inspecionados e motorista-guia certificado',
+    'services.premiumService': 'Atendimento Premium',
+    'services.premiumServiceDesc': 'Serviço atencioso e dedicado do início ao fim da sua experiência',
+    
+    // Why Choose Us Items
+    'services.localExperience': 'Experiência Local',
+    'services.localExperienceDesc': 'Conhecimento profundo de Portugal, suas histórias e segredos',
+    'services.uniqueMoments': 'Momentos Únicos',
+    'services.uniqueMomentsDesc': 'Criamos experiências memoráveis que vão além do turismo convencional',
+    'services.transparentPricing': 'Preços Transparentes',
+    'services.transparentPricingDesc': 'Sem taxas ocultas, tudo incluído no preço anunciado',
+    'services.support247': 'Suporte 24/7',
+    'services.support247Desc': 'Estamos sempre disponíveis para ajudar antes, durante e após o tour',
+    
+    // Portuguese Experience
+    'services.portugueseExperience': 'Uma Experiência Verdadeiramente Portuguesa',
+    'services.portugueseExperienceDesc': 'Mais do que um simples transporte, oferecemos uma jornada cultural através de Portugal. Cada tour é uma oportunidade de mergulhar na história, gastronomia e tradições locais.',
+    'services.satisfaction': 'Satisfação',
+    'services.guaranteed': 'Garantida',
+    
+    // Call to Action
+    'services.readyExperience': 'Pronto para uma experiência inesquecível?',
+    'services.readyExperienceDesc': 'Deixe-nos criar o tour perfeito para si. Cada detalhe será pensado para tornar a sua viagem única e memorável.',
+    'services.viewAvailableTours': 'Ver Tours Disponíveis',
+    'services.requestCustomTour': 'Solicitar Tour Personalizado',
     
     // Contact
     'contact.phone': 'Telefone',
@@ -99,8 +120,6 @@ const translations = {
     'footer.rights': 'Todos os direitos reservados.',
     'footer.privacyPolicy': 'Política de Privacidade',
     'footer.termsConditions': 'Termos e Condições',
-
-    
   },
   
   en: {
@@ -156,19 +175,40 @@ const translations = {
     'about.portuguese': 'Português',
     'about.english': 'English',
     
-    // Services
-    'services.certified': 'Certified Driver',
-    'services.certifiedDesc': 'Professional certified driver with years of experience',
-    'services.localKnowledge': 'Local Knowledge',
-    'services.localDesc': 'I know the best places, stories and secrets of Portugal',
-    'services.personalized': '100% Personalized',
-    'services.personalizedDesc': 'Private tours adapted to your interests and preferences',
-    'services.flexibility': 'Total Flexibility',
-    'services.flexibilityDesc': 'Flexible schedules and itineraries at your pace',
-    'services.safety': 'Guaranteed Safety',
-    'services.safetyDesc': 'Complete insurance and vehicles always in perfect condition',
-    'services.premium': 'Premium Experience',
-    'services.premiumDesc': 'Excellence service with attention to the smallest details',
+    // Services Section
+    'services.whyChoose': 'Why Choose',
+    'services.ourServices': 'Our Services',
+    'services.subtitle': 'We offer a premium tourism experience with attention to the smallest details',
+    
+    // Main Services Cards
+    'services.personalizedTours': 'Personalized Tours',
+    'services.personalizedToursDesc': 'Exclusive itineraries adapted to your interests, pace and personal preferences',
+    'services.guaranteedSafety': 'Guaranteed Safety',
+    'services.guaranteedSafetyDesc': 'Complete insurance, inspected vehicles and certified driver-guide',
+    'services.premiumService': 'Premium Service',
+    'services.premiumServiceDesc': 'Attentive and dedicated service from start to finish of your experience',
+    
+    // Why Choose Us Items
+    'services.localExperience': 'Local Experience',
+    'services.localExperienceDesc': 'Deep knowledge of Portugal, its stories and secrets',
+    'services.uniqueMoments': 'Unique Moments',
+    'services.uniqueMomentsDesc': 'We create memorable experiences that go beyond conventional tourism',
+    'services.transparentPricing': 'Transparent Pricing',
+    'services.transparentPricingDesc': 'No hidden fees, everything included in the advertised price',
+    'services.support247': '24/7 Support',
+    'services.support247Desc': 'We are always available to help before, during and after the tour',
+    
+    // Portuguese Experience
+    'services.portugueseExperience': 'A Truly Portuguese Experience',
+    'services.portugueseExperienceDesc': 'More than just transportation, we offer a cultural journey through Portugal. Each tour is an opportunity to immerse yourself in local history, gastronomy and traditions.',
+    'services.satisfaction': 'Satisfaction',
+    'services.guaranteed': 'Guaranteed',
+    
+    // Call to Action
+    'services.readyExperience': 'Ready for an unforgettable experience?',
+    'services.readyExperienceDesc': 'Let us create the perfect tour for you. Every detail will be designed to make your trip unique and memorable.',
+    'services.viewAvailableTours': 'View Available Tours',
+    'services.requestCustomTour': 'Request Custom Tour',
     
     // Contact
     'contact.phone': 'Phone',
@@ -188,8 +228,6 @@ const translations = {
     'footer.rights': 'All rights reserved.',
     'footer.privacyPolicy': 'Privacy Policy',
     'footer.termsConditions': 'Terms and Conditions',
-
-    
   },
 };
 
