@@ -127,11 +127,7 @@ const TourCard: React.FC<TourCardProps> = ({ tour, index = 0 }) => {
               </div>
             </div>
           </div>
-          <div className='bg-green-50 rounded px-3 py-2 mb-4'>
-            <p className='text-xs text-green-700 text-center'>
-              💰 Economize €{Math.round(priceForOne - tour.price.perPerson)}/pessoa em grupo
-            </p>
-          </div>
+         
 
           <div className='flex gap-2'>
             <Link href={`/tours/${tour.slug}`} className='flex-1'>
