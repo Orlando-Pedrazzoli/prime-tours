@@ -18,6 +18,8 @@ interface TourCardProps {
       total: number;
       perPerson: number;
       maxPeople: number;
+      basePrice?: number;
+      additionalPassenger?: number;
     };
     description: string;
     image: string;
@@ -28,6 +30,8 @@ interface TourCardProps {
 }
 
 const TourCard: React.FC<TourCardProps> = ({ tour, index = 0 }) => {
+  const priceForOne = tour.price.basePrice || Math.round(tour.price.total * 0.74);
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -36,14 +40,12 @@ const TourCard: React.FC<TourCardProps> = ({ tour, index = 0 }) => {
       viewport={{ once: true }}
       className='group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] relative'
     >
-      {/* Badge de Tour em Destaque */}
       {tour.featured && (
         <div className='absolute top-4 left-4 z-20 bg-secondary text-black px-3 py-1 rounded-full text-xs font-bold'>
           ⭐ Destaque
         </div>
       )}
 
-      {/* Link envolvendo toda a imagem */}
       <Link href={`/tours/${tour.slug}`} className='block'>
         <div className='relative h-64 overflow-hidden cursor-pointer'>
           <div className='absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10' />
@@ -62,7 +64,6 @@ const TourCard: React.FC<TourCardProps> = ({ tour, index = 0 }) => {
             </p>
           </div>
 
-          {/* Overlay hover com ícone */}
           <div className='absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-20'>
             <div className='bg-white/90 rounded-full p-3'>
               <ArrowRight className='text-primary' size={24} />
@@ -71,13 +72,11 @@ const TourCard: React.FC<TourCardProps> = ({ tour, index = 0 }) => {
         </div>
       </Link>
 
-      {/* Content */}
       <div className='p-6'>
         <p className='text-gray-600 mb-4 line-clamp-2 text-sm leading-relaxed'>
           {tour.description}
         </p>
 
-        {/* Info Grid */}
         <div className='grid grid-cols-2 gap-3 mb-4'>
           <div className='flex items-center gap-2 text-sm'>
             <Clock className='text-primary flex-shrink-0' size={16} />
@@ -93,7 +92,6 @@ const TourCard: React.FC<TourCardProps> = ({ tour, index = 0 }) => {
           </div>
         </div>
 
-        {/* Highlights */}
         <div className='mb-6'>
           <p className='font-semibold text-sm text-gray-700 mb-2'>Destaques:</p>
           <ul className='text-sm text-gray-600 space-y-1'>
@@ -111,28 +109,30 @@ const TourCard: React.FC<TourCardProps> = ({ tour, index = 0 }) => {
           </ul>
         </div>
 
-        {/* Price and CTA */}
         <div className='border-t pt-4'>
-          <div className='flex items-center justify-between mb-4'>
-            <div>
-              <p className='text-sm text-gray-500'>A partir de</p>
+          <div className='grid grid-cols-2 gap-3 mb-4'>
+            <div className='bg-primary/5 rounded-lg p-3 border border-primary/20'>
+              <p className='text-xs text-gray-500 mb-1'>1 Pessoa</p>
               <div className='flex items-baseline gap-1'>
-                <Euro className='text-primary' size={16} />
-                <span className='text-2xl font-bold text-primary'>
-                  {tour.price.perPerson}
-                </span>
-                <span className='text-sm font-normal text-gray-600'>
-                  /pessoa
-                </span>
+                <Euro className='text-primary' size={14} />
+                <span className='text-2xl font-bold text-primary'>{priceForOne}</span>
               </div>
-              <p className='text-xs text-gray-500'>
-                Total: {formatPrice(tour.price.total)} ({tour.price.maxPeople}{' '}
-                pessoas)
-              </p>
+            </div>
+            <div className='bg-green-50 rounded-lg p-3 border border-green-200'>
+              <p className='text-xs text-gray-500 mb-1'>Grupo ({tour.price.maxPeople}p)</p>
+              <div className='flex items-baseline gap-1'>
+                <Euro className='text-green-600' size={14} />
+                <span className='text-2xl font-bold text-green-600'>{tour.price.perPerson}</span>
+                <span className='text-xs text-green-600'>/p</span>
+              </div>
             </div>
           </div>
+          <div className='bg-green-50 rounded px-3 py-2 mb-4'>
+            <p className='text-xs text-green-700 text-center'>
+              💰 Economize €{Math.round(priceForOne - tour.price.perPerson)}/pessoa em grupo
+            </p>
+          </div>
 
-          {/* Botões de Ação */}
           <div className='flex gap-2'>
             <Link href={`/tours/${tour.slug}`} className='flex-1'>
               <Button
