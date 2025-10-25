@@ -2,10 +2,13 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { MapPin, Star, Users, Calendar } from 'lucide-react';
+import { MapPin, Star, Users } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const HeroSection = () => {
+  const { t } = useLanguage();
+  
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     element?.scrollIntoView({ behavior: 'smooth' });
@@ -34,12 +37,11 @@ const HeroSection = () => {
             transition={{ duration: 0.8 }}
           >
             <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>
-              Descubra Portugal de
-              <span className='text-secondary'> Forma Exclusiva</span>
+              {t('hero.title')}
+              <span className='text-secondary'> {t('hero.titleHighlight')}</span>
             </h1>
             <p className='text-xl md:text-2xl text-white/90 mb-8'>
-              Tours privados personalizados. Experiências únicas desde Lisboa
-              até aos recantos mais encantadores de Portugal.
+              {t('hero.subtitle')}
             </p>
           </motion.div>
 
@@ -55,7 +57,7 @@ const HeroSection = () => {
               className='border-white text-white hover:bg-white hover:text-black'
               onClick={() => scrollToSection('tours')}
             >
-              Explorar Tours
+              {t('hero.exploreTours')}
             </Button>
           </motion.div>
 
@@ -71,8 +73,8 @@ const HeroSection = () => {
                 <MapPin className='text-secondary' size={20} />
               </div>
               <div>
-                <p className='font-semibold'>Localização</p>
-                <p className='text-sm opacity-90'>Lisboa</p>
+                <p className='font-semibold'>{t('hero.location')}</p>
+                <p className='text-sm opacity-90'>{t('hero.lisbon')}</p>
               </div>
             </div>
 
@@ -81,8 +83,8 @@ const HeroSection = () => {
                 <Users className='text-secondary' size={20} />
               </div>
               <div>
-                <p className='font-semibold'>Capacidade</p>
-                <p className='text-sm opacity-90'>Até 4 pessoas</p>
+                <p className='font-semibold'>{t('hero.capacity')}</p>
+                <p className='text-sm opacity-90'>{t('hero.upTo')}</p>
               </div>
             </div>
 
@@ -91,7 +93,7 @@ const HeroSection = () => {
                 <Star className='text-secondary' size={20} />
               </div>
               <div>
-                <p className='font-semibold'>Avaliação</p>
+                <p className='font-semibold'>{t('hero.rating')}</p>
                 <p className='text-sm opacity-90'>5.0 ★★★★★</p>
               </div>
             </div>

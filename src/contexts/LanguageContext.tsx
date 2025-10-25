@@ -99,6 +99,8 @@ const translations = {
     'footer.rights': 'Todos os direitos reservados.',
     'footer.privacyPolicy': 'Política de Privacidade',
     'footer.termsConditions': 'Termos e Condições',
+
+    
   },
   
   en: {
@@ -186,6 +188,8 @@ const translations = {
     'footer.rights': 'All rights reserved.',
     'footer.privacyPolicy': 'Privacy Policy',
     'footer.termsConditions': 'Terms and Conditions',
+
+    
   },
 };
 
