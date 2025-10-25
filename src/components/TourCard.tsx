@@ -84,7 +84,7 @@ const TourCard: React.FC<TourCardProps> = ({ tour, index = 0 }) => {
           </div>
           <div className='flex items-center gap-2 text-sm'>
             <Users className='text-primary flex-shrink-0' size={16} />
-            <span className='text-gray-600'>Até {tour.price.maxPeople}p</span>
+            <span className='text-gray-600'>Até {tour.price.maxPeople}pessoas</span>
           </div>
           <div className='flex items-center gap-2 text-sm col-span-2'>
             <MapPin className='text-primary flex-shrink-0' size={16} />
@@ -119,11 +119,11 @@ const TourCard: React.FC<TourCardProps> = ({ tour, index = 0 }) => {
               </div>
             </div>
             <div className='bg-green-50 rounded-lg p-3 border border-green-200'>
-              <p className='text-xs text-gray-500 mb-1'>Grupo ({tour.price.maxPeople}p)</p>
+              <p className='text-xs text-gray-500 mb-1'>Grupo ({tour.price.maxPeople}pessoas)</p>
               <div className='flex items-baseline gap-1'>
                 <Euro className='text-green-600' size={14} />
                 <span className='text-2xl font-bold text-green-600'>{tour.price.perPerson}</span>
-                <span className='text-xs text-green-600'>/p</span>
+                <span className='text-xs text-green-600'>/por pessoa</span>
               </div>
             </div>
           </div>
