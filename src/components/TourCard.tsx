@@ -6,6 +6,7 @@ import { Clock, Users, MapPin, ArrowRight, Euro } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { formatPrice } from '@/lib/utils';
 import { motion } from 'framer-motion';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 interface TourCardProps {
   tour: {
@@ -30,6 +31,7 @@ interface TourCardProps {
 }
 
 const TourCard: React.FC<TourCardProps> = ({ tour, index = 0 }) => {
+  const { t } = useLanguage();
   const priceForOne = tour.price.basePrice || Math.round(tour.price.total * 0.74);
 
   return (
@@ -42,7 +44,7 @@ const TourCard: React.FC<TourCardProps> = ({ tour, index = 0 }) => {
     >
       {tour.featured && (
         <div className='absolute top-4 left-4 z-20 bg-secondary text-black px-3 py-1 rounded-full text-xs font-bold'>
-          ⭐ Destaque
+          ⭐ {t('tourCard.featured')}
         </div>
       )}
 
@@ -84,16 +86,22 @@ const TourCard: React.FC<TourCardProps> = ({ tour, index = 0 }) => {
           </div>
           <div className='flex items-center gap-2 text-sm'>
             <Users className='text-primary flex-shrink-0' size={16} />
-            <span className='text-gray-600'>Até {tour.price.maxPeople}pessoas</span>
+            <span className='text-gray-600'>
+              {t('tourCard.upTo')} {tour.price.maxPeople} {t('tourCard.people')}
+            </span>
           </div>
           <div className='flex items-center gap-2 text-sm col-span-2'>
             <MapPin className='text-primary flex-shrink-0' size={16} />
-            <span className='text-gray-600'>Partida: Lisboa</span>
+            <span className='text-gray-600'>
+              {t('tourCard.departure')}: {t('tourCard.departureLisbon')}
+            </span>
           </div>
         </div>
 
         <div className='mb-6'>
-          <p className='font-semibold text-sm text-gray-700 mb-2'>Destaques:</p>
+          <p className='font-semibold text-sm text-gray-700 mb-2'>
+            {t('tourCard.highlights')}
+          </p>
           <ul className='text-sm text-gray-600 space-y-1'>
             {tour.highlights.slice(0, 3).map((highlight, index) => (
               <li key={index} className='flex items-start gap-2'>
@@ -103,7 +111,7 @@ const TourCard: React.FC<TourCardProps> = ({ tour, index = 0 }) => {
             ))}
             {tour.highlights.length > 3 && (
               <li className='text-primary text-sm font-medium'>
-                +{tour.highlights.length - 3} mais destaques...
+                +{tour.highlights.length - 3} {t('tours.moreHighlights')}
               </li>
             )}
           </ul>
@@ -112,22 +120,25 @@ const TourCard: React.FC<TourCardProps> = ({ tour, index = 0 }) => {
         <div className='border-t pt-4'>
           <div className='grid grid-cols-2 gap-3 mb-4'>
             <div className='bg-primary/5 rounded-lg p-3 border border-primary/20'>
-              <p className='text-xs text-gray-500 mb-1'>1 Pessoa</p>
+              <p className='text-xs text-gray-500 mb-1'>
+                1 {t('tourCard.person')}
+              </p>
               <div className='flex items-baseline gap-1'>
                 <Euro className='text-primary' size={14} />
                 <span className='text-2xl font-bold text-primary'>{priceForOne}</span>
               </div>
             </div>
             <div className='bg-green-50 rounded-lg p-3 border border-green-200'>
-              <p className='text-xs text-gray-500 mb-1'>Grupo ({tour.price.maxPeople}pessoas)</p>
+              <p className='text-xs text-gray-500 mb-1'>
+                {t('tourCard.group')} ({tour.price.maxPeople} {t('tourCard.people')})
+              </p>
               <div className='flex items-baseline gap-1'>
                 <Euro className='text-green-600' size={14} />
                 <span className='text-2xl font-bold text-green-600'>{tour.price.perPerson}</span>
-                <span className='text-xs text-green-600'>/por pessoa</span>
+                <span className='text-xs text-green-600'>{t('tourCard.perPerson')}</span>
               </div>
             </div>
           </div>
-         
 
           <div className='flex gap-2'>
             <Link href={`/tours/${tour.slug}`} className='flex-1'>
@@ -135,7 +146,7 @@ const TourCard: React.FC<TourCardProps> = ({ tour, index = 0 }) => {
                 className='w-full bg-primary hover:bg-primary-700 group transition-all duration-300'
                 size='sm'
               >
-                Ver Detalhes
+                {t('tourCard.viewDetails')}
                 <ArrowRight
                   className='ml-2 group-hover:translate-x-1 transition-transform duration-300'
                   size={16}
@@ -149,7 +160,7 @@ const TourCard: React.FC<TourCardProps> = ({ tour, index = 0 }) => {
               onClick={e => {
                 e.preventDefault();
                 const message = encodeURIComponent(
-                  `Olá! Gostaria de mais informações sobre o tour: ${tour.title}`
+                  `${t('tourCard.whatsappMessage')} ${tour.title}`
                 );
                 window.open(
                   `https://wa.me/351912164220?text=${message}`,
@@ -157,7 +168,7 @@ const TourCard: React.FC<TourCardProps> = ({ tour, index = 0 }) => {
                 );
               }}
             >
-              WhatsApp
+              {t('tourCard.whatsapp')}
             </Button>
           </div>
         </div>

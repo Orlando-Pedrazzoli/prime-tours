@@ -56,6 +56,20 @@ const translations = {
     'tours.viewDetails': 'Ver Detalhes',
     'tours.moreHighlights': 'mais destaques...',
     
+    // Tour Card
+    'tourCard.featured': 'Destaque',
+    'tourCard.upTo': 'Até',
+    'tourCard.people': 'pessoas',
+    'tourCard.departure': 'Partida',
+    'tourCard.departureLisbon': 'Lisboa',
+    'tourCard.highlights': 'Destaques:',
+    'tourCard.person': 'Pessoa',
+    'tourCard.group': 'Grupo',
+    'tourCard.perPerson': '/por pessoa',
+    'tourCard.viewDetails': 'Ver Detalhes',
+    'tourCard.whatsapp': 'WhatsApp',
+    'tourCard.whatsappMessage': 'Olá! Gostaria de mais informações sobre o tour:',
+    
     // About Section
     'about.meetYour': 'Conheça o Seu',
     'about.driver': 'Motorista',
@@ -250,6 +264,20 @@ const translations = {
     'tours.highlights': 'Highlights',
     'tours.viewDetails': 'View Details',
     'tours.moreHighlights': 'more highlights...',
+    
+    // Tour Card
+    'tourCard.featured': 'Featured',
+    'tourCard.upTo': 'Up to',
+    'tourCard.people': 'people',
+    'tourCard.departure': 'Departure',
+    'tourCard.departureLisbon': 'Lisbon',
+    'tourCard.highlights': 'Highlights:',
+    'tourCard.person': 'Person',
+    'tourCard.group': 'Group',
+    'tourCard.perPerson': '/per person',
+    'tourCard.viewDetails': 'View Details',
+    'tourCard.whatsapp': 'WhatsApp',
+    'tourCard.whatsappMessage': 'Hello! I would like more information about the tour:',
     
     // About Section
     'about.meetYour': 'Meet Your',
