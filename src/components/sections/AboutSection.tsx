@@ -4,40 +4,41 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Award, MapPin, Users, Clock, Shield, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const AboutSection = () => {
+  const { t } = useLanguage();
+
   const features = [
     {
       icon: Award,
-      title: 'Motorista Certificado',
-      description: 'Motorista profissional certificado com anos de experiência',
+      title: t('about.certifiedDriver'),
+      description: t('about.certifiedDriverDesc'),
     },
     {
       icon: MapPin,
-      title: 'Conhecimento Local',
-      description:
-        'Conheço os melhores lugares, histórias e segredos de Portugal',
+      title: t('about.localKnowledge'),
+      description: t('about.localKnowledgeDesc'),
     },
     {
       icon: Users,
-      title: '100% Personalizado',
-      description:
-        'Tours privados adaptados aos seus interesses e preferências',
+      title: t('about.fullyPersonalized'),
+      description: t('about.fullyPersonalizedDesc'),
     },
     {
       icon: Clock,
-      title: 'Flexibilidade Total',
-      description: 'Horários e itinerários flexíveis ao seu ritmo',
+      title: t('about.totalFlexibility'),
+      description: t('about.totalFlexibilityDesc'),
     },
     {
       icon: Shield,
-      title: 'Segurança Garantida',
-      description: 'Seguro completo e veículos sempre em perfeitas condições',
+      title: t('about.guaranteedSafety'),
+      description: t('about.guaranteedSafetyDesc'),
     },
     {
       icon: Star,
-      title: 'Experiência Premium',
-      description: 'Serviço de excelência com atenção aos mínimos detalhes',
+      title: t('about.premiumExperience'),
+      description: t('about.premiumExperienceDesc'),
     },
   ];
 
@@ -55,14 +56,13 @@ const AboutSection = () => {
             <div className='relative'>
               <img
                 src='/orlando-perfil.jpg'
-                alt='Orlando Pedrazzoli - Motorista'
+                alt={`Orlando Pedrazzoli - ${t('about.driver')}`}
                 className='rounded-2xl shadow-xl w-full'
               />
               <div className='absolute -bottom-6 -right-6 bg-primary text-white p-6 rounded-2xl shadow-xl'>
                 <div className='text-center'>
                   <p className='text-3xl font-bold'>8+</p>
-                  <p className='text-sm'>Anos de</p>
-                  <p className='text-sm'>Experiência</p>
+                  <p className='text-sm'>{t('about.experience')}</p>
                 </div>
               </div>
             </div>
@@ -76,41 +76,34 @@ const AboutSection = () => {
             viewport={{ once: true }}
           >
             <h2 className='text-4xl md:text-5xl font-bold mb-6'>
-              Conheça o Seu <span className='text-primary'>Motorista</span>
+              {t('about.meetYour')} <span className='text-primary'>{t('about.driver')}</span>
             </h2>
 
             <p className='text-lg text-gray-700 mb-4'>
-              Olá! Sou o Orlando, o seu motorista dedicado para descobrir
-              Portugal de uma forma única e memorável.
+              {t('about.greeting')}
             </p>
 
             <p className='text-gray-600 mb-6'>
-              Tenho a paixão de partilhar a beleza, história e cultura do meu
-              país com visitantes de todo o mundo. Com mais de 8 anos de
-              experiência em turismo premium, garanto que cada tour é uma
-              experiência personalizada e inesquecível.
+              {t('about.passion')}
             </p>
 
             <p className='text-gray-600 mb-8'>
-              Falo português e inglês fluentemente, permitindo-me comunicar
-              confortavelmente com clientes de diversas nacionalidades. O meu
-              objetivo é não apenas levá-lo aos destinos, mas também
-              proporcionar-lhe uma verdadeira imersão na cultura portuguesa.
+              {t('about.languages')}
             </p>
 
             <div className='flex flex-wrap gap-4 mb-8'>
               <div className='flex items-center gap-2 text-sm'>
                 <div className='w-2 h-2 bg-green-500 rounded-full'></div>
-                <span>Português</span>
+                <span>{t('about.portuguese')}</span>
               </div>
               <div className='flex items-center gap-2 text-sm'>
                 <div className='w-2 h-2 bg-green-500 rounded-full'></div>
-                <span>English</span>
+                <span>{t('about.english')}</span>
               </div>
             </div>
 
             <Button size='lg' className='bg-primary hover:bg-primary-700'>
-              Conhecer os Tours
+              {t('about.knowTours')}
             </Button>
           </motion.div>
         </div>
@@ -152,22 +145,22 @@ const AboutSection = () => {
         >
           <div className='text-center'>
             <h3 className='text-3xl font-bold mb-4'>
-              Viaje com Conforto e Segurança
+              {t('about.comfortSafety')}
             </h3>
             <p className='text-xl mb-8 opacity-90'>
-              Veículos modernos e confortáveis para a sua experiência premium
+              {t('about.modernVehicles')}
             </p>
             <div className='grid md:grid-cols-2 gap-8 max-w-2xl mx-auto'>
               <div className='bg-white/10 backdrop-blur-sm rounded-xl p-6'>
                 <h4 className='text-xl font-bold mb-2'>Hyundai i30 SW</h4>
                 <p className='opacity-90'>
-                  Espaçoso e confortável para viagens longas
+                  {t('about.spaciousComfortable')}
                 </p>
               </div>
               <div className='bg-white/10 backdrop-blur-sm rounded-xl p-6'>
                 <h4 className='text-xl font-bold mb-2'>Toyota Yaris Cross</h4>
                 <p className='opacity-90'>
-                  Compacto e eficiente para tours urbanos
+                  {t('about.compactEfficient')}
                 </p>
               </div>
             </div>

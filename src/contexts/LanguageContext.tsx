@@ -67,6 +67,26 @@ const translations = {
     'about.portuguese': 'Português',
     'about.english': 'English',
     
+    // About Features
+    'about.certifiedDriver': 'Motorista Certificado',
+    'about.certifiedDriverDesc': 'Motorista profissional certificado com anos de experiência',
+    'about.localKnowledge': 'Conhecimento Local',
+    'about.localKnowledgeDesc': 'Conheço os melhores lugares, histórias e segredos de Portugal',
+    'about.fullyPersonalized': '100% Personalizado',
+    'about.fullyPersonalizedDesc': 'Tours privados adaptados aos seus interesses e preferências',
+    'about.totalFlexibility': 'Flexibilidade Total',
+    'about.totalFlexibilityDesc': 'Horários e itinerários flexíveis ao seu ritmo',
+    'about.guaranteedSafety': 'Segurança Garantida',
+    'about.guaranteedSafetyDesc': 'Seguro completo e veículos sempre em perfeitas condições',
+    'about.premiumExperience': 'Experiência Premium',
+    'about.premiumExperienceDesc': 'Serviço de excelência com atenção aos mínimos detalhes',
+    
+    // About Vehicles
+    'about.comfortSafety': 'Viaje com Conforto e Segurança',
+    'about.modernVehicles': 'Veículos modernos e confortáveis para a sua experiência premium',
+    'about.spaciousComfortable': 'Espaçoso e confortável para viagens longas',
+    'about.compactEfficient': 'Compacto e eficiente para tours urbanos',
+    
     // Services Section
     'services.whyChoose': 'Porquê Escolher os',
     'services.ourServices': 'Nossos Serviços',
@@ -174,6 +194,26 @@ const translations = {
     'about.knowTours': 'Discover Tours',
     'about.portuguese': 'Português',
     'about.english': 'English',
+    
+    // About Features
+    'about.certifiedDriver': 'Certified Driver',
+    'about.certifiedDriverDesc': 'Professional certified driver with years of experience',
+    'about.localKnowledge': 'Local Knowledge',
+    'about.localKnowledgeDesc': 'I know the best places, stories and secrets of Portugal',
+    'about.fullyPersonalized': '100% Personalized',
+    'about.fullyPersonalizedDesc': 'Private tours adapted to your interests and preferences',
+    'about.totalFlexibility': 'Total Flexibility',
+    'about.totalFlexibilityDesc': 'Flexible schedules and itineraries at your pace',
+    'about.guaranteedSafety': 'Guaranteed Safety',
+    'about.guaranteedSafetyDesc': 'Complete insurance and vehicles always in perfect condition',
+    'about.premiumExperience': 'Premium Experience',
+    'about.premiumExperienceDesc': 'Excellent service with attention to the smallest details',
+    
+    // About Vehicles
+    'about.comfortSafety': 'Travel with Comfort and Safety',
+    'about.modernVehicles': 'Modern and comfortable vehicles for your premium experience',
+    'about.spaciousComfortable': 'Spacious and comfortable for long trips',
+    'about.compactEfficient': 'Compact and efficient for city tours',
     
     // Services Section
     'services.whyChoose': 'Why Choose',
