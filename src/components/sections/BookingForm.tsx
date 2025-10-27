@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -20,26 +20,44 @@ import {
   AlertCircle,
 } from 'lucide-react';
 import emailjs from '@emailjs/browser';
+import { useLanguage } from '@/contexts/LanguageContext';
 
-const bookingSchema = z.object({
-  name: z.string().min(2, 'Nome deve ter pelo menos 2 caracteres'),
-  email: z.string().email('Email inválido'),
-  phone: z.string().min(9, 'Telefone inválido'),
-  whatsapp: z.string().optional(),
-  tour: z.string().min(1, 'Por favor selecione um tour'),
-  date: z.string().min(1, 'Por favor selecione uma data'),
-  passengers: z.string().min(1, 'Por favor indique o número de passageiros'),
-  message: z.string().optional(),
-});
-
-type BookingFormData = z.infer<typeof bookingSchema>;
+type BookingFormData = {
+  name: string;
+  email: string;
+  phone: string;
+  whatsapp?: string;
+  tour: string;
+  date: string;
+  passengers: string;
+  message?: string;
+};
 
 const BookingForm = () => {
+  const { t, language } = useLanguage();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<
     'idle' | 'success' | 'error'
   >('idle');
   const [dateValue, setDateValue] = useState('');
+
+  // Schema de validação dinâmico baseado no idioma
+  const bookingSchema = useMemo(
+    () =>
+      z.object({
+        name: z.string().min(2, t('booking.validation.nameMin')),
+        email: z.string().email(t('booking.validation.emailInvalid')),
+        phone: z.string().min(9, t('booking.validation.phoneInvalid')),
+        whatsapp: z.string().optional(),
+        tour: z.string().min(1, t('booking.validation.tourRequired')),
+        date: z.string().min(1, t('booking.validation.dateRequired')),
+        passengers: z
+          .string()
+          .min(1, t('booking.validation.passengersRequired')),
+        message: z.string().optional(),
+      }),
+    [t]
+  );
 
   const {
     register,
@@ -65,6 +83,7 @@ const BookingForm = () => {
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID &&
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
       ) {
+        const locale = language === 'pt' ? 'pt-PT' : 'en-US';
         await emailjs.send(
           process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
           process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
@@ -75,22 +94,29 @@ const BookingForm = () => {
             phone: data.phone,
             whatsapp: data.whatsapp || data.phone,
             tour_name: data.tour,
-            tour_date: new Date(data.date).toLocaleDateString('pt-PT'),
+            tour_date: new Date(data.date).toLocaleDateString(locale),
             passengers: data.passengers,
-            message: data.message || 'Sem mensagem adicional',
-            booking_date: new Date().toLocaleDateString('pt-PT'),
-            booking_time: new Date().toLocaleTimeString('pt-PT'),
+            message: data.message || t('booking.whatsappNoMessage'),
+            booking_date: new Date().toLocaleDateString(locale),
+            booking_time: new Date().toLocaleTimeString(locale),
           }
         );
       } else {
+        const locale = language === 'pt' ? 'pt-PT' : 'en-US';
         const message = encodeURIComponent(
-          `Nova Reserva:\n\nNome: ${data.name}\nEmail: ${
+          `${t('booking.whatsappNewBooking')}:\n\n${t(
+            'booking.whatsappName'
+          )}: ${data.name}\n${t('booking.whatsappEmail')}: ${
             data.email
-          }\nTelefone: ${data.phone}\nTour: ${data.tour}\nData: ${new Date(
+          }\n${t('booking.whatsappPhone')}: ${data.phone}\n${t(
+            'booking.whatsappTour'
+          )}: ${data.tour}\n${t('booking.whatsappDate')}: ${new Date(
             data.date
-          ).toLocaleDateString('pt-PT')}\nPassageiros: ${
+          ).toLocaleDateString(locale)}\n${t('booking.whatsappPassengers')}: ${
             data.passengers
-          }\nMensagem: ${data.message || 'Sem mensagem'}`
+          }\n${t('booking.whatsappMessage')}: ${
+            data.message || t('booking.whatsappNoMessage')
+          }`
         );
         window.open(
           `https://wa.me/${businessInfo.whatsapp}?text=${message}`,
@@ -123,12 +149,10 @@ const BookingForm = () => {
             className='text-center mb-12'
           >
             <h2 className='text-4xl md:text-5xl font-bold mb-4'>
-              Reserve o Seu <span className='text-primary'>Tour Privado</span>
+              {t('booking.title')}{' '}
+              <span className='text-primary'>{t('booking.titleHighlight')}</span>
             </h2>
-            <p className='text-xl text-gray-600'>
-              Preencha o formulário abaixo e entraremos em contacto em até 24
-              horas
-            </p>
+            <p className='text-xl text-gray-600'>{t('booking.subtitle')}</p>
           </motion.div>
 
           <div className='grid lg:grid-cols-3 gap-8'>
@@ -142,7 +166,7 @@ const BookingForm = () => {
             >
               <div className='bg-primary rounded-2xl p-8 text-white h-full'>
                 <h3 className='text-2xl font-bold mb-6'>
-                  Informações de Contacto
+                  {t('booking.contactInfo')}
                 </h3>
 
                 <div className='space-y-6'>
@@ -151,7 +175,9 @@ const BookingForm = () => {
                       <Phone size={20} />
                     </div>
                     <div>
-                      <p className='font-semibold mb-1'>Telefone</p>
+                      <p className='font-semibold mb-1'>
+                        {t('contact.phone')}
+                      </p>
                       <a
                         href={`tel:${businessInfo.phone}`}
                         className='hover:text-secondary transition-colors'
@@ -166,7 +192,7 @@ const BookingForm = () => {
                       <Mail size={20} />
                     </div>
                     <div>
-                      <p className='font-semibold mb-1'>Email</p>
+                      <p className='font-semibold mb-1'>{t('contact.email')}</p>
                       <a
                         href={`mailto:${businessInfo.email}`}
                         className='hover:text-secondary transition-colors text-sm'
@@ -181,14 +207,18 @@ const BookingForm = () => {
                       <MapPin size={20} />
                     </div>
                     <div>
-                      <p className='font-semibold mb-1'>Localização</p>
+                      <p className='font-semibold mb-1'>
+                        {t('contact.location')}
+                      </p>
                       <p className='opacity-90'>{businessInfo.location}</p>
                     </div>
                   </div>
                 </div>
 
                 <div className='mt-8 pt-8 border-t border-white/20'>
-                  <h4 className='font-semibold mb-4'>O que está incluído:</h4>
+                  <h4 className='font-semibold mb-4'>
+                    {t('booking.whatsIncluded')}
+                  </h4>
                   <ul className='space-y-2 text-sm opacity-90'>
                     {businessInfo.included.slice(0, 3).map((item, index) => (
                       <li key={index} className='flex items-start gap-2'>
@@ -212,12 +242,16 @@ const BookingForm = () => {
               viewport={{ once: true }}
               className='lg:col-span-2'
             >
-              <form onSubmit={handleSubmit(onSubmit)} className='space-y-6'>
+              <form
+                onSubmit={handleSubmit(onSubmit)}
+                className='bg-gray-50 rounded-2xl p-6 md:p-8 space-y-6'
+              >
+                {/* Nome e Email */}
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6'>
                   {/* Nome */}
                   <div>
                     <label className='block text-sm font-medium text-gray-700 mb-2'>
-                      Nome Completo *
+                      {t('booking.fullName')} *
                     </label>
                     <div className='relative'>
                       <User
@@ -227,7 +261,7 @@ const BookingForm = () => {
                       <input
                         {...register('name')}
                         className='w-full pl-11 md:pl-10 pr-3 md:pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm md:text-base'
-                        placeholder='Seu nome completo'
+                        placeholder={t('booking.namePlaceholder')}
                       />
                     </div>
                     {errors.name && (
@@ -240,7 +274,7 @@ const BookingForm = () => {
                   {/* Email */}
                   <div>
                     <label className='block text-sm font-medium text-gray-700 mb-2'>
-                      Email *
+                      {t('booking.email')} *
                     </label>
                     <div className='relative'>
                       <Mail
@@ -251,7 +285,7 @@ const BookingForm = () => {
                         {...register('email')}
                         type='email'
                         className='w-full pl-11 md:pl-10 pr-3 md:pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm md:text-base'
-                        placeholder='seu@email.com'
+                        placeholder={t('booking.emailPlaceholder')}
                       />
                     </div>
                     {errors.email && (
@@ -260,11 +294,14 @@ const BookingForm = () => {
                       </p>
                     )}
                   </div>
+                </div>
 
+                {/* Telefone e WhatsApp */}
+                <div className='grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6'>
                   {/* Telefone */}
                   <div>
                     <label className='block text-sm font-medium text-gray-700 mb-2'>
-                      Telefone *
+                      {t('booking.phone')} *
                     </label>
                     <div className='relative'>
                       <Phone
@@ -274,7 +311,7 @@ const BookingForm = () => {
                       <input
                         {...register('phone')}
                         className='w-full pl-11 md:pl-10 pr-3 md:pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm md:text-base'
-                        placeholder='+351 xxx xxx xxx'
+                        placeholder={t('booking.phonePlaceholder')}
                       />
                     </div>
                     {errors.phone && (
@@ -287,7 +324,7 @@ const BookingForm = () => {
                   {/* WhatsApp */}
                   <div>
                     <label className='block text-sm font-medium text-gray-700 mb-2'>
-                      WhatsApp (opcional)
+                      {t('booking.whatsapp')}
                     </label>
                     <div className='relative'>
                       <MessageSquare
@@ -297,7 +334,7 @@ const BookingForm = () => {
                       <input
                         {...register('whatsapp')}
                         className='w-full pl-11 md:pl-10 pr-3 md:pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm md:text-base'
-                        placeholder='+351 xxx xxx xxx'
+                        placeholder={t('booking.whatsappPlaceholder')}
                       />
                     </div>
                   </div>
@@ -306,19 +343,21 @@ const BookingForm = () => {
                 {/* Tour */}
                 <div>
                   <label className='block text-sm font-medium text-gray-700 mb-2'>
-                    Selecione o Tour *
+                    {t('booking.selectTour')} *
                   </label>
                   <select
                     {...register('tour')}
                     className='w-full px-3 md:px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm md:text-base'
                   >
-                    <option value=''>Escolha um tour...</option>
+                    <option value=''>{t('booking.tourPlaceholder')}</option>
                     {tours.map(tour => (
                       <option key={tour.id} value={tour.title}>
                         {tour.title} - €{tour.price.total}
                       </option>
                     ))}
-                    <option value='personalizado'>Tour Personalizado</option>
+                    <option value={t('booking.customTour')}>
+                      {t('booking.customTour')}
+                    </option>
                   </select>
                   {errors.tour && (
                     <p className='mt-1 text-sm text-red-600'>
@@ -331,7 +370,7 @@ const BookingForm = () => {
                   {/* Data */}
                   <div>
                     <label className='block text-sm font-medium text-gray-700 mb-2'>
-                      Data Pretendida *
+                      {t('booking.desiredDate')} *
                     </label>
                     <div className='relative'>
                       <Calendar
@@ -360,7 +399,7 @@ const BookingForm = () => {
                       />
                       {!dateValue && (
                         <span className='absolute left-11 md:left-10 top-3 text-gray-400 text-sm md:text-base pointer-events-none'>
-                          Selecione a data...
+                          {t('booking.datePlaceholder')}
                         </span>
                       )}
                     </div>
@@ -374,7 +413,7 @@ const BookingForm = () => {
                   {/* Número de Passageiros */}
                   <div>
                     <label className='block text-sm font-medium text-gray-700 mb-2'>
-                      Número de Passageiros *
+                      {t('booking.numberOfPassengers')} *
                     </label>
                     <div className='relative'>
                       <Users
@@ -385,11 +424,13 @@ const BookingForm = () => {
                         {...register('passengers')}
                         className='w-full pl-11 md:pl-10 pr-8 md:pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm md:text-base appearance-none'
                       >
-                        <option value=''>Selecione...</option>
-                        <option value='1'>1 pessoa</option>
-                        <option value='2'>2 pessoas</option>
-                        <option value='3'>3 pessoas</option>
-                        <option value='4'>4 pessoas</option>
+                        <option value=''>
+                          {t('booking.passengersPlaceholder')}
+                        </option>
+                        <option value='1'>1 {t('booking.person')}</option>
+                        <option value='2'>2 {t('booking.people')}</option>
+                        <option value='3'>3 {t('booking.people')}</option>
+                        <option value='4'>4 {t('booking.people')}</option>
                       </select>
                     </div>
                     {errors.passengers && (
@@ -403,13 +444,13 @@ const BookingForm = () => {
                 {/* Mensagem */}
                 <div>
                   <label className='block text-sm font-medium text-gray-700 mb-2'>
-                    Mensagem Adicional (opcional)
+                    {t('booking.additionalMessage')}
                   </label>
                   <textarea
                     {...register('message')}
                     rows={4}
                     className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent'
-                    placeholder='Informações adicionais, pedidos especiais, etc...'
+                    placeholder={t('booking.messagePlaceholder')}
                   />
                 </div>
 
@@ -423,12 +464,12 @@ const BookingForm = () => {
                   {isSubmitting ? (
                     <>
                       <div className='mr-2 h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent' />
-                      Enviando...
+                      {t('booking.sending')}
                     </>
                   ) : (
                     <>
                       <Send className='mr-2' size={20} />
-                      Enviar Reserva
+                      {t('booking.sendBooking')}
                     </>
                   )}
                 </Button>
@@ -437,15 +478,13 @@ const BookingForm = () => {
                 {submitStatus === 'success' && (
                   <div className='bg-green-50 text-green-800 p-4 rounded-lg flex items-center gap-3'>
                     <CheckCircle size={20} />
-                    Reserva enviada com sucesso! Entraremos em contacto em
-                    breve.
+                    {t('booking.successMessage')}
                   </div>
                 )}
                 {submitStatus === 'error' && (
                   <div className='bg-red-50 text-red-800 p-4 rounded-lg flex items-center gap-3'>
                     <AlertCircle size={20} />
-                    Erro ao enviar reserva. Por favor tente novamente ou
-                    contacte-nos diretamente.
+                    {t('booking.errorMessage')}
                   </div>
                 )}
               </form>

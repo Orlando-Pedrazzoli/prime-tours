@@ -127,6 +127,65 @@ const translations = {
     'contact.email': 'Email',
     'contact.location': 'Localização',
 
+    // Booking Form
+    'booking.title': 'Reserve o Seu',
+    'booking.titleHighlight': 'Tour Privado',
+    'booking.subtitle': 'Preencha o formulário abaixo e entraremos em contacto em até 24 horas',
+    'booking.contactInfo': 'Informações de Contacto',
+    'booking.whatsIncluded': 'O que está incluído:',
+    
+    // Form Labels
+    'booking.fullName': 'Nome Completo',
+    'booking.email': 'Email',
+    'booking.phone': 'Telefone',
+    'booking.whatsapp': 'WhatsApp (opcional)',
+    'booking.selectTour': 'Selecione o Tour',
+    'booking.desiredDate': 'Data Pretendida',
+    'booking.numberOfPassengers': 'Número de Passageiros',
+    'booking.additionalMessage': 'Mensagem Adicional (opcional)',
+    
+    // Form Placeholders
+    'booking.namePlaceholder': 'O seu nome completo',
+    'booking.emailPlaceholder': 'seuemail@exemplo.com',
+    'booking.phonePlaceholder': '+351 xxx xxx xxx',
+    'booking.whatsappPlaceholder': '+351 xxx xxx xxx',
+    'booking.tourPlaceholder': 'Escolha um tour...',
+    'booking.datePlaceholder': 'Selecione a data...',
+    'booking.passengersPlaceholder': 'Selecione...',
+    'booking.messagePlaceholder': 'Informações adicionais, pedidos especiais, etc...',
+    
+    // Form Options
+    'booking.customTour': 'Tour Personalizado',
+    'booking.person': 'pessoa',
+    'booking.people': 'pessoas',
+    
+    // Validation Messages
+    'booking.validation.nameMin': 'Nome deve ter pelo menos 2 caracteres',
+    'booking.validation.emailInvalid': 'Email inválido',
+    'booking.validation.phoneInvalid': 'Telefone inválido',
+    'booking.validation.tourRequired': 'Por favor selecione um tour',
+    'booking.validation.dateRequired': 'Por favor selecione uma data',
+    'booking.validation.passengersRequired': 'Por favor indique o número de passageiros',
+    
+    // Form Buttons
+    'booking.sending': 'Enviando...',
+    'booking.sendBooking': 'Enviar Reserva',
+    
+    // Status Messages
+    'booking.successMessage': 'Reserva enviada com sucesso! Entraremos em contacto em breve.',
+    'booking.errorMessage': 'Erro ao enviar reserva. Por favor tente novamente ou contacte-nos diretamente.',
+    
+    // WhatsApp Message
+    'booking.whatsappNewBooking': 'Nova Reserva',
+    'booking.whatsappName': 'Nome',
+    'booking.whatsappEmail': 'Email',
+    'booking.whatsappPhone': 'Telefone',
+    'booking.whatsappTour': 'Tour',
+    'booking.whatsappDate': 'Data',
+    'booking.whatsappPassengers': 'Passageiros',
+    'booking.whatsappMessage': 'Mensagem',
+    'booking.whatsappNoMessage': 'Sem mensagem',
+
     // Footer
     'footer.description': 'Experiências exclusivas de turismo privado em Portugal. Descubra o melhor do nosso país com conforto e segurança.',
     'footer.popularTours': 'Tours Populares',
@@ -254,6 +313,65 @@ const translations = {
     'contact.phone': 'Phone',
     'contact.email': 'Email',
     'contact.location': 'Location',
+
+    // Booking Form
+    'booking.title': 'Book Your',
+    'booking.titleHighlight': 'Private Tour',
+    'booking.subtitle': 'Fill out the form below and we will contact you within 24 hours',
+    'booking.contactInfo': 'Contact Information',
+    'booking.whatsIncluded': "What's included:",
+    
+    // Form Labels
+    'booking.fullName': 'Full Name',
+    'booking.email': 'Email',
+    'booking.phone': 'Phone',
+    'booking.whatsapp': 'WhatsApp (optional)',
+    'booking.selectTour': 'Select Tour',
+    'booking.desiredDate': 'Desired Date',
+    'booking.numberOfPassengers': 'Number of Passengers',
+    'booking.additionalMessage': 'Additional Message (optional)',
+    
+    // Form Placeholders
+    'booking.namePlaceholder': 'Your full name',
+    'booking.emailPlaceholder': 'youremail@example.com',
+    'booking.phonePlaceholder': '+351 xxx xxx xxx',
+    'booking.whatsappPlaceholder': '+351 xxx xxx xxx',
+    'booking.tourPlaceholder': 'Choose a tour...',
+    'booking.datePlaceholder': 'Select date...',
+    'booking.passengersPlaceholder': 'Select...',
+    'booking.messagePlaceholder': 'Additional information, special requests, etc...',
+    
+    // Form Options
+    'booking.customTour': 'Custom Tour',
+    'booking.person': 'person',
+    'booking.people': 'people',
+    
+    // Validation Messages
+    'booking.validation.nameMin': 'Name must be at least 2 characters',
+    'booking.validation.emailInvalid': 'Invalid email',
+    'booking.validation.phoneInvalid': 'Invalid phone',
+    'booking.validation.tourRequired': 'Please select a tour',
+    'booking.validation.dateRequired': 'Please select a date',
+    'booking.validation.passengersRequired': 'Please indicate the number of passengers',
+    
+    // Form Buttons
+    'booking.sending': 'Sending...',
+    'booking.sendBooking': 'Send Booking',
+    
+    // Status Messages
+    'booking.successMessage': 'Booking sent successfully! We will contact you soon.',
+    'booking.errorMessage': 'Error sending booking. Please try again or contact us directly.',
+    
+    // WhatsApp Message
+    'booking.whatsappNewBooking': 'New Booking',
+    'booking.whatsappName': 'Name',
+    'booking.whatsappEmail': 'Email',
+    'booking.whatsappPhone': 'Phone',
+    'booking.whatsappTour': 'Tour',
+    'booking.whatsappDate': 'Date',
+    'booking.whatsappPassengers': 'Passengers',
+    'booking.whatsappMessage': 'Message',
+    'booking.whatsappNoMessage': 'No message',
 
     // Footer
     'footer.description': 'Exclusive private tourism experiences in Portugal. Discover the best of our country with comfort and safety.',
