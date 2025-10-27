@@ -21,6 +21,7 @@ import { Button } from '@/components/ui/button';
 import { formatPrice } from '@/lib/utils';
 import { businessInfo } from '@/data/tours';
 import BookingForm from '@/components/sections/BookingForm';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 interface TourDetailContentProps {
   tour: any;
@@ -61,6 +62,7 @@ const tourMapImages = {
 
 const TourDetailContent: React.FC<TourDetailContentProps> = ({ tour }) => {
   const [selectedPassengers, setSelectedPassengers] = useState(4);
+  const { t } = useLanguage();
 
   // ============================================
   // TABELA DE PREÇOS DINÂMICA
@@ -101,7 +103,7 @@ const TourDetailContent: React.FC<TourDetailContentProps> = ({ tour }) => {
 
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent(
-      `Olá! Gostaria de mais informações sobre o tour: ${tour.title}`
+      `${t('tourDetail.whatsappMessage')} ${tour.title}`
     );
     window.open(
       `https://wa.me/${businessInfo.whatsapp}?text=${message}`,
@@ -122,7 +124,7 @@ const TourDetailContent: React.FC<TourDetailContentProps> = ({ tour }) => {
               transition={{ duration: 0.6 }}
               className='bg-white rounded-2xl p-8 shadow-md'
             >
-              <h2 className='text-3xl font-bold mb-4'>Sobre Este Tour</h2>
+              <h2 className='text-3xl font-bold mb-4'>{t('tourDetail.aboutTour')}</h2>
               <p className='text-gray-700 text-lg leading-relaxed mb-4'>
                 {tour.description}
               </p>
@@ -140,7 +142,7 @@ const TourDetailContent: React.FC<TourDetailContentProps> = ({ tour }) => {
               transition={{ duration: 0.6, delay: 0.1 }}
               className='bg-white rounded-2xl p-8 shadow-md'
             >
-              <h2 className='text-3xl font-bold mb-6'>Destaques do Tour</h2>
+              <h2 className='text-3xl font-bold mb-6'>{t('tourDetail.highlights')}</h2>
               <div className='grid md:grid-cols-2 gap-4'>
                 {tour.highlights.map((highlight: string, index: number) => (
                   <div key={index} className='flex items-start gap-3'>
@@ -163,7 +165,7 @@ const TourDetailContent: React.FC<TourDetailContentProps> = ({ tour }) => {
             >
               <h2 className='text-2xl md:text-3xl font-bold mb-3 md:mb-6 flex items-center gap-2 md:gap-3'>
                 <MapPin className='text-primary' size={28} />
-                Mapa do Percurso
+                {t('tourDetail.routeMap')}
               </h2>
               <div className='relative w-full rounded-lg md:rounded-xl overflow-hidden border-2 md:border-4 border-primary/20'>
                 <img
@@ -171,7 +173,7 @@ const TourDetailContent: React.FC<TourDetailContentProps> = ({ tour }) => {
                     tourMapImages[tour.slug as keyof typeof tourMapImages] ||
                     'default-map.jpg'
                   }`}
-                  alt={`Mapa do percurso - ${tour.title}`}
+                  alt={`${t('tourDetail.routeMap')} - ${tour.title}`}
                   className='w-full h-auto max-h-[800px] md:max-h-[600px] object-cover md:object-contain'
                   onError={e => {
                     // Fallback se a imagem não existir
@@ -180,7 +182,7 @@ const TourDetailContent: React.FC<TourDetailContentProps> = ({ tour }) => {
                 />
               </div>
               <p className='text-xs md:text-sm text-gray-500 mt-2 md:mt-3 text-center px-2'>
-                * Percurso sujeito a alterações conforme preferências do cliente
+                {t('tourDetail.routeDisclaimer')}
               </p>
             </motion.div>
 
@@ -193,54 +195,42 @@ const TourDetailContent: React.FC<TourDetailContentProps> = ({ tour }) => {
                 className='bg-white rounded-2xl p-8 shadow-md'
               >
                 <h2 className='text-3xl font-bold mb-6 flex items-center gap-3'>
-                  <Clock className='text-primary' size={32} />
-                  Itinerário Detalhado
+                  <Clock className='text-primary' />
+                  {t('tourDetail.detailedItinerary')}
                 </h2>
                 <div className='space-y-6'>
-                  {tour.itinerary.map((item: any, index: number) => (
-                    <div key={index} className='flex gap-4 relative'>
-                      {/* Linha vertical */}
-                      {index !== tour.itinerary.length - 1 && (
-                        <div className='absolute left-6 top-12 bottom-0 w-0.5 bg-gray-200' />
-                      )}
-
-                      {/* Horário */}
-                      <div className='flex-shrink-0'>
-                        <div className='bg-primary text-white px-4 py-2 rounded-full font-bold text-sm'>
-                          {item.time}
-                        </div>
+                  {tour.itinerary.map(
+                    (
+                      stop: { location: string; description: string },
+                      index: number
+                    ) => (
+                      <div key={index} className='border-l-4 border-primary pl-6'>
+                        <h3 className='font-bold text-xl mb-2'>
+                          {stop.location}
+                        </h3>
+                        <p className='text-gray-600 leading-relaxed'>
+                          {stop.description}
+                        </p>
                       </div>
-
-                      {/* Conteúdo */}
-                      <div className='flex-1 pb-6'>
-                        <div className='bg-gray-50 rounded-xl p-4'>
-                          <h4 className='font-bold text-lg mb-2 text-primary'>
-                            {item.location}
-                          </h4>
-                          <p className='text-gray-600'>{item.description}</p>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
+                    )
+                  )}
                 </div>
               </motion.div>
             )}
 
-            {/* O Que Está Incluído / Não Incluído */}
+            {/* O que está incluído e não incluído */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               className='bg-white rounded-2xl p-8 shadow-md'
             >
-              <h2 className='text-3xl font-bold mb-6'>
-                Informações Importantes
-              </h2>
               <div className='grid md:grid-cols-2 gap-8'>
                 {/* Incluído */}
                 <div>
-                  <h3 className='text-xl font-semibold mb-4 text-green-600 flex items-center gap-2'>
-                    <Check size={24} />O Que Está Incluído
+                  <h3 className='text-2xl font-bold mb-4 flex items-center gap-2'>
+                    <Check className='text-green-500' />
+                    {t('tourDetail.included')}
                   </h3>
                   <ul className='space-y-3'>
                     {businessInfo.included.map((item, index) => (
@@ -249,17 +239,17 @@ const TourDetailContent: React.FC<TourDetailContentProps> = ({ tour }) => {
                           className='text-green-500 mt-1 flex-shrink-0'
                           size={18}
                         />
-                        <span className='text-gray-700 text-sm'>{item}</span>
+                        <span className='text-gray-700'>{item}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
 
-                {/* Não Incluído */}
+                {/* Não incluído */}
                 <div>
-                  <h3 className='text-xl font-semibold mb-4 text-red-600 flex items-center gap-2'>
-                    <XIcon size={24} />
-                    Não Incluído
+                  <h3 className='text-2xl font-bold mb-4 flex items-center gap-2'>
+                    <XIcon className='text-red-500' />
+                    {t('tourDetail.notIncluded')}
                   </h3>
                   <ul className='space-y-3'>
                     {businessInfo.notIncluded.map((item, index) => (
@@ -268,45 +258,48 @@ const TourDetailContent: React.FC<TourDetailContentProps> = ({ tour }) => {
                           className='text-red-500 mt-1 flex-shrink-0'
                           size={18}
                         />
-                        <span className='text-gray-700 text-sm'>{item}</span>
+                        <span className='text-gray-700'>{item}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
               </div>
+            </motion.div>
 
-              {/* Políticas */}
-              <div className='mt-8 pt-8 border-t'>
-                <h3 className='text-xl font-semibold mb-4 flex items-center gap-2'>
-                  <AlertCircle className='text-primary' size={24} />
-                  Políticas e Regras
-                </h3>
-                <div className='space-y-3 text-gray-700'>
-                  <p className='flex items-start gap-3'>
-                    <span className='text-primary mt-1'>•</span>
-                    <span>
-                      Cancelamentos até 48 horas antes do tour têm reembolso
-                      total
-                    </span>
-                  </p>
-                  <p className='flex items-start gap-3'>
-                    <span className='text-primary mt-1'>•</span>
-                    <span>
-                      Tours funcionam independentemente das condições
-                      meteorológicas
-                    </span>
-                  </p>
-                  <p className='flex items-start gap-3'>
-                    <span className='text-primary mt-1'>•</span>
-                    <span>
-                      Itinerário pode ser ajustado conforme suas preferências
-                    </span>
-                  </p>
-                  <p className='flex items-start gap-3'>
-                    <span className='text-primary mt-1'>•</span>
-                    <span>Recolha e entrega no local designado por si</span>
-                  </p>
-                </div>
+            {/* Informações Importantes */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              className='bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl p-8 border-2 border-primary/20'
+            >
+              <h3 className='text-2xl font-bold mb-4 flex items-center gap-3'>
+                <AlertCircle className='text-primary' />
+                {t('tourDetail.importantInfo')}
+              </h3>
+              <div className='space-y-3 text-gray-700'>
+                <p className='flex items-start gap-3'>
+                  <span className='text-primary mt-1'>•</span>
+                  <span>
+                    {t('tourDetail.info.reservations')}
+                  </span>
+                </p>
+                <p className='flex items-start gap-3'>
+                  <span className='text-primary mt-1'>•</span>
+                  <span>
+                    {t('tourDetail.info.weather')}
+                  </span>
+                </p>
+                <p className='flex items-start gap-3'>
+                  <span className='text-primary mt-1'>•</span>
+                  <span>
+                    {t('tourDetail.info.flexible')}
+                  </span>
+                </p>
+                <p className='flex items-start gap-3'>
+                  <span className='text-primary mt-1'>•</span>
+                  <span>{t('tourDetail.info.pickup')}</span>
+                </p>
               </div>
             </motion.div>
           </div>
@@ -322,19 +315,19 @@ const TourDetailContent: React.FC<TourDetailContentProps> = ({ tour }) => {
                 className='bg-white rounded-2xl p-6 shadow-lg border-2 border-primary/20'
               >
                 <div className='text-center mb-6'>
-                  <p className='text-gray-600 mb-2'>A partir de</p>
+                  <p className='text-gray-600 mb-2'>{t('tourDetail.from')}</p>
                   <p className='text-4xl font-bold text-primary'>
                     {formatPrice(tour.price.perPerson)}
                   </p>
                   <p className='text-sm text-gray-500'>
-                    por pessoa (4 pessoas)
+                    {t('tourDetail.perPerson4')}
                   </p>
                 </div>
 
                 {/* Seletor de Passageiros */}
                 <div className='mb-6'>
                   <label className='block text-sm font-semibold mb-3'>
-                    Número de Passageiros
+                    {t('tourDetail.numberOfPassengers')}
                   </label>
                   <div className='grid grid-cols-4 gap-2'>
                     {priceTable.map(price => (
@@ -358,7 +351,7 @@ const TourDetailContent: React.FC<TourDetailContentProps> = ({ tour }) => {
                   <div className='flex justify-between items-center mb-2'>
                     <span className='text-gray-600'>
                       {selectedPassengers}{' '}
-                      {selectedPassengers === 1 ? 'pessoa' : 'pessoas'}
+                      {selectedPassengers === 1 ? t('tourDetail.person') : t('tourDetail.people')}
                     </span>
                     <span className='text-xl font-bold text-primary'>
                       {formatPrice(
@@ -373,7 +366,7 @@ const TourDetailContent: React.FC<TourDetailContentProps> = ({ tour }) => {
                       priceTable.find(p => p.passengers === selectedPassengers)
                         ?.perPerson || tour.price.perPerson
                     )}{' '}
-                    por pessoa
+                    {t('tourDetail.perPerson')}
                   </div>
                 </div>
 
@@ -385,7 +378,7 @@ const TourDetailContent: React.FC<TourDetailContentProps> = ({ tour }) => {
                       className='w-full bg-secondary hover:bg-secondary/90 text-black font-bold'
                     >
                       <Calendar className='mr-2' size={20} />
-                      Reservar Agora
+                      {t('tourDetail.bookNow')}
                     </Button>
                   </a>
                   <Button
@@ -395,7 +388,7 @@ const TourDetailContent: React.FC<TourDetailContentProps> = ({ tour }) => {
                     onClick={handleWhatsAppClick}
                   >
                     <MessageCircle className='mr-2' size={20} />
-                    WhatsApp
+                    {t('tourDetail.whatsapp')}
                   </Button>
                 </div>
               </motion.div>
@@ -407,7 +400,7 @@ const TourDetailContent: React.FC<TourDetailContentProps> = ({ tour }) => {
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className='bg-gradient-to-br from-primary to-accent text-white rounded-2xl p-6 shadow-lg'
               >
-                <h3 className='text-xl font-bold mb-4'>Precisa de Ajuda?</h3>
+                <h3 className='text-xl font-bold mb-4'>{t('tourDetail.needHelp')}</h3>
                 <div className='space-y-3 text-sm'>
                   <a
                     href={`tel:${businessInfo.phone}`}
@@ -437,32 +430,32 @@ const TourDetailContent: React.FC<TourDetailContentProps> = ({ tour }) => {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className='bg-white rounded-2xl p-6 shadow-md'
               >
-                <h3 className='text-lg font-bold mb-4'>Nossas Garantias</h3>
+                <h3 className='text-lg font-bold mb-4'>{t('tourDetail.ourGuarantees')}</h3>
                 <div className='space-y-4'>
                   <div className='flex items-start gap-3'>
                     <Shield className='text-primary flex-shrink-0' size={20} />
                     <div>
-                      <p className='font-semibold text-sm'>Seguro Completo</p>
+                      <p className='font-semibold text-sm'>{t('tourDetail.fullInsurance')}</p>
                       <p className='text-xs text-gray-600'>
-                        Acidentes e responsabilidade civil
+                        {t('tourDetail.insuranceDesc')}
                       </p>
                     </div>
                   </div>
                   <div className='flex items-start gap-3'>
                     <Car className='text-primary flex-shrink-0' size={20} />
                     <div>
-                      <p className='font-semibold text-sm'>Veículos Premium</p>
-                      <p className='text-xs text-gray-600'>Hyundai & Toyota</p>
+                      <p className='font-semibold text-sm'>{t('tourDetail.premiumVehicles')}</p>
+                      <p className='text-xs text-gray-600'>{t('tourDetail.vehiclesDesc')}</p>
                     </div>
                   </div>
                   <div className='flex items-start gap-3'>
                     <Award className='text-primary flex-shrink-0' size={20} />
                     <div>
                       <p className='font-semibold text-sm'>
-                        Motorista Certificado
+                        {t('tourDetail.certifiedDriver')}
                       </p>
                       <p className='text-xs text-gray-600'>
-                        Profissional licenciado
+                        {t('tourDetail.certifiedDriverDesc')}
                       </p>
                     </div>
                   </div>
