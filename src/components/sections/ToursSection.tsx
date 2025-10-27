@@ -5,15 +5,16 @@ import { motion } from 'framer-motion';
 import TourCard from '@/components/TourCard';
 import { tours } from '@/data/tours';
 import { Button } from '@/components/ui/button';
-import { MapPin, Clock, Euro } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const ToursSection = () => {
+  const { t } = useLanguage();
   const [selectedCategory, setSelectedCategory] = useState('todos');
   const [showAll, setShowAll] = useState(false);
 
   const categories = [
-    { id: 'todos', name: 'Todos os Tours', count: tours.length },
-    { id: 'meio-dia', name: 'Meio Dia', count: 2 },
+    { id: 'todos', name: t('tours.allTours'), count: tours.length },
+    { id: 'meio-dia', name: t('tours.halfDay'), count: 2 },
   ];
 
   const filteredTours = tours.filter(tour => {
@@ -41,12 +42,10 @@ const ToursSection = () => {
           className='text-center mb-12'
         >
           <h2 className='text-4xl md:text-5xl font-bold mb-4'>
-            Nossos <span className='text-primary'>Tours Exclusivos</span>
+            {t('tours.title')} <span className='text-primary'>{t('tours.titleHighlight')}</span>
           </h2>
           <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-            Descubra Portugal com tours privados personalizados. Do histórico ao
-            contemporâneo, do espiritual ao cultural, temos a experiência
-            perfeita para si.
+            {t('tours.subtitle')}
           </p>
         </motion.div>
 
@@ -103,7 +102,7 @@ const ToursSection = () => {
               onClick={() => setShowAll(true)}
               className='border-primary text-primary hover:bg-primary hover:text-white'
             >
-              Ver Todos os Tours
+              {t('tours.viewAllTours')}
             </Button>
           </motion.div>
         )}
@@ -117,17 +116,16 @@ const ToursSection = () => {
           className='mt-16 bg-primary rounded-2xl p-8 md:p-12 text-white text-center'
         >
           <h3 className='text-3xl font-bold mb-4'>
-            Não encontrou o tour ideal?
+            {t('tours.notFoundTitle')}
           </h3>
           <p className='text-xl mb-8 opacity-90'>
-            Criamos experiências personalizadas de acordo com os seus interesses
-            e preferências
+            {t('tours.customTourDescription')}
           </p>
           <Button
             size='lg'
             className='bg-secondary hover:bg-secondary/90 text-black font-bold'
           >
-            Solicitar Tour Personalizado
+            {t('tours.requestCustomTour')}
           </Button>
         </motion.div>
       </div>
