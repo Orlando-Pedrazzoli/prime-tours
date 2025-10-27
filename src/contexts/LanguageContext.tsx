@@ -168,7 +168,7 @@ const translations = {
     'booking.validation.passengersRequired': 'Por favor indique o número de passageiros',
     
     // Form Buttons
-    'booking.sending': 'Enviando...',
+    'booking.sending': 'A enviar...',
     'booking.sendBooking': 'Enviar Reserva',
     
     // Status Messages
@@ -186,21 +186,29 @@ const translations = {
     'booking.whatsappMessage': 'Mensagem',
     'booking.whatsappNoMessage': 'Sem mensagem',
 
+    // FAQ Section
+    'faq.title': 'Perguntas',
+    'faq.titleHighlight': 'Frequentes',
+    'faq.subtitle': 'Encontre respostas para as dúvidas mais comuns sobre os nossos tours privados',
+    'faq.stillHaveQuestions': 'Ainda tem dúvidas?',
+    'faq.contactMessage': 'Estamos aqui para ajudar! Entre em contacto connosco e responderemos a todas as suas questões.',
+    'faq.sendEmail': 'Enviar Email',
+    'faq.whatsapp': 'WhatsApp',
+
     // Footer
     'footer.description': 'Experiências exclusivas de turismo privado em Portugal. Descubra o melhor do nosso país com conforto e segurança.',
     'footer.popularTours': 'Tours Populares',
     'footer.information': 'Informações',
     'footer.available': 'Disponível todos os dias',
     'footer.certifications': 'Certificações',
-    'footer.insurance': 'Seguro Total',
-    'footer.insuranceDesc': 'Acidentes e RC incluídos',
+    'footer.insurance': 'Seguro Completo',
+    'footer.insuranceDesc': 'Acidentes e responsabilidade civil incluídos',
     'footer.premiumVehicles': 'Veículos Premium',
     'footer.vehiclesDesc': 'Hyundai & Toyota',
     'footer.rights': 'Todos os direitos reservados.',
     'footer.privacyPolicy': 'Política de Privacidade',
     'footer.termsConditions': 'Termos e Condições',
   },
-  
   en: {
     // Navigation
     'nav.home': 'Home',
@@ -246,17 +254,17 @@ const translations = {
     // About Section
     'about.meetYour': 'Meet Your',
     'about.driver': 'Driver',
-    'about.greeting': "Hello! I'm Orlando, your dedicated driver to discover Portugal in a unique and memorable way.",
-    'about.passion': "I have a passion for sharing the beauty, history, and culture of my country with visitors from around the world. With over 8 years of experience in premium tourism, I guarantee that each tour is a personalized and unforgettable experience.",
-    'about.languages': "I speak Portuguese and English fluently, allowing me to communicate comfortably with clients from various nationalities. My goal is not just to take you to destinations, but also to provide you with a true immersion in Portuguese culture.",
+    'about.greeting': 'Hello! I am Orlando, your dedicated driver to discover Portugal in a unique and memorable way.',
+    'about.passion': 'I have a passion for sharing the beauty, history and culture of my country with visitors from around the world. With over 8 years of experience in premium tourism, I guarantee that each tour is a personalized and unforgettable experience.',
+    'about.languages': 'I speak Portuguese and English fluently, allowing me to communicate comfortably with clients of different nationalities. My goal is not only to take you to destinations, but also to provide you with a true immersion in Portuguese culture.',
     'about.experience': 'Years of Experience',
-    'about.knowTours': 'Discover Tours',
+    'about.knowTours': 'Know the Tours',
     'about.portuguese': 'Português',
     'about.english': 'English',
     
     // About Features
     'about.certifiedDriver': 'Certified Driver',
-    'about.certifiedDriverDesc': 'Professional certified driver with years of experience',
+    'about.certifiedDriverDesc': 'Certified professional driver with years of experience',
     'about.localKnowledge': 'Local Knowledge',
     'about.localKnowledgeDesc': 'I know the best places, stories and secrets of Portugal',
     'about.fullyPersonalized': '100% Personalized',
@@ -372,6 +380,15 @@ const translations = {
     'booking.whatsappPassengers': 'Passengers',
     'booking.whatsappMessage': 'Message',
     'booking.whatsappNoMessage': 'No message',
+
+    // FAQ Section
+    'faq.title': 'Frequently',
+    'faq.titleHighlight': 'Asked Questions',
+    'faq.subtitle': 'Find answers to the most common questions about our private tours',
+    'faq.stillHaveQuestions': 'Still have questions?',
+    'faq.contactMessage': "We're here to help! Contact us and we'll answer all your questions.",
+    'faq.sendEmail': 'Send Email',
+    'faq.whatsapp': 'WhatsApp',
 
     // Footer
     'footer.description': 'Exclusive private tourism experiences in Portugal. Discover the best of our country with comfort and safety.',

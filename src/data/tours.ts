@@ -1298,40 +1298,70 @@ export const testimonials = [
   },
 ];
 
-export const faqs = [
+export const faqsData = [
   {
-    question: 'Qual a capacidade máxima dos veículos?',
-    answer:
-      'Os nossos veículos têm capacidade para até 4 passageiros confortavelmente. Para grupos maiores, por favor contacte-nos para arranjos especiais.',
+    question: {
+      pt: 'Qual a capacidade máxima dos veículos?',
+      en: 'What is the maximum capacity of the vehicles?',
+    },
+    answer: {
+      pt: 'Os nossos veículos têm capacidade para até 4 passageiros confortavelmente. Para grupos maiores, por favor contacte-nos para arranjos especiais.',
+      en: 'Our vehicles can accommodate up to 4 passengers comfortably. For larger groups, please contact us for special arrangements.',
+    },
   },
   {
-    question: 'Os preços incluem entradas em monumentos?',
-    answer:
-      'Não, os preços dos tours não incluem bilhetes de entrada em monumentos, museus ou palácios. Estes devem ser pagos à parte. Podemos ajudar com informações sobre preços e horários.',
+    question: {
+      pt: 'Os preços incluem entradas em monumentos?',
+      en: 'Do prices include monument entrance fees?',
+    },
+    answer: {
+      pt: 'Não, os preços dos tours não incluem bilhetes de entrada em monumentos, museus ou palácios. Estes devem ser pagos à parte. Podemos ajudar com informações sobre preços e horários.',
+      en: 'No, tour prices do not include entrance fees for monuments, museums or palaces. These must be paid separately. We can help with information about prices and schedules.',
+    },
   },
   {
-    question: 'É possível personalizar os tours?',
-    answer:
-      'Sim! Todos os nossos tours são privados e podem ser personalizados de acordo com os seus interesses e preferências. Contacte-nos para criar o seu itinerário ideal.',
+    question: {
+      pt: 'É possível personalizar os tours?',
+      en: 'Is it possible to customize the tours?',
+    },
+    answer: {
+      pt: 'Sim! Todos os nossos tours são privados e podem ser personalizados de acordo com os seus interesses e preferências. Contacte-nos para criar o seu itinerário ideal.',
+      en: 'Yes! All our tours are private and can be customized according to your interests and preferences. Contact us to create your ideal itinerary.',
+    },
   },
   {
-    question: 'Onde é o ponto de encontro?',
-    answer:
-      'Fazemos a recolha em qualquer local designado por si - hotel, aeroporto, estação de comboios ou outro local em Lisboa.',
+    question: {
+      pt: 'Onde é o ponto de encontro?',
+      en: 'Where is the meeting point?',
+    },
+    answer: {
+      pt: 'Fazemos a recolha em qualquer local designado por si - hotel, aeroporto, estação de comboios ou outro local em Lisboa.',
+      en: 'We pick you up at any location you designate - hotel, airport, train station or other location in Lisbon.',
+    },
   },
   {
-    question: 'Qual a política de cancelamento?',
-    answer:
-      'Cancelamentos até 48 horas antes do tour têm reembolso total. Cancelamentos com menos de 48 horas estão sujeitos a uma taxa de 50%.',
+    question: {
+      pt: 'Qual a política de cancelamento?',
+      en: 'What is the cancellation policy?',
+    },
+    answer: {
+      pt: 'Cancelamentos até 48 horas antes do tour têm reembolso total. Cancelamentos com menos de 48 horas estão sujeitos a uma taxa de 50%.',
+      en: 'Cancellations up to 48 hours before the tour have full refund. Cancellations with less than 48 hours are subject to a 50% fee.',
+    },
   },
   {
-    question: 'Os tours funcionam com chuva?',
-    answer:
-      'Sim, os tours funcionam independentemente das condições meteorológicas. Portugal tem um clima ameno e muitas atrações são interiores ou cobertas.',
+    question: {
+      pt: 'Os tours funcionam com chuva?',
+      en: 'Do tours operate in the rain?',
+    },
+    answer: {
+      pt: 'Sim, os tours funcionam independentemente das condições meteorológicas. Portugal tem um clima ameno e muitas atrações são interiores ou cobertas.',
+      en: 'Yes, tours operate regardless of weather conditions. Portugal has a mild climate and many attractions are indoors or covered.',
+    },
   },
 ];
 
-// Traduções
+// Traduções (mantenha todo o objeto translations existente)
 export const translations = {
   pt: {
     nav: {
@@ -1389,64 +1419,6 @@ export const translations = {
       submit: 'Submit Booking',
       success: 'Booking sent successfully!',
       error: 'Error sending booking. Please try again.',
-    },
-  },
-  es: {
-    nav: {
-      home: 'Inicio',
-      tours: 'Tours',
-      about: 'Acerca',
-      gallery: 'Galería',
-      contact: 'Contacto',
-    },
-    hero: {
-      title: 'Descubra Portugal Exclusivamente',
-      subtitle: 'Tours privados personalizados con conductor-guía certificado',
-      cta: 'Reservar Ahora',
-      explore: 'Explorar Tours',
-    },
-    booking: {
-      title: 'Reserve su Tour',
-      name: 'Nombre Completo',
-      email: 'Email',
-      phone: 'Teléfono',
-      whatsapp: 'WhatsApp',
-      tour: 'Seleccione el Tour',
-      date: 'Fecha Deseada',
-      passengers: 'Número de Pasajeros',
-      message: 'Mensaje Adicional',
-      submit: 'Enviar Reserva',
-      success: '¡Reserva enviada con éxito!',
-      error: 'Error al enviar la reserva. Por favor, inténtelo de nuevo.',
-    },
-  },
-  fr: {
-    nav: {
-      home: 'Accueil',
-      tours: 'Tours',
-      about: 'À propos',
-      gallery: 'Galerie',
-      contact: 'Contact',
-    },
-    hero: {
-      title: 'Découvrez le Portugal en Exclusivité',
-      subtitle: 'Tours privés personnalisés avec chauffeur-guide certifié',
-      cta: 'Réserver Maintenant',
-      explore: 'Explorer les Tours',
-    },
-    booking: {
-      title: 'Réservez Votre Tour',
-      name: 'Nom Complet',
-      email: 'Email',
-      phone: 'Téléphone',
-      whatsapp: 'WhatsApp',
-      tour: 'Sélectionnez le Tour',
-      date: 'Date Souhaitée',
-      passengers: 'Nombre de Passagers',
-      message: 'Message Supplémentaire',
-      submit: 'Envoyer la Réservation',
-      success: 'Réservation envoyée avec succès!',
-      error: "Erreur lors de l'envoi de la réservation. Veuillez réessayer.",
     },
   },
 };

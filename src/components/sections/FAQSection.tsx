@@ -3,9 +3,11 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ChevronDown, HelpCircle } from 'lucide-react';
-import { faqs } from '@/data/tours';
+import { useLanguage } from '@/contexts/LanguageContext';
+import { faqsData } from '@/data/tours';
 
 const FAQSection = () => {
+  const { language, t } = useLanguage();
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const toggleAccordion = (index: number) => {
@@ -23,17 +25,16 @@ const FAQSection = () => {
           className='text-center mb-12'
         >
           <h2 className='text-4xl md:text-5xl font-bold mb-4'>
-            Perguntas <span className='text-primary'>Frequentes</span>
+            {t('faq.title')} <span className='text-primary'>{t('faq.titleHighlight')}</span>
           </h2>
           <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-            Encontre respostas para as dúvidas mais comuns sobre os nossos tours
-            privados
+            {t('faq.subtitle')}
           </p>
         </motion.div>
 
         <div className='max-w-3xl mx-auto'>
           <div className='space-y-4'>
-            {faqs.map((faq, index) => (
+            {faqsData.map((faq, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -52,7 +53,7 @@ const FAQSection = () => {
                       size={24}
                     />
                     <h3 className='font-semibold text-gray-800'>
-                      {faq.question}
+                      {faq.question[language]}
                     </h3>
                   </div>
                   <ChevronDown
@@ -67,7 +68,7 @@ const FAQSection = () => {
                     openIndex === index ? 'py-4' : 'max-h-0 overflow-hidden'
                   }`}
                 >
-                  <p className='text-gray-600 pl-9'>{faq.answer}</p>
+                  <p className='text-gray-600 pl-9'>{faq.answer[language]}</p>
                 </div>
               </motion.div>
             ))}
@@ -80,23 +81,22 @@ const FAQSection = () => {
             viewport={{ once: true }}
             className='mt-12 bg-primary rounded-2xl p-8 text-center text-white'
           >
-            <h3 className='text-2xl font-bold mb-3'>Ainda tem dúvidas?</h3>
+            <h3 className='text-2xl font-bold mb-3'>{t('faq.stillHaveQuestions')}</h3>
             <p className='mb-6 opacity-90'>
-              Estamos aqui para ajudar! Entre em contacto connosco e
-              responderemos a todas as suas questões.
+              {t('faq.contactMessage')}
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <a
-                href={`mailto:${faqs[0] ? 'pedrazzoliorlando@gmail.com' : ''}`}
+                href='mailto:pedrazzoliorlando@gmail.com'
                 className='bg-white text-primary px-6 py-3 rounded-lg font-semibold hover:bg-secondary hover:text-black transition-colors'
               >
-                Enviar Email
+                {t('faq.sendEmail')}
               </a>
               <a
-                href={`https://wa.me/351912164220`}
+                href='https://wa.me/351912164220'
                 className='bg-green-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors'
               >
-                WhatsApp
+                {t('faq.whatsapp')}
               </a>
             </div>
           </motion.div>
