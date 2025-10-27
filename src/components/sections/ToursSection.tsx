@@ -102,7 +102,7 @@ const ToursSection = () => {
               onClick={() => setShowAll(true)}
               className='border-primary text-primary hover:bg-primary hover:text-white'
             >
-              {t('tours.viewAllTours')}
+              {t('tours.viewAll')}
             </Button>
           </motion.div>
         )}
@@ -116,16 +116,16 @@ const ToursSection = () => {
           className='mt-16 bg-primary rounded-2xl p-8 md:p-12 text-white text-center'
         >
           <h3 className='text-3xl font-bold mb-4'>
-            {t('tours.notFoundTitle')}
+            {t('tours.notFound')}
           </h3>
           <p className='text-xl mb-8 opacity-90'>
-            {t('tours.customTourDescription')}
+            {t('tours.customTour')}
           </p>
           <Button
             size='lg'
             className='bg-secondary hover:bg-secondary/90 text-black font-bold'
           >
-            {t('tours.requestCustomTour')}
+            {t('tours.requestCustom')}
           </Button>
         </motion.div>
       </div>
