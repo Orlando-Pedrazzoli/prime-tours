@@ -22,6 +22,7 @@ import { formatPrice } from '@/lib/utils';
 import { businessInfo } from '@/data/tours';
 import BookingForm from '@/components/sections/BookingForm';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { toursEn } from '@/data/tours-en';
 
 interface TourDetailContentProps {
   tour: any;
@@ -62,7 +63,14 @@ const tourMapImages = {
 
 const TourDetailContent: React.FC<TourDetailContentProps> = ({ tour }) => {
   const [selectedPassengers, setSelectedPassengers] = useState(4);
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+
+  // ============================================
+  // OBTER DADOS DO TOUR COM BASE NO IDIOMA
+  // ============================================
+  const localizedTour = language === 'en' && (toursEn as any)[tour.id]
+    ? { ...tour, ...(toursEn as any)[tour.id] }
+    : tour;
 
   // ============================================
   // TABELA DE PREÇOS DINÂMICA
@@ -103,7 +111,7 @@ const TourDetailContent: React.FC<TourDetailContentProps> = ({ tour }) => {
 
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent(
-      `${t('tourDetail.whatsappMessage')} ${tour.title}`
+      `${t('tourDetail.whatsappMessage')} ${localizedTour.title}`
     );
     window.open(
       `https://wa.me/${businessInfo.whatsapp}?text=${message}`,
@@ -126,11 +134,11 @@ const TourDetailContent: React.FC<TourDetailContentProps> = ({ tour }) => {
             >
               <h2 className='text-3xl font-bold mb-4'>{t('tourDetail.aboutTour')}</h2>
               <p className='text-gray-700 text-lg leading-relaxed mb-4'>
-                {tour.description}
+                {localizedTour.description}
               </p>
-              {tour.longDescription && (
+              {localizedTour.longDescription && (
                 <p className='text-gray-600 leading-relaxed'>
-                  {tour.longDescription}
+                  {localizedTour.longDescription}
                 </p>
               )}
             </motion.div>
@@ -144,7 +152,7 @@ const TourDetailContent: React.FC<TourDetailContentProps> = ({ tour }) => {
             >
               <h2 className='text-3xl font-bold mb-6'>{t('tourDetail.highlights')}</h2>
               <div className='grid md:grid-cols-2 gap-4'>
-                {tour.highlights.map((highlight: string, index: number) => (
+                {localizedTour.highlights.map((highlight: string, index: number) => (
                   <div key={index} className='flex items-start gap-3'>
                     <Check
                       className='text-green-500 mt-1 flex-shrink-0'
@@ -170,10 +178,10 @@ const TourDetailContent: React.FC<TourDetailContentProps> = ({ tour }) => {
               <div className='relative w-full rounded-lg md:rounded-xl overflow-hidden border-2 md:border-4 border-primary/20'>
                 <img
                   src={`/${
-                    tourMapImages[tour.slug as keyof typeof tourMapImages] ||
+                    (tourMapImages as any)[tour.slug as keyof typeof tourMapImages] ||
                     'default-map.jpg'
                   }`}
-                  alt={`${t('tourDetail.routeMap')} - ${tour.title}`}
+                  alt={`${t('tourDetail.routeMap')} - ${localizedTour.title}`}
                   className='w-full h-auto max-h-[800px] md:max-h-[600px] object-cover md:object-contain'
                   onError={e => {
                     // Fallback se a imagem não existir
@@ -187,101 +195,130 @@ const TourDetailContent: React.FC<TourDetailContentProps> = ({ tour }) => {
             </motion.div>
 
             {/* Itinerário Detalhado */}
-            {tour.itinerary && tour.itinerary.length > 0 && (
+            {localizedTour.itinerary && localizedTour.itinerary.length > 0 && (
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className='bg-white rounded-2xl p-8 shadow-md'
               >
-                <h2 className='text-3xl font-bold mb-6 flex items-center gap-3'>
-                  <Clock className='text-primary' />
-                  {t('tourDetail.detailedItinerary')}
-                </h2>
+                <h2 className='text-3xl font-bold mb-6'>{t('tourDetail.detailedItinerary')}</h2>
                 <div className='space-y-6'>
-                  {tour.itinerary.map(
-                    (
-                      stop: { location: string; description: string },
-                      index: number
-                    ) => (
-                      <div key={index} className='border-l-4 border-primary pl-6'>
-                        <h3 className='font-bold text-xl mb-2'>
-                          {stop.location}
-                        </h3>
-                        <p className='text-gray-600 leading-relaxed'>
-                          {stop.description}
-                        </p>
-                      </div>
-                    )
-                  )}
+                  {localizedTour.itinerary.map((stop: any, index: number) => (
+                    <div
+                      key={index}
+                      className='border-l-4 border-primary pl-6 relative'
+                    >
+                      <div className='absolute -left-[10px] top-0 w-5 h-5 bg-primary rounded-full border-4 border-white'></div>
+                      <h3 className='font-bold text-lg mb-2 text-gray-800'>
+                        {stop.location}
+                      </h3>
+                      <p className='text-gray-600 leading-relaxed'>
+                        {stop.description}
+                      </p>
+                    </div>
+                  ))}
                 </div>
               </motion.div>
             )}
 
-            {/* O que está incluído e não incluído */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className='bg-white rounded-2xl p-8 shadow-md'
-            >
-              <div className='grid md:grid-cols-2 gap-8'>
-                {/* Incluído */}
-                <div>
-                  <h3 className='text-2xl font-bold mb-4 flex items-center gap-2'>
-                    <Check className='text-green-500' />
-                    {t('tourDetail.included')}
-                  </h3>
-                  <ul className='space-y-3'>
-                    {businessInfo.included.map((item, index) => (
-                      <li key={index} className='flex items-start gap-3'>
-                        <Check
-                          className='text-green-500 mt-1 flex-shrink-0'
-                          size={18}
-                        />
-                        <span className='text-gray-700'>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+            {/* Incluído / Não Incluído */}
+            <div className='grid md:grid-cols-2 gap-6'>
+              {/* Incluído */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className='bg-white rounded-2xl p-6 shadow-md'
+              >
+                <h3 className='text-xl font-bold mb-4 flex items-center gap-2'>
+                  <Check className='text-green-500' size={24} />
+                  {t('tourDetail.included')}
+                </h3>
+                <ul className='space-y-2 text-gray-700'>
+                  <li className='flex items-start gap-2'>
+                    <span className='text-green-500 mt-1'>✓</span>
+                    <span>{t('tourDetail.included.driver')}</span>
+                  </li>
+                  <li className='flex items-start gap-2'>
+                    <span className='text-green-500 mt-1'>✓</span>
+                    <span>{t('tourDetail.included.vehicle')}</span>
+                  </li>
+                  <li className='flex items-start gap-2'>
+                    <span className='text-green-500 mt-1'>✓</span>
+                    <span>{t('tourDetail.included.wifi')}</span>
+                  </li>
+                  <li className='flex items-start gap-2'>
+                    <span className='text-green-500 mt-1'>✓</span>
+                    <span>{t('tourDetail.included.water')}</span>
+                  </li>
+                  <li className='flex items-start gap-2'>
+                    <span className='text-green-500 mt-1'>✓</span>
+                    <span>{t('tourDetail.included.insurance')}</span>
+                  </li>
+                  <li className='flex items-start gap-2'>
+                    <span className='text-green-500 mt-1'>✓</span>
+                    <span>{t('tourDetail.included.fuel')}</span>
+                  </li>
+                  <li className='flex items-start gap-2'>
+                    <span className='text-green-500 mt-1'>✓</span>
+                    <span>{t('tourDetail.included.pickup')}</span>
+                  </li>
+                  <li className='flex items-start gap-2'>
+                    <span className='text-green-500 mt-1'>✓</span>
+                    <span>{t('tourDetail.included.private')}</span>
+                  </li>
+                </ul>
+              </motion.div>
 
-                {/* Não incluído */}
-                <div>
-                  <h3 className='text-2xl font-bold mb-4 flex items-center gap-2'>
-                    <XIcon className='text-red-500' />
-                    {t('tourDetail.notIncluded')}
-                  </h3>
-                  <ul className='space-y-3'>
-                    {businessInfo.notIncluded.map((item, index) => (
-                      <li key={index} className='flex items-start gap-3'>
-                        <XIcon
-                          className='text-red-500 mt-1 flex-shrink-0'
-                          size={18}
-                        />
-                        <span className='text-gray-700'>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </motion.div>
+              {/* Não Incluído */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+                className='bg-white rounded-2xl p-6 shadow-md'
+              >
+                <h3 className='text-xl font-bold mb-4 flex items-center gap-2'>
+                  <XIcon className='text-red-500' size={24} />
+                  {t('tourDetail.notIncluded')}
+                </h3>
+                <ul className='space-y-2 text-gray-700'>
+                  <li className='flex items-start gap-2'>
+                    <span className='text-red-500 mt-1'>✕</span>
+                    <span>{t('tourDetail.notIncluded.tickets')}</span>
+                  </li>
+                  <li className='flex items-start gap-2'>
+                    <span className='text-red-500 mt-1'>✕</span>
+                    <span>{t('tourDetail.notIncluded.meals')}</span>
+                  </li>
+                  <li className='flex items-start gap-2'>
+                    <span className='text-red-500 mt-1'>✕</span>
+                    <span>{t('tourDetail.notIncluded.personal')}</span>
+                  </li>
+                  <li className='flex items-start gap-2'>
+                    <span className='text-red-500 mt-1'>✕</span>
+                    <span>{t('tourDetail.notIncluded.gratuities')}</span>
+                  </li>
+                </ul>
+              </motion.div>
+            </div>
 
             {/* Informações Importantes */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
-              className='bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl p-8 border-2 border-primary/20'
+              transition={{ duration: 0.6, delay: 0.6 }}
+              className='bg-blue-50 border-2 border-blue-200 rounded-2xl p-6'
             >
-              <h3 className='text-2xl font-bold mb-4 flex items-center gap-3'>
-                <AlertCircle className='text-primary' />
+              <h3 className='text-xl font-bold mb-4 flex items-center gap-2 text-blue-900'>
+                <AlertCircle className='text-blue-600' size={24} />
                 {t('tourDetail.importantInfo')}
               </h3>
               <div className='space-y-3 text-gray-700'>
                 <p className='flex items-start gap-3'>
                   <span className='text-primary mt-1'>•</span>
                   <span>
-                    {t('tourDetail.info.reservations')}
+                    {t('tourDetail.info.booking')}
                   </span>
                 </p>
                 <p className='flex items-start gap-3'>
