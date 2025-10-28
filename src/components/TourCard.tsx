@@ -2,9 +2,8 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Clock, Users, MapPin, ArrowRight, Euro } from 'lucide-react';
+import { Clock, Users, MapPin, ArrowRight, Euro, MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { formatPrice } from '@/lib/utils';
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/contexts/LanguageContext';
 
@@ -26,13 +25,23 @@ interface TourCardProps {
     image: string;
     highlights: string[];
     featured?: boolean;
+    departure?: string;
   };
   index?: number;
 }
 
 const TourCard: React.FC<TourCardProps> = ({ tour, index = 0 }) => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const priceForOne = tour.price.basePrice || Math.round(tour.price.total * 0.74);
+
+  const handleWhatsAppClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const message = language === 'pt' 
+      ? `Olá! Gostaria de mais informações sobre o tour: ${tour.title}`
+      : `Hello! I would like more information about the tour: ${tour.title}`;
+    const encodedMessage = encodeURIComponent(message);
+    window.open(`https://wa.me/351912164220?text=${encodedMessage}`, '_blank');
+  };
 
   return (
     <motion.div
@@ -43,22 +52,22 @@ const TourCard: React.FC<TourCardProps> = ({ tour, index = 0 }) => {
       className='group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] relative'
     >
       {tour.featured && (
-        <div className='absolute top-4 left-4 z-20 bg-secondary text-black px-3 py-1 rounded-full text-xs font-bold'>
+        <div className='absolute top-4 left-4 z-20 bg-gradient-to-r from-yellow-400 to-yellow-500 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg'>
           ⭐ {t('tourCard.featured')}
         </div>
       )}
 
       <Link href={`/tours/${tour.slug}`} className='block'>
         <div className='relative h-64 overflow-hidden cursor-pointer'>
-          <div className='absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10' />
+          <div className='absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent z-10' />
           <img
             src={tour.image}
             alt={tour.title}
-            className='w-full h-full object-cover group-hover:scale-110 transition-transform duration-500'
+            className='w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out'
             loading='lazy'
           />
           <div className='absolute bottom-4 left-4 right-4 z-20'>
-            <h3 className='text-2xl font-bold text-white mb-1 line-clamp-2'>
+            <h3 className='text-2xl font-bold text-white mb-1 line-clamp-2 drop-shadow-lg'>
               {tour.title}
             </h3>
             <p className='text-white/90 text-sm line-clamp-1'>
@@ -67,7 +76,7 @@ const TourCard: React.FC<TourCardProps> = ({ tour, index = 0 }) => {
           </div>
 
           <div className='absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-20'>
-            <div className='bg-white/90 rounded-full p-3'>
+            <div className='bg-white/90 backdrop-blur-sm rounded-full p-3 shadow-lg'>
               <ArrowRight className='text-primary' size={24} />
             </div>
           </div>
@@ -93,7 +102,7 @@ const TourCard: React.FC<TourCardProps> = ({ tour, index = 0 }) => {
           <div className='flex items-center gap-2 text-sm col-span-2'>
             <MapPin className='text-primary flex-shrink-0' size={16} />
             <span className='text-gray-600'>
-              {t('tourCard.departure')}: {t('tourCard.departureLisbon')}
+              {t('tourCard.departure')}: {tour.departure || t('tourCard.departureLisbon')}
             </span>
           </div>
         </div>
@@ -103,15 +112,15 @@ const TourCard: React.FC<TourCardProps> = ({ tour, index = 0 }) => {
             {t('tourCard.highlights')}
           </p>
           <ul className='text-sm text-gray-600 space-y-1'>
-            {tour.highlights.slice(0, 3).map((highlight, index) => (
-              <li key={index} className='flex items-start gap-2'>
+            {tour.highlights.slice(0, 3).map((highlight, idx) => (
+              <li key={idx} className='flex items-start gap-2'>
                 <span className='text-primary mt-1 flex-shrink-0'>•</span>
                 <span className='line-clamp-1'>{highlight}</span>
               </li>
             ))}
             {tour.highlights.length > 3 && (
-              <li className='text-primary text-sm font-medium'>
-                +{tour.highlights.length - 3} {t('tours.moreHighlights')}
+              <li className='text-primary text-sm font-medium pl-4'>
+                +{tour.highlights.length - 3} {t('tourCard.moreHighlights')}
               </li>
             )}
           </ul>
@@ -135,7 +144,7 @@ const TourCard: React.FC<TourCardProps> = ({ tour, index = 0 }) => {
               <div className='flex items-baseline gap-1'>
                 <Euro className='text-green-600' size={14} />
                 <span className='text-2xl font-bold text-green-600'>{tour.price.perPerson}</span>
-                <span className='text-xs text-green-600'>{t('tourCard.perPerson')}</span>
+                <span className='text-xs text-green-600'>/{t('tourCard.perPerson')}</span>
               </div>
             </div>
           </div>
@@ -143,8 +152,8 @@ const TourCard: React.FC<TourCardProps> = ({ tour, index = 0 }) => {
           <div className='flex gap-2'>
             <Link href={`/tours/${tour.slug}`} className='flex-1'>
               <Button
-                className='w-full bg-primary hover:bg-primary-700 group transition-all duration-300'
-                size='sm'
+                className='w-full bg-primary hover:bg-primary/90 group transition-all duration-300'
+                size='lg'
               >
                 {t('tourCard.viewDetails')}
                 <ArrowRight
@@ -155,20 +164,11 @@ const TourCard: React.FC<TourCardProps> = ({ tour, index = 0 }) => {
             </Link>
             <Button
               variant='outline'
-              size='sm'
-              className='border-green-500 text-green-600 hover:bg-green-50 px-3'
-              onClick={e => {
-                e.preventDefault();
-                const message = encodeURIComponent(
-                  `${t('tourCard.whatsappMessage')} ${tour.title}`
-                );
-                window.open(
-                  `https://wa.me/351912164220?text=${message}`,
-                  '_blank'
-                );
-              }}
+              size='lg'
+              className='border-green-500 text-green-600 hover:bg-green-50 hover:border-green-600 px-4'
+              onClick={handleWhatsAppClick}
             >
-              {t('tourCard.whatsapp')}
+              <MessageCircle size={18} />
             </Button>
           </div>
         </div>
