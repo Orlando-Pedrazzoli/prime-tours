@@ -151,13 +151,7 @@ const ServicesSection = () => {
                   allowFullScreen
                 />
               </div>
-              <div className='absolute -bottom-6 -right-6 bg-secondary text-black p-6 rounded-2xl shadow-xl'>
-                <div className='text-center'>
-                  <p className='text-3xl font-bold'>100%</p>
-                  <p className='text-sm font-medium'>{t('services.satisfaction')}</p>
-                  <p className='text-sm'>{t('services.guaranteed')}</p>
-                </div>
-              </div>
+             
             </div>
           </div>
         </motion.div>
