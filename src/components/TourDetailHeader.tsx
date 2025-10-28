@@ -172,7 +172,7 @@ const TourDetailHeader: React.FC<TourDetailHeaderProps> = ({ tour }) => {
                 </div>
                 <div className='flex items-center gap-2 bg-gray-100 px-4 py-2 rounded-lg'>
                   <MapPin className='text-primary' size={18} />
-                  <span className='font-medium'>Oeiras, Lisboa</span>
+                  <span className='font-medium'>Lisboa</span>
                 </div>
                 <div className='flex items-center gap-2 bg-yellow-50 px-4 py-2 rounded-lg'>
                   <Star className='text-yellow-500 fill-current' size={18} />
