@@ -141,11 +141,16 @@ const ServicesSection = () => {
             </div>
 
             <div className='relative'>
-              <img
-                src='https://images.unsplash.com/photo-1555881400-74d7acaacd8b?w=600'
-                alt='Lisboa'
-                className='rounded-2xl shadow-2xl'
-              />
+              <div className='relative w-full' style={{ paddingBottom: '56.25%' }}>
+                <iframe
+                  className='absolute top-0 left-0 w-full h-full rounded-2xl shadow-2xl'
+                  src='https://www.youtube.com/embed/N8bHCHl8X_0?si=WSyNIj-pzIiREBA5'
+                  title='YouTube video player'
+                  allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+                  referrerPolicy='strict-origin-when-cross-origin'
+                  allowFullScreen
+                />
+              </div>
               <div className='absolute -bottom-6 -right-6 bg-secondary text-black p-6 rounded-2xl shadow-xl'>
                 <div className='text-center'>
                   <p className='text-3xl font-bold'>100%</p>
